@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aycaramba — Kommt bald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark: #0c0c0c;
+      --pink: #e53a69;
+      --orange: #fea651;
+      --off-white: #f4efe9;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: 'Basement';
+      src: url('brand_assets/Fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Yakin';
+      src: url('brand_assets/Fonts/Yakin-rgZBp.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--off-white);
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* ── Background layers ── */
+    .bg-palms {
+      position: fixed;
+      inset: 0;
+      background-image: url('brand_assets/Background_Hero.png');
+      background-size: cover;
+      background-position: center bottom;
+      z-index: 0;
+      opacity: 0.35;
+    }
+
+    .bg-texture {
+      position: fixed;
+      inset: 0;
+      background-image: url('brand_assets/BG%20Main.png');
+      background-size: 420px auto;
+      background-repeat: repeat;
+      z-index: 1;
+      opacity: 0.6;
+      mix-blend-mode: overlay;
+    }
+
+    /* Radial vignette */
+    .bg-vignette {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(12, 12, 12, 0.85) 100%);
+      z-index: 2;
+    }
+
+    /* Left gradient fade */
+    .bg-fade-left {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(90deg,
+          rgba(12, 12, 12, 1) 0%,
+          rgba(12, 12, 12, 0.92) 30%,
+          rgba(12, 12, 12, 0.4) 60%,
+          transparent 100%);
+      z-index: 3;
+    }
+
+    /* Bottom fade */
+    .bg-fade-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(12, 12, 12, 1) 0%, transparent 100%);
+      z-index: 3;
+    }
+
+    /* ── Hero Woman ── */
+    .woman-wrap {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 4;
+      display: flex;
+      align-items: flex-end;
+      pointer-events: none;
+    }
+
+    .woman-wrap img {
+      height: clamp(420px, 80vh, 900px);
+      width: auto;
+      display: block;
+      filter:
+        drop-shadow(-40px 0 80px rgba(229, 58, 105, 0.18)) drop-shadow(0 0 120px rgba(229, 58, 105, 0.08));
+      animation: womanReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+    }
+
+    @keyframes womanReveal {
+      from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    /* Pink glow behind woman */
+    .woman-glow {
+      position: fixed;
+      right: -10%;
+      bottom: -5%;
+      width: 60vw;
+      height: 80vh;
+      background: radial-gradient(ellipse at center bottom,
+          rgba(229, 58, 105, 0.12) 0%,
+          rgba(229, 58, 105, 0.04) 50%,
+          transparent 70%);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* ── Content ── */
+    .content {
+      position: relative;
+      z-index: 10;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15vh clamp(2rem, 6vw, 8rem) 0;
+      max-width: 700px;
+    }
+
+    /* Logo */
+    .logo {
+      position: fixed;
+      top: 3rem;
+      left: clamp(2rem, 6vw, 8rem);
+      z-index: 20;
+      animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+    }
+
+    /* Eyebrow */
+    .eyebrow {
+      font-family: 'Basement', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--pink);
+      opacity: 0.8;
+      flex-shrink: 0;
+    }
+
+    /* Headline */
+    .headline {
+      font-family: 'Basement', sans-serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--off-white);
+      margin-bottom: 0.15em;
+      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+    }
+
+    .headline .accent {
+      font-family: 'Yakin', cursive;
+      font-size: 1.15em;
+      color: var(--pink);
+      text-transform: none;
+      line-height: 1;
+      display: block;
+      letter-spacing: 0;
+    }
+
+    /* Body */
+    .body-text {
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      line-height: 1.7;
+      color: rgba(244, 239, 233, 0.6);
+      max-width: 440px;
+      margin-top: 1.25rem;
+      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+    }
+
+    /* Divider pill */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(244, 239, 233, 0.1);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: rgba(244, 239, 233, 0.4);
+      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.48s both;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--pink);
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+      }
+    }
+
+    /* Contact link */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'Basement', sans-serif;
+      color: var(--pink);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.2s, gap 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.58s both;
+    }
+
+    .contact-link:hover {
+      opacity: 1;
+      gap: 0.9rem;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+
+      html,
+      body {
+        overflow: auto;
+      }
+
+      .mobile-stack {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .woman-wrap {
+        position: relative;
+        height: auto;
+        justify-content: center;
+        padding-top: 0;
+        order: 2;
+      }
+
+      .woman-wrap img {
+        height: clamp(260px, 70vw, 380px);
+        width: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+      }
+
+      .bg-fade-left {
+        background: linear-gradient(180deg,
+            rgba(12, 12, 12, 1) 0%,
+            rgba(12, 12, 12, 0.5) 40%,
+            transparent 100%);
+      }
+
+      .content {
+        height: auto;
+        padding: 130px 1.75rem 2rem;
+        max-width: 100%;
+        order: 1;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo {
+        left: 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Backgrounds -->
+  <div class="bg-palms"></div>
+  <div class="bg-texture"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-fade-left"></div>
+  <div class="bg-fade-bottom"></div>
+  <div class="woman-glow"></div>
+
+  <!-- Logo -->
+  <a href="#" class="logo" aria-label="Aycaramba">
+    <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:38px;width:auto;" />
+  </a>
+
+  <div class="mobile-stack">
+
+    <!-- Hero Woman -->
+    <div class="woman-wrap">
+      <img src="brand_assets/Hero_Woman.png" alt="" />
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <h1 class="headline">
+        <span class="accent">Coming Soon</span>
+      </h1>
+
+      <p class="body-text">
+        Wir schrauben gerade an etwas Großem.<br>
+        Unsere neue Website ist in Kürze live, bis bald!
+      </p>
+
+      <a href="mailto:office@aycaramba.at" class="contact-link">
+        office@aycaramba.at
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

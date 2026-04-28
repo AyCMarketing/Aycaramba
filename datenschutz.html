@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz — Aycaramba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --dark: #0c0c0c;
+      --dark-2: #111111;
+      --dark-3: #171717;
+      --dark-4: #1e1e1e;
+      --pink: #e53a69;
+      --pink-hover: #f04878;
+      --off-white: #f4efe9;
+      --muted: rgba(244, 239, 233, 0.55);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      background-image: url('brand_assets/BG%20Main.png');
+      background-size: 420px auto;
+      background-attachment: fixed;
+      background-repeat: repeat;
+      color: var(--off-white);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    @font-face {
+      font-family: 'Basement';
+      src: url('brand_assets/Fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ── Nav ── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    #nav.scrolled {
+      background: rgba(12,12,12,0.92);
+      border-color: rgba(244,239,233,0.07);
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-back {
+      font-family: 'Basement', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+    .nav-back:hover { color: var(--off-white); }
+    .nav-back svg { transition: transform 0.2s ease; }
+    .nav-back:hover svg { transform: translateX(-3px); }
+
+    /* ── Page Layout ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 120px 2rem 6rem;
+    }
+
+    /* ── Header ── */
+    .page-label {
+      font-family: 'Basement', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .page-title {
+      font-family: 'Basement', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--off-white);
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+    }
+    .page-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--pink);
+      margin-bottom: 3rem;
+      opacity: 0.7;
+    }
+
+    /* ── Content ── */
+    .legal-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(244,239,233,0.07);
+    }
+    .legal-section:last-child {
+      border-bottom: none;
+    }
+    .legal-section h2 {
+      font-family: 'Basement', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 1rem;
+    }
+    .legal-section p,
+    .legal-section address {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba(244,239,233,0.75);
+      font-style: normal;
+    }
+    .legal-section p + p {
+      margin-top: 0.75rem;
+    }
+    .legal-section a {
+      color: var(--pink);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .legal-section a:hover { opacity: 0.75; }
+
+    .placeholder-note {
+      display: inline-block;
+      background: rgba(229,58,105,0.08);
+      border: 1px dashed rgba(229,58,105,0.3);
+      border-radius: 3px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.78rem;
+      color: rgba(229,58,105,0.6);
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2.5rem 2rem;
+      border-top: 1px solid rgba(244,239,233,0.06);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(244,239,233,0.3);
+      letter-spacing: 0.03em;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(244,239,233,0.3);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--off-white); }
+    .footer-links a.active { color: var(--pink); }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" aria-label="Aycaramba Home">
+        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:36px;width:auto;" />
+      </a>
+      <a href="index.html" class="nav-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Zurück
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+
+    <span class="page-label">Rechtliches</span>
+    <h1 class="page-title">Datenschutz</h1>
+    <div class="page-divider"></div>
+
+    <div class="legal-section">
+      <h2>Einleitung</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Verantwortlicher</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Erhebung und Verarbeitung personenbezogener Daten</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Cookies</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Ihre Rechte</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Kontakt</h2>
+      <p><span class="placeholder-note">Inhalt folgt</span></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" aria-label="Aycaramba Home">
+        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:32px;width:auto;opacity:0.9;" />
+      </a>
+      <p class="footer-copy">© 2025 Aycaramba. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html" class="active">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+</body>
+</html>
