@@ -295,6 +295,172 @@
         margin-top: -5rem;
       }
     }
+
+    /* ---------- Funnel diagnose ---------- */
+    .funnel-diagnose-head {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .funnel-diagnose-head .eyebrow-script {
+      margin-bottom: 0.3rem;
+    }
+
+    .funnel-diagnose-head h3 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+      letter-spacing: -0.01em;
+      margin: 0 0 0.6rem;
+    }
+
+    .funnel-diagnose-head p {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+
+    .funnel-diagnose {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .funnel-stage {
+      width: 100%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      overflow: hidden;
+    }
+
+    .funnel-stage-head {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.75rem;
+      border-bottom: var(--cs-border-thick);
+    }
+
+    .funnel-stage-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--color-ink);
+    }
+
+    .funnel-stage-head h4 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+      margin: 0;
+      color: var(--color-white);
+    }
+
+    .funnel-stage-head .funnel-stage-sub {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.8);
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    .funnel-stage--positioning .funnel-stage-head { background: var(--color-teal); }
+    .funnel-stage--attracting .funnel-stage-head { background: var(--color-orange); }
+    .funnel-stage--collecting .funnel-stage-head { background: var(--color-pink); }
+    .funnel-stage--converting .funnel-stage-head { background: var(--color-ink); }
+
+    .funnel-stage-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .funnel-col {
+      padding: 1.35rem 1.35rem;
+    }
+
+    .funnel-col + .funnel-col {
+      border-left: 1px solid rgba(23,18,20,0.12);
+    }
+
+    .funnel-col h5 {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.8rem;
+      color: var(--color-ink-soft);
+    }
+
+    .funnel-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .funnel-col li {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      line-height: 1.4;
+      color: var(--color-ink);
+      margin: 0;
+    }
+
+    .funnel-col li span.mark {
+      flex-shrink: 0;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .funnel-col-good li span.mark { color: var(--color-teal-dark); }
+    .funnel-col-bad li span.mark { color: var(--color-ink-soft); }
+
+    .funnel-col-todo {
+      background: var(--color-cream);
+    }
+
+    .funnel-col-todo li { font-weight: 600; }
+    .funnel-col-todo li span.mark { color: var(--color-orange-dark); }
+
+    .funnel-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin: -1px 0;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-stage-body {
+        grid-template-columns: 1fr;
+      }
+      .funnel-col + .funnel-col {
+        border-left: none;
+        border-top: 1px solid rgba(23,18,20,0.12);
+      }
+    }
   </style>
 </head>
 <body>
@@ -367,17 +533,17 @@
       <div class="container">
         <article class="post-body">
 
-          <p class="post-lead">Wär's nicht fein, wenn neue Kund:innen nicht mehr Glückssache wären, sondern ein Prozess, der einfach läuft? Genau darum geht's bei Leadgenerierung. Oida, ich weiß, klingt erstmal nach einem drögen Marketing-Buzzword. Ist es aber nicht, wenn man's richtig macht.</p>
+          <p class="post-lead">Wär's nicht fein, wenn neue Kund:innen nicht mehr Glückssache wären, sondern ein Prozess, der einfach läuft? Genau darum geht's bei Leadgenerierung. Ja, ich weiß, klingt erstmal nach einem drögen Marketing-Buzzword. Ist es aber nicht, wenn man's richtig macht.</p>
 
           <h2>Was ist Leadgenerierung? Die Definition</h2>
-          <p>Leadgenerierung ist der Prozess, mit dem du aus wildfremden Menschen Personen machst, die dir freiwillig ihre Kontaktdaten geben, meistens im Tausch gegen etwas Wertvolles: einen Newsletter, ein Whitepaper, ein kostenloses Erstgespräch. So eine Person nennt man dann einen <strong>Lead</strong>.</p>
-          <p>Ein Lead ist noch kein Kunde. Ein Lead ist jemand, der Interesse gezeigt hat und ansprechbar geworden ist. Der Unterschied ist entscheidend: Ohne Leadgenerierung sprichst du ins Leere. Mit ihr sprichst du mit Menschen, die schon einmal "Ja" gesagt haben — zumindest zu einem ersten kleinen Schritt.</p>
+          <p>Leadgenerierung ist der Prozess, mit dem du aus wildfremden Menschen Personen machst, die dir freiwillig ihre Kontaktdaten geben, im besten Fall im Tausch gegen etwas Wertvolles: einen Newsletter, ein Whitepaper, ein kostenloses "Goodie". So eine Person nennt man dann einen <strong>Lead</strong>.</p>
+          <p>Problem? Ein Lead ist noch kein Kunde. Ein Lead ist jemand, der Interesse gezeigt hat und ansprechbar geworden ist. Der Unterschied ist entscheidend: Ohne Leadgenerierung sprichst du ins Leere. Mit ihr sprichst du mit Menschen, die schon einmal "Ja" gesagt haben — zumindest zu einem ersten kleinen Schritt.</p>
 
           <div class="pull-quote">Ein Lead ist kein Kunde. Ein Lead ist jemand, der bereits "Ja" zu einem ersten Schritt gesagt hat.</div>
 
           <h2>Warum Leadgenerierung dein Business retten kann</h2>
           <p>Ohne Mist: Die meisten Selbstständigen und KMUs, mit denen wir arbeiten, haben kein Produktproblem. Sie haben ein Sichtbarkeitsproblem. Gute Arbeit allein bringt niemanden automatisch vor die richtige Tür.</p>
-          <p>Leadgenerierung dreht diesen Spieß um. Statt zu warten, bis jemand zufällig auf dich stößt, baust du dir einen Mechanismus, der laufend neue, qualifizierte Kontakte liefert. Planbar, nicht zufällig. Genau diesen Mechanismus bauen wir bei <a href="../leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a> für unsere Kund:innen.</p>
+          <p>Leadgenerierung dreht diesen Spieß um. Statt zu warten, bis jemand zufällig auf dich stößt, baust du dir einen Mechanismus, der laufend neue, qualifizierte Kontakte liefert. Planbar, nicht zufällig. By the way: Genau diesen Mechanismus bauen wir bei <a href="../leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a> für unsere Kund:innen.</p>
 
           <figure class="post-image">
             <img src="../assets/img/blog/leadgenerierung-team.jpg" alt="Marketing-Team plant eine Leadgenerierung-Kampagne am Konferenztisch">
@@ -393,8 +559,154 @@
           </ul>
           <p>Macht sie das kompliziert? Vielleicht auf den ersten Blick. Braucht es dafür eine Riesen-Kampagne? Nein. Es braucht einen klaren Plan, wer auf welcher Stufe steht — und was diese Person als Nächstes sehen soll.</p>
 
+          <div class="funnel-diagnose-head">
+            <span class="eyebrow-script">Selbstcheck</span>
+            <h3>Der Leadgenerierung-Funnel: die Diagnose</h3>
+            <p>Vier Phasen, in denen ein Funnel typischerweise leckt — und was in jeder Phase zu tun ist, je nachdem, welche Zeichen du siehst.</p>
+          </div>
+
+          <div class="funnel-diagnose">
+
+            <div class="funnel-stage funnel-stage--positioning">
+              <div class="funnel-stage-head">
+                <span class="funnel-stage-num">1</span>
+                <h4>Offering &amp; Positioning<span class="funnel-stage-sub">Angebot &amp; Positionierung</span></h4>
+              </div>
+              <div class="funnel-stage-body">
+                <div class="funnel-col funnel-col-good">
+                  <h5>Gute Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✓</span><span>Angebot steht</span></li>
+                    <li><span class="mark">✓</span><span>Strategie ist klar</span></li>
+                    <li><span class="mark">✓</span><span>Leads kommen rein</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-bad">
+                  <h5>Schlechte Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✕</span><span>Niemand interessiert sich</span></li>
+                    <li><span class="mark">✕</span><span>Keine klare Marketingstrategie</span></li>
+                    <li><span class="mark">✕</span><span>Zu wenig Leads</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-todo">
+                  <h5>To-Do</h5>
+                  <ul>
+                    <li><span class="mark">→</span><span>Attraction-Angebot schärfen</span></li>
+                    <li><span class="mark">→</span><span>Marketingstrategie erstellen</span></li>
+                    <li><span class="mark">→</span><span>Werbung starten</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="funnel-arrow" aria-hidden="true">
+              <svg width="28" height="36" viewBox="0 0 28 36" fill="none"><path d="M14 0V30M14 30L2 18M14 30L26 18" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="funnel-stage funnel-stage--attracting">
+              <div class="funnel-stage-head">
+                <span class="funnel-stage-num">2</span>
+                <h4>Attracting (Leadgen)<span class="funnel-stage-sub">Anziehen</span></h4>
+              </div>
+              <div class="funnel-stage-body">
+                <div class="funnel-col funnel-col-good">
+                  <h5>Gute Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✓</span><span>Leute fragen nach</span></li>
+                    <li><span class="mark">✓</span><span>Strategie ist klar</span></li>
+                    <li><span class="mark">✓</span><span>Leads kommen rein</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-bad">
+                  <h5>Schlechte Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✕</span><span>Niemand kennt dich</span></li>
+                    <li><span class="mark">✕</span><span>Anzeigen performen schlecht</span></li>
+                    <li><span class="mark">✕</span><span>Zu wenig Leads</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-todo">
+                  <h5>To-Do</h5>
+                  <ul>
+                    <li><span class="mark">→</span><span>Werbung starten</span></li>
+                    <li><span class="mark">→</span><span>Testen</span></li>
+                    <li><span class="mark">→</span><span>Anzeigen optimieren</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="funnel-arrow" aria-hidden="true">
+              <svg width="28" height="36" viewBox="0 0 28 36" fill="none"><path d="M14 0V30M14 30L2 18M14 30L26 18" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="funnel-stage funnel-stage--collecting">
+              <div class="funnel-stage-head">
+                <span class="funnel-stage-num">3</span>
+                <h4>Collecting (Landingpage, Leadmagnet)<span class="funnel-stage-sub">Einsammeln</span></h4>
+              </div>
+              <div class="funnel-stage-body">
+                <div class="funnel-col funnel-col-good">
+                  <h5>Gute Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✓</span><span>Leute besuchen die Website</span></li>
+                    <li><span class="mark">✓</span><span>Niedriger CPC bei Ads</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-bad">
+                  <h5>Schlechte Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✕</span><span>Niemand meldet sich an</span></li>
+                    <li><span class="mark">✕</span><span>Leute springen schnell ab</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-todo">
+                  <h5>To-Do</h5>
+                  <ul>
+                    <li><span class="mark">→</span><span>Werbung starten</span></li>
+                    <li><span class="mark">→</span><span>Struktur fixen</span></li>
+                    <li><span class="mark">→</span><span>Mehr testen</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="funnel-arrow" aria-hidden="true">
+              <svg width="28" height="36" viewBox="0 0 28 36" fill="none"><path d="M14 0V30M14 30L2 18M14 30L26 18" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="funnel-stage funnel-stage--converting">
+              <div class="funnel-stage-head">
+                <span class="funnel-stage-num">4</span>
+                <h4>Converting (Leadmagnet – Closing)<span class="funnel-stage-sub">Abschließen</span></h4>
+              </div>
+              <div class="funnel-stage-body">
+                <div class="funnel-col funnel-col-good">
+                  <h5>Gute Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✓</span><span>Leute melden sich an</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-bad">
+                  <h5>Schlechte Zeichen</h5>
+                  <ul>
+                    <li><span class="mark">✕</span><span>Schlechte Abschlussrate</span></li>
+                  </ul>
+                </div>
+                <div class="funnel-col funnel-col-todo">
+                  <h5>To-Do</h5>
+                  <ul>
+                    <li><span class="mark">→</span><span>Sales-Prozess fixen</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
           <h2>Die besten Maßnahmen zur Leadgenerierung</h2>
-          <p>Konkret vor abstrakt. Hier sind die Maßnahmen, die in der Praxis wirklich Leads bringen:</p>
+          <p>Hier sind die Maßnahmen, die in der Praxis wirklich Leads bringen:</p>
           <ul>
             <li><strong>Landingpages mit einem Angebot:</strong> Eine Seite, ein Ziel, ein Formular. Keine Ablenkung, keine zehn Links, die wegführen.</li>
             <li><strong>Content Marketing:</strong> Blogartikel, Guides und Checklisten, die echte Fragen beantworten, statt nur Produkteigenschaften aufzulisten.</li>
