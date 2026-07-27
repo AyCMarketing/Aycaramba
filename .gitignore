@@ -4,3 +4,27 @@ temporary screenshots/
 brand_assets/.env
 .env
 brand_assets/Videoclips/
+
+# Internal-only: never part of the deployed website
+Inspiration/
+references/
+CLAUDE.md
+brand_assets/AyC_Social Sharing.png
+brand_assets/Brand Guidelines.png
+brand_assets/Favicon_AyC_big.png
+brand_assets/Favicon_AyC_small.png
+brand_assets/Favicon_AyC_small_round.png
+brand_assets/Fonts/
+brand_assets/Graphs & Statistics/
+brand_assets/Images/Hero Images.jpg
+brand_assets/Images/iStock-1946674523_different.jpg
+brand_assets/Lines BG.png
+brand_assets/Logo/PNG/AyC_Logo_MainAyC_Logo_Accent.png
+brand_assets/Logo/PNG/AyC_Logo_MainAyC_Logo_Black.png
+brand_assets/Logo/PNG/AyC_Logo_MainAyC_Logo_White.png
+brand_assets/Logo/PNG/Rectangle 41.png
+brand_assets/Logo/SVG/
+brand_assets/Partners/vega_logo_white-2.png
+brand_assets/Peppi Desktop.png
+brand_assets/Peppi_Mobile.png
+brand_assets/Projekte/vlcsnap-2026-07-18-09h39m14s050.png
