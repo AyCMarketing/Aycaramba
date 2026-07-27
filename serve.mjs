@@ -44,10 +44,8 @@ http.createServer((req, res) => {
     }
 
     const headers = { 'Content-Type': contentType };
-    if (LONG_CACHE.has(ext)) {
-      headers['Cache-Control'] = 'public, max-age=31536000, immutable';
-    } else if (ext === '.css' || ext === '.js') {
-      headers['Cache-Control'] = 'public, max-age=2592000';
+    if (LONG_CACHE.has(ext) || ext === '.css' || ext === '.js') {
+      headers['Cache-Control'] = 'no-cache';
     }
 
     const acceptEncoding = req.headers['accept-encoding'] || '';
