@@ -40,7 +40,8 @@
       z-index: 5;
       overflow: hidden;
       isolation: isolate;
-      min-height: 100vh;
+      height: 100vh;
+      height: 100dvh;
       background: var(--color-ink);
     }
 
@@ -244,6 +245,10 @@
       main {
         display: flex;
         flex-direction: column;
+      }
+
+      main > * {
+        min-width: 0;
       }
 
       .hero {
