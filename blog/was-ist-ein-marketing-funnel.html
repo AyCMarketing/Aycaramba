@@ -488,6 +488,35 @@
         margin-top: -5rem;
       }
     }
+
+    /* ---------- Funnel shape ---------- */
+    .funnel-shape-figure {
+      margin: 2.5rem 0;
+    }
+
+    .funnel-shape-card {
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: 2rem 1.5rem 1.75rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .funnel-shape-card svg {
+      width: 100%;
+      height: auto;
+      max-width: 480px;
+    }
+
+    .funnel-shape-caption {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--color-ink-soft);
+      margin-top: 1rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -545,7 +574,7 @@
         <a href="index.html" class="back-link">← Zurück zum Blog</a>
         <span class="post-badge">Funnel &amp; Conversion</span>
         <h1>Was ist ein Marketing-Funnel? Definition, Phasen &amp; Aufbau</h1>
-        <p class="post-hero-lead">TOFU, MOFU, BOFU, AIDA-Modell und ein Bauplan, mit dem du aus Fremden planbar Kund:innen machst — statt auf Zufall zu hoffen.</p>
+        <p class="post-hero-lead">TOFU, MOFU, BOFU, AIDA klingt nach bescheuerten Marketingfachwörtern, kann Dir aber einen echten Merhwert in der Kundenakquise bieten.</p>
         <div class="post-meta">
           <span class="avatar-cartoon">NM</span>
           <a href="../ueber-uns.html">Niklas Markes</a>
@@ -560,7 +589,8 @@
       <div class="container">
         <article class="post-body">
 
-          <p class="post-lead">Wär's nicht fein, wenn du genau wüsstest, warum jemand deine Website verlässt, ohne zu kaufen? Ein Marketing-Funnel ist ein Modell, das genau diesen Weg sichtbar macht: die Reise, die Menschen von der ersten Begegnung mit deiner Marke bis zum Kauf durchlaufen, aufgeteilt in klar abgegrenzte Phasen wie Aufmerksamkeit, Interesse und Entscheidung. Er heißt Funnel (Trichter), weil auf jeder Phase Leute abspringen: Aus 1.000 Personen, die deine Anzeige sehen, werden vielleicht 50 Leads und am Ende 5 Kund:innen. Klingt nüchtern? Ist es. Genau diese Nüchternheit macht dein Marketing endlich planbar statt zufällig.</p>
+          <p class="post-lead">Jeder kennt den Begriff Trichter oder Funnel, aber weißt Du auch wirklich warum dieser Name gewählt wurde?
+Falls ja, Gratulation. Falls nein, hier die Erklärung: Er heißt Funnel (Trichter), weil auf jeder Phase Leute abspringen: Aus 1.000 Personen, die deine Anzeige sehen, werden vielleicht 50 Leads und am Ende 5 Kund:innen. Klingt nüchtern? Ist es. Aber don’t be sad: Denn genau diese Erkenntnis spielt eine große Rolle im erfolgreichen Marketing.</p>
 
           <div class="post-toc" aria-label="Inhaltsverzeichnis">
             <p class="post-toc-title">Inhalt dieses Artikels</p>
@@ -602,6 +632,33 @@
 
           <h2 id="phasen">Die Phasen des Marketing-Funnels: TOFU, MOFU, BOFU</h2>
           <p>Die drei Buchstaben-Kürzel klingen komplizierter, als sie sind. Sie beschreiben schlicht, wo im Trichter jemand gerade steht — und was diese Person als Nächstes sehen sollte. <a href="https://blog.hubspot.de/marketing/marketing-funnel" target="_blank" rel="noopener">HubSpot</a> ordnet dieselbe Logik im eigenen Funnel-Modell den Phasen Reach, Akquisition und Conversion zu, im Kern läuft es aber auf dieselben drei Stufen hinaus.</p>
+
+          <figure class="funnel-shape-figure">
+            <div class="funnel-shape-card">
+              <svg width="620" height="500" viewBox="0 0 620 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trichterdiagramm mit den Phasen TOFU, MOFU, BOFU und Retention &amp; Loyalty">
+                <polygon points="40,20 580,20 470,160 150,160" fill="#4E9DB8" stroke="#171214" stroke-width="4" stroke-linejoin="round"/>
+                <polygon points="150,160 470,160 380,300 240,300" fill="#F4680A" stroke="#171214" stroke-width="4" stroke-linejoin="round"/>
+                <polygon points="240,300 380,300 325,410 295,410" fill="#FF008E" stroke="#171214" stroke-width="4" stroke-linejoin="round"/>
+
+                <text x="310" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Poppins" font-weight="900" font-size="26">TOFU</text>
+                <text x="310" y="108" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Inter" font-weight="600" font-size="14">Awareness · 1.000 Besucher:innen</text>
+
+                <text x="310" y="222" text-anchor="middle" fill="#FFFFFF" font-family="Poppins" font-weight="900" font-size="24">MOFU</text>
+                <text x="310" y="248" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Inter" font-weight="600" font-size="13">Consideration · 50 Leads</text>
+
+                <text x="310" y="335" text-anchor="middle" fill="#FFFFFF" font-family="Poppins" font-weight="900" font-size="16">BOFU</text>
+                <text x="310" y="353" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Inter" font-weight="600" font-size="10">5 Kund:innen</text>
+
+                <g transform="translate(310,458)">
+                  <path d="M -18,-8 A 22 22 0 1 1 -18,8" stroke="#171214" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path d="M -25,-14 L -18,-8 L -10,-15" stroke="#171214" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <text x="345" y="463" text-anchor="start" fill="#171214" font-family="Inter" font-weight="700" font-size="13">Retention &amp; Loyalty</text>
+              </svg>
+            </div>
+            <figcaption class="funnel-shape-caption">Aus 1.000 Besucher:innen werden 50 Leads und am Ende 5 zahlende Kund:innen — dieselbe Reise, die dieser Artikel beschreibt.</figcaption>
+          </figure>
+
           <h3>Top of Funnel (TOFU) — Aufmerksamkeit</h3>
           <p>Die Person kennt dich noch nicht. Hier zählt Reichweite, nicht der Verkauf. Passende Inhalte: Blogartikel wie dieser, Social-Media-Posts, SEO-Content, Kurzvideos. Ziel ist, überhaupt wahrgenommen zu werden, nicht sofort zu konvertieren.</p>
           <h3>Middle of Funnel (MOFU) — Interesse &amp; Abwägung</h3>
