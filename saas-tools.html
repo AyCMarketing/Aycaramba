@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS-Tools — Ay Caramba!</title>
+  <meta name="description" content="Peppi und Vega — die eigenen SaaS-Tools von AyCaramba für Content-Erstellung und mehr.">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .wave-zone {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-white);
+    }
+
+    .wave-zone .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-wave-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .services-wave-bg-mirror {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32%;
+      width: 100%;
+      height: auto;
+      transform: scaleX(-1);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .services-wave-bg {
+        bottom: 22%;
+      }
+
+      .services-wave-bg-mirror {
+        display: block;
+        bottom: 46%;
+      }
+
+      .tools-wave-zone .services-wave-bg-mirror {
+        bottom: 63.5%;
+      }
+    }
+
+    .tools-overview {
+      background: transparent;
+      text-align: center;
+    }
+
+    .tools-overview-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      max-width: 18ch;
+      margin: 0 auto 3rem;
+    }
+
+    .tool-showcase-list {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .tool-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .tool-showcase:nth-child(even) .tool-showcase-media {
+      order: 2;
+    }
+
+    .tool-showcase-media img {
+      width: 100%;
+      border-radius: 24px;
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .tool-showcase-media.is-mockup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-teal);
+      padding: 2rem;
+      border-radius: 24px;
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .tool-showcase-media.is-mockup img {
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      width: 100%;
+    }
+
+    .tool-showcase-body h3 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .tool-showcase-body p {
+      color: var(--color-ink-soft);
+      max-width: 52ch;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (max-width: 860px) {
+      .tool-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-showcase:nth-child(even) .tool-showcase-media {
+        order: -1;
+      }
+    }
+
+    .cta-band {
+      background: transparent;
+    }
+
+    .site-header {
+      background: var(--color-orange);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    .page-header {
+      background: var(--color-orange);
+      border-bottom: var(--cs-border-xthick);
+      padding-top: 1rem;
+    }
+
+    .page-header h1,
+    .page-header-lead,
+    .page-header .eyebrow-script {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .page-header-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header-text {
+        margin: 0 auto;
+      }
+
+      .page-header-cta {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+            <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+            <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html" aria-current="page">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-row">
+          <div class="page-header-text">
+            <h1>Unsere In-House Tools</h1>
+            <p class="page-header-lead">Weil wir wissen, wie's sich anfühlt, wenn Software nicht mitdenkt, bauen wir unsere eigene. Zwei eigenständige Produkte, beide live und eigenständig erreichbar.</p>
+          </div>
+          <a href="kontakt.html" class="btn-cartoon btn-cartoon-teal page-header-cta">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SaaS Tools -->
+    <div class="wave-zone tools-wave-zone">
+      <img class="services-wave-bg" src="Vectorized_vertical.png" alt="" aria-hidden="true">
+      <img class="services-wave-bg-mirror" src="Vectorized_vertical.png" alt="" aria-hidden="true">
+
+      <section class="section-cartoon tools-overview">
+        <div class="container">
+          <h2 class="tools-overview-title">Unsere Tools zum Mitnehmen</h2>
+          <div class="tool-showcase-list">
+
+            <article class="tool-showcase">
+              <div class="tool-showcase-media">
+                <img src="brand_assets/Projekte/Projekt%20%236%20Peppi%20SaaS%20Tool.jpg" alt="Peppi Content-Creator Oberfläche">
+              </div>
+              <div class="tool-showcase-body">
+                <h3>Peppi</h3>
+                <p>Peppi ist unser hauseigenes Social-Media-Tool für deutschsprachige Unternehmen – gebaut für alle, denen Social Media gehörig auf die Nerven geht. Keine Zeit für Marketing, aber trotzdem Bock auf Sichtbarkeit? Genau dafür gibt's Peppi: Ideen finden, Postings für alle gängigen Plattformen und Content-Formate erstellen, im Kalender einplanen – fertig. Ein Tool. Alles drin. Nerven geschont.</p>
+                <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener" class="btn-cartoon btn-cartoon-pink">Zu Peppi ↗</a>
+              </div>
+            </article>
+
+            <article class="tool-showcase">
+              <div class="tool-showcase-media is-mockup">
+                <img src="brand_assets/Visitors_Mockup_hell.png" alt="Vega Besucher-Übersicht">
+              </div>
+              <div class="tool-showcase-body">
+                <h3>Vega</h3>
+                <p>Eine KI, die Kaufabsichten in Echtzeit erkennt? Das ist kein Nice-to-have, das ist ein unfairer Vorteil. VEGA fängt Absprünge ab und führt Unentschlossene zum Abschluss – mit KI-Agents, die nicht nur beraten, sondern verkaufen.</p>
+                <p>Das Beste: VEGA ist unser Partner und bei uns fest inkludiert. Andere bauen Funnels und hoffen. Wir bauen Funnels, die aktiv verkaufen. Eigene Liga – und du ab jetzt auch.</p>
+                <a href="https://www.vega.company" target="_blank" rel="noopener" class="btn-cartoon btn-cartoon-teal">Zu Vega ↗</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Terminbuchung -->
+    <section class="section-cartoon booking-cartoon">
+      <div class="container">
+        <div class="booking-embed">
+          <h2>Du willst mehr über unsere Tools erfahren?</h2>
+          <p class="booking-lead">Kein Verkaufsgespräch, kein Bla — nur 15 Minuten, um zu schauen, ob's zwischen uns
+            passt. Wähl dir einfach einen freien Termin aus.</p>
+
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/d/dz5m-ztm-tkf?primary_color=f4680a"
+            style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html" aria-current="page">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

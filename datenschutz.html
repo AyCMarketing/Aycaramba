@@ -1,276 +1,183 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz — Aycaramba</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz — Ay Caramba!</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://aycaramba.at/datenschutz">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    :root {
-      --dark: #0c0c0c;
-      --dark-2: #111111;
-      --dark-3: #171717;
-      --dark-4: #1e1e1e;
-      --pink: #e53a69;
-      --pink-hover: #f04878;
-      --off-white: #f4efe9;
-      --muted: rgba(244, 239, 233, 0.55);
+    .legal-content {
+      max-width: 720px;
+      padding-block: var(--space-section);
+      margin-inline: auto;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--dark);
-      background-image: url('brand_assets/BG%20Main.png');
-      background-size: 420px auto;
-      background-attachment: fixed;
-      background-repeat: repeat;
-      color: var(--off-white);
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
+    .legal-content h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
     }
-
-    @font-face {
-      font-family: 'Basement';
-      src: url('brand_assets/Fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    /* ── Nav ── */
-    #nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 0 2rem;
-      height: 68px;
-      display: flex;
-      align-items: center;
-      background: transparent;
-      transition: background 0.3s ease, border-color 0.3s ease;
-      border-bottom: 1px solid transparent;
-    }
-    #nav.scrolled {
-      background: rgba(12,12,12,0.92);
-      border-color: rgba(244,239,233,0.07);
-      backdrop-filter: blur(12px);
-    }
-    .nav-inner {
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-back {
-      font-family: 'Basement', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: color 0.2s ease;
-    }
-    .nav-back:hover { color: var(--off-white); }
-    .nav-back svg { transition: transform 0.2s ease; }
-    .nav-back:hover svg { transform: translateX(-3px); }
-
-    /* ── Page Layout ── */
-    .page-wrap {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 120px 2rem 6rem;
-    }
-
-    /* ── Header ── */
-    .page-label {
-      font-family: 'Basement', sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 1.25rem;
-      display: block;
-    }
-    .page-title {
-      font-family: 'Basement', sans-serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 0.95;
-      text-transform: uppercase;
-      color: var(--off-white);
-      letter-spacing: -0.02em;
-      margin-bottom: 3rem;
-    }
-    .page-divider {
-      width: 48px;
-      height: 2px;
-      background: var(--pink);
-      margin-bottom: 3rem;
-      opacity: 0.7;
-    }
-
-    /* ── Content ── */
-    .legal-section {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(244,239,233,0.07);
-    }
-    .legal-section:last-child {
-      border-bottom: none;
-    }
-    .legal-section h2 {
-      font-family: 'Basement', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 1rem;
-    }
-    .legal-section p,
-    .legal-section address {
-      font-size: 0.95rem;
-      line-height: 1.75;
-      color: rgba(244,239,233,0.75);
-      font-style: normal;
-    }
-    .legal-section p + p {
-      margin-top: 0.75rem;
-    }
-    .legal-section a {
-      color: var(--pink);
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .legal-section a:hover { opacity: 0.75; }
-
-    .placeholder-note {
-      display: inline-block;
-      background: rgba(229,58,105,0.08);
-      border: 1px dashed rgba(229,58,105,0.3);
-      border-radius: 3px;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.78rem;
-      color: rgba(229,58,105,0.6);
-      letter-spacing: 0.05em;
-      margin-top: 0.5rem;
-    }
-
-    /* ── Footer ── */
-    footer {
-      padding: 2.5rem 2rem;
-      border-top: 1px solid rgba(244,239,233,0.06);
-    }
-    .footer-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .footer-copy {
-      font-size: 0.8rem;
-      color: rgba(244,239,233,0.3);
-      letter-spacing: 0.03em;
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-    .footer-links a {
-      font-size: 0.8rem;
-      color: rgba(244,239,233,0.3);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--off-white); }
-    .footer-links a.active { color: var(--pink); }
   </style>
 </head>
 <body>
 
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="index.html" aria-label="Aycaramba Home">
-        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:36px;width:auto;" />
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/PNG/AyC_Logo_Main.png" alt="Ay Caramba!">
       </a>
-      <a href="index.html" class="nav-back">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Zurück
-      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+            <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+            <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="page-wrap">
+  <main class="container">
+    <div class="legal-content">
+      <h1>Datenschutz</h1>
 
-    <span class="page-label">Rechtliches</span>
-    <h1 class="page-title">Datenschutz</h1>
-    <div class="page-divider"></div>
-
-    <div class="legal-section">
       <h2>Einleitung</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2021). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.</p>
 
-    <div class="legal-section">
       <h2>Verantwortlicher</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <p>
+        AyCaramba e.U.<br>
+        Martinstraße 25<br>
+        3400 Klosterneuburg<br>
+        Österreich<br>
+        E-Mail: <a href="mailto:office@aycaramba.at">office@aycaramba.at</a><br>
+        Tel.: <a href="tel:+436603222837">+43 660 32 22 837</a>
+      </p>
 
-    <div class="legal-section">
-      <h2>Erhebung und Verarbeitung personenbezogener Daten</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <h2>Hosting &amp; Server-Logfiles</h2>
+      <p>Diese Website wird gehostet bei: Hostinger UAB, Švitrigailos g. 34, 03230 Vilnius, Litauen (<a href="https://www.hostinger.com/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung Hostinger</a>).</p>
+      <p>Beim Besuch unserer Website werden automatisch folgende Daten in Server-Logfiles gespeichert: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene URL, Referrer-URL sowie Browser und Betriebssystem. Diese Daten sind technisch notwendig für die Auslieferung der Website (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO) und werden nach spätestens 7 Tagen automatisch gelöscht.</p>
 
-    <div class="legal-section">
+      <h2>Kontaktformular &amp; Kontaktaufnahme</h2>
+      <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden Ihre angegebenen Daten (Name, E-Mail-Adresse, Nachricht) zum Zweck der Bearbeitung Ihrer Anfrage bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Die Daten werden gelöscht, sobald Ihre Anfrage abschließend bearbeitet ist und keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+      <h2>Google Fonts</h2>
+      <p>Diese Website verwendet Google Fonts (Anbieter: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Beim Laden der Seite werden Schriftarten von Google-Servern abgerufen, wobei Ihre IP-Adresse an Google übertragen wird. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung). Informationen zur Datenverarbeitung durch Google finden Sie unter <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
       <h2>Cookies</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <p>Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Es werden keine Tracking- oder Werbe-Cookies eingesetzt. Eine Einwilligung ist für technisch notwendige Cookies nicht erforderlich (§ 165 Abs. 3 TKG 2021).</p>
 
-    <div class="legal-section">
       <h2>Ihre Rechte</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <p>Ihnen stehen bezüglich Ihrer bei uns gespeicherten Daten grundsätzlich folgende Rechte zu:</p>
+      <p>Auskunft (Art. 15 DSGVO) · Berichtigung (Art. 16 DSGVO) · Löschung (Art. 17 DSGVO) · Einschränkung der Verarbeitung (Art. 18 DSGVO) · Datenübertragbarkeit (Art. 20 DSGVO) · Widerspruch (Art. 21 DSGVO)</p>
+      <p>Zur Ausübung dieser Rechte wenden Sie sich bitte an: <a href="mailto:office@aycaramba.at">office@aycaramba.at</a></p>
 
-    <div class="legal-section">
-      <h2>Kontakt</h2>
-      <p><span class="placeholder-note">Inhalt folgt</span></p>
-    </div>
+      <h2>Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <p>Sie haben das Recht, sich bei der österreichischen Datenschutzbehörde zu beschweren:</p>
+      <p>
+        Österreichische Datenschutzbehörde<br>
+        Barichgasse 40–42, 1030 Wien<br>
+        Tel.: +43 1 52 152-0<br>
+        E-Mail: <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a><br>
+        Web: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>
+      </p>
 
+      <h2>Aktualität &amp; Änderungen</h2>
+      <p>Diese Datenschutzerklärung hat den Stand Juni 2026. Wir behalten uns vor, diese bei Bedarf anzupassen, um stets den aktuellen rechtlichen Anforderungen zu entsprechen.</p>
+    </div>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <a href="index.html" aria-label="Aycaramba Home">
-        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:32px;width:auto;opacity:0.9;" />
-      </a>
-      <p class="footer-copy">© 2025 Aycaramba. Alle Rechte vorbehalten.</p>
-      <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html" class="active">Datenschutz</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    window.addEventListener('scroll', () => {
-      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

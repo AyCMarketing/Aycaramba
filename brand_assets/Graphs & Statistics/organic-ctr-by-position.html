@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Organische Klickrate nach Position — AyCaramba</title>
+<style>
+  @font-face{font-family:Yakin;src:url("../Fonts/Yakin.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+  :root{
+    --color-orange:#F4680A;
+    --color-orange-light:#FF9A4D;
+    --color-orange-dark:#C2530A;
+    --color-teal:#4E9DB8;
+    --color-teal-dark:#386F80;
+    --color-cream:#F3E7CE;
+    --color-white:#FFFFFF;
+    --color-ink:#171214;
+    --color-ink-soft:rgba(23,18,20,0.65);
+    --font-display:"Poppins",sans-serif;
+    --font-accent:"Yakin",cursive;
+    --font-body:"Inter",sans-serif;
+    --cs-border-thick:3px solid var(--color-ink);
+    --cs-border-xthick:4px solid var(--color-ink);
+    --shadow-pop-lg:8px 8px 0 0 var(--color-ink);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:var(--font-body);
+    background:var(--color-cream);
+    color:var(--color-ink);
+    padding:3rem 1.5rem;
+    display:flex;
+    justify-content:center;
+  }
+  .chart-card{
+    width:100%;
+    max-width:840px;
+    background:var(--color-white);
+    border:var(--cs-border-xthick);
+    border-radius:28px;
+    box-shadow:var(--shadow-pop-lg);
+    padding:clamp(1.75rem,4vw,3rem);
+  }
+  .chart-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.8rem;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--color-ink);
+    background:var(--color-teal);
+    border:2px solid var(--color-ink);
+    border-radius:999px;
+    padding:0.35rem 0.9rem;
+    margin-bottom:1.1rem;
+  }
+  .chart-title{
+    font-family:var(--font-display);
+    font-weight:900;
+    letter-spacing:-0.02em;
+    font-size:clamp(1.5rem,3.2vw,2.1rem);
+    line-height:1.15;
+    margin-bottom:0.4rem;
+    max-width:26ch;
+  }
+  .chart-sub{
+    font-family:var(--font-body);
+    font-size:0.92rem;
+    color:var(--color-ink-soft);
+    margin-bottom:2.25rem;
+  }
+  .bar-row{
+    display:grid;
+    grid-template-columns:56px 1fr 76px;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:0.85rem;
+  }
+  .bar-rank{
+    font-family:var(--font-display);
+    font-weight:900;
+    font-size:1.05rem;
+    color:var(--color-ink);
+  }
+  .bar-track{
+    position:relative;
+    height:34px;
+    background:var(--color-cream);
+    border:2px solid var(--color-ink);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .bar-fill{
+    position:absolute;
+    inset:0;
+    width:0%;
+    background:var(--color-orange);
+    border-right:2px solid var(--color-ink);
+    border-radius:8px 0 0 8px;
+  }
+  .bar-row:first-child .bar-fill{
+    background:var(--color-orange-dark);
+  }
+  .bar-row:nth-child(2) .bar-fill{
+    background:var(--color-orange);
+  }
+  .bar-fill.is-full{
+    border-radius:8px;
+    border-right:none;
+  }
+  .bar-caption{
+    position:absolute;
+    left:0.75rem;
+    top:50%;
+    transform:translateY(-50%);
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.75rem;
+    color:var(--color-ink-soft);
+    white-space:nowrap;
+  }
+  .bar-value{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:1rem;
+    color:var(--color-ink);
+    text-align:right;
+  }
+  .chart-footnote{
+    margin-top:1.75rem;
+    padding-top:1.25rem;
+    border-top:1px solid rgba(23,18,20,0.15);
+    font-family:var(--font-body);
+    font-size:0.78rem;
+    color:var(--color-ink-soft);
+  }
+  .chart-source{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    flex-wrap:wrap;
+    margin-top:0.35rem;
+  }
+  .chart-brand{
+    font-family:var(--font-accent);
+    font-size:1rem;
+    color:var(--color-pink,var(--color-orange));
+  }
+</style>
+</head>
+<body>
+
+  <div class="chart-card">
+    <span class="chart-eyebrow">SEO &amp; Sichtbarkeit</span>
+    <h1 class="chart-title">Organische Klickrate nach Google-Position</h1>
+    <p class="chart-sub">Anteil der Klicks pro Ranking-Platz auf Seite 1 der Suchergebnisse.</p>
+
+    <div id="bars"></div>
+
+    <div class="chart-footnote">
+      <div>* Featured Snippet / Position 0 enthalten &nbsp; ** inkl. People-Also-Ask-Klicks</div>
+      <div class="chart-source">
+        <span>Quelle: aioseo.com</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const data = [
+      { rank: 1, value: 39.8, note: '*' },
+      { rank: 2, value: 18.7, note: '**' },
+      { rank: 3, value: 10.2 },
+      { rank: 4, value: 7.2 },
+      { rank: 5, value: 5.1 },
+      { rank: 6, value: 4.4 },
+      { rank: 7, value: 3.0 },
+      { rank: 8, value: 2.1 },
+      { rank: 9, value: 1.9 },
+      { rank: 10, value: 1.6, caption: '(falls vorhanden)' },
+    ];
+
+    const max = Math.max(...data.map(d => d.value));
+    const container = document.getElementById('bars');
+
+    data.forEach(d => {
+      const row = document.createElement('div');
+      row.className = 'bar-row';
+
+      const rank = document.createElement('div');
+      rank.className = 'bar-rank';
+      rank.textContent = '#' + d.rank;
+
+      const track = document.createElement('div');
+      track.className = 'bar-track';
+
+      const fill = document.createElement('div');
+      fill.className = 'bar-fill';
+      const pct = (d.value / max) * 100;
+      fill.style.width = pct.toFixed(1) + '%';
+      if (pct > 96) fill.classList.add('is-full');
+
+      if (d.caption) {
+        const caption = document.createElement('span');
+        caption.className = 'bar-caption';
+        caption.style.left = 'calc(' + pct.toFixed(1) + '% + 0.75rem)';
+        caption.textContent = d.caption;
+        track.appendChild(fill);
+        track.appendChild(caption);
+      } else {
+        track.appendChild(fill);
+      }
+
+      const value = document.createElement('div');
+      value.className = 'bar-value';
+      value.textContent = d.value.toFixed(1).replace('.', ',') + '%' + (d.note || '');
+
+      row.appendChild(rank);
+      row.appendChild(track);
+      row.appendChild(value);
+      container.appendChild(row);
+    });
+  </script>
+
+</body>
+</html>

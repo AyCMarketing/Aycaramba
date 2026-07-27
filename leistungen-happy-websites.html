@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website-Perfektion — Ay Caramba!</title>
+  <meta name="description" content="Web-/Shopentwicklung, SEO & SEA und Content & Wartung — Websites, die nicht nur gut aussehen, sondern auch verkaufen.">
+  <link rel="canonical" href="https://aycaramba.at/leistungen-happy-websites">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Website-Perfektion — Ay Caramba!">
+  <meta property="og:description" content="Web-/Shopentwicklung, SEO & SEA und Content & Wartung — Websites, die nicht nur gut aussehen, sondern auch verkaufen.">
+  <meta property="og:url" content="https://aycaramba.at/leistungen-happy-websites">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website-Perfektion — Ay Caramba!">
+  <meta name="twitter:description" content="Web-/Shopentwicklung, SEO & SEA und Content & Wartung — Websites, die nicht nur gut aussehen, sondern auch verkaufen.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .services-overview .services-stack .tile-cartoon:nth-child(1) .tile-cartoon-icon { background: var(--color-teal-light); }
+    .services-overview .services-stack .tile-cartoon:nth-child(2) .tile-cartoon-icon { background: var(--color-orange-light); }
+    .services-overview .services-stack .tile-cartoon:nth-child(3) .tile-cartoon-icon { background: var(--color-pink-mid); }
+    .services-overview .services-stack .tile-cartoon:nth-child(4) .tile-cartoon-icon { background: var(--color-pink-soft); }
+    .services-overview .services-stack .tile-cartoon:nth-child(5) .tile-cartoon-icon { background: var(--color-teal-light); }
+    .services-overview .services-stack .tile-cartoon:nth-child(6) .tile-cartoon-icon { background: var(--color-orange-light); }
+
+    .services-overview {
+      background: transparent;
+    }
+
+    /* ---------- Wellen-Hintergrund hinter den Unterleistungen ---------- */
+    .wave-zone {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-white);
+    }
+
+    .wave-zone .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-wave-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .services-wave-bg-mirror {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32%;
+      width: 100%;
+      height: auto;
+      transform: scaleX(-1);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Diese Seite hat 6 statt 3 Kacheln, der Wellen-Zone-Container ist also
+       deutlich höher — bottom:0 würde die Welle viel zu weit unten
+       positionieren. Auf Desktop deshalb fix von oben aus verankert, direkt
+       unter dem Seitenkopf, unabhängig von der Höhe des Kachel-Stacks darunter. */
+    @media (min-width: 641px) {
+      .services-wave-bg {
+        top: 220px;
+        bottom: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-wave-bg {
+        bottom: 22%;
+      }
+
+      .services-wave-bg-mirror {
+        display: block;
+        bottom: 46%;
+      }
+    }
+
+    .cta-band {
+      background: transparent;
+    }
+
+    .site-header {
+      background: var(--color-teal);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    .page-header {
+      background: var(--color-teal);
+      border-bottom: var(--cs-border-xthick);
+      padding-top: 1rem;
+    }
+
+    .page-header h1,
+    .page-header-lead,
+    .page-header .eyebrow-script,
+    .page-header .back-link {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .page-header-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header-text {
+        margin: 0 auto;
+      }
+
+      .page-header-cta {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+            <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+            <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign" aria-current="page">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <a href="leistungen.html" class="back-link">← Alle Leistungen</a>
+        <div class="page-header-row">
+          <div class="page-header-text">
+            <h1>Website-Perfektion</h1>
+            <p class="page-header-lead"><strong>Wär's nicht fein, eine eigene Website zu haben, die nicht nur geil aussieht, sondern auch Kunden am laufenden Band bringt?</strong></p>
+          </div>
+          <a href="kontakt.html" class="btn-cartoon btn-cartoon-primary page-header-cta">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-zone">
+      <img class="services-wave-bg" src="Vectorized_vertical.png" alt="" aria-hidden="true">
+      <img class="services-wave-bg-mirror" src="Vectorized_vertical.png" alt="" aria-hidden="true">
+
+      <!-- Unterleistungen -->
+      <section class="section-cartoon services-overview">
+        <div class="container">
+          <div class="services-stack">
+            <div class="tile-cartoon" id="webdesign">
+              <div class="tile-cartoon-icon">🎨</div>
+              <div>
+                <h3>Webdesign</h3>
+                <p>Heutzutage ist es leicht, mittelmäßige Websites zu erstellen. Wer allerdings herausstechen will, muss einzigartig aussehen — wir helfen dir dabei!</p>
+              </div>
+            </div>
+            <div class="tile-cartoon" id="webentwicklung-wordpress">
+              <div class="tile-cartoon-icon">📝</div>
+              <div>
+                <h3>Webentwicklung: WordPress</h3>
+                <p>Deine eigene Website, in deinen Händen und immer konfigurierbar — möglich gemacht durch WordPress.</p>
+              </div>
+            </div>
+            <div class="tile-cartoon" id="webentwicklung-individuell">
+              <div class="tile-cartoon-icon">🧩</div>
+              <div>
+                <h3>Webentwicklung: Benutzerdefinierte Websites</h3>
+                <p>Du hast was Spezielles im Kopf? Kein Problem, wir bauen dir gerne deine maßgeschneiderte Lösung.</p>
+              </div>
+            </div>
+            <div class="tile-cartoon" id="shopentwicklung">
+              <div class="tile-cartoon-icon">🛒</div>
+              <div>
+                <h3>Shopentwicklung</h3>
+                <p>Du möchtest deinen eigenen Shop aufbauen? Kein Problem, wir bauen ihn dir!</p>
+              </div>
+            </div>
+            <div class="tile-cartoon" id="seo-sea">
+              <div class="tile-cartoon-icon">🔍</div>
+              <div>
+                <h3>SEO &amp; SEA</h3>
+                <p><strong>Sichtbarkeit ist kein Zufall.</strong> Wir sorgen dafür, dass deine Website möglichst vielen Menschen angezeigt wird und dadurch mehr Umsatz über deine Website generiert wird.</p>
+              </div>
+            </div>
+            <div class="tile-cartoon" id="content-wartung">
+              <div class="tile-cartoon-icon">🛠️</div>
+              <div>
+                <h3>Content &amp; Wartung</h3>
+                <p><strong>Präsent und aktuell sein kostet Zeit, Ausfälle sind verboten.</strong> Was du brauchst? Einen Partner, der sich um deine News kümmert und deine Website immer auf dem sichersten und aktuellsten Stand hält.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CTA -->
+    <section class="section-cartoon cta-band">
+      <div class="container">
+        <div class="cta-banner">
+          <p class="cta-banner-text">Bereit für eine Website, die wirklich was bringt? Melde dich unverbindlich.</p>
+          <a href="kontakt.html" class="cta-badge">
+            <span>Unverbindlich anfragen</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referenzen — Ay Caramba!</title>
+  <meta name="description" content="Was Kund:innen über die Zusammenarbeit mit AyCaramba sagen — und ausgewählte Projekte, an denen wir gearbeitet haben.">
+  <link rel="canonical" href="https://aycaramba.at/referenzen">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Referenzen — Ay Caramba!">
+  <meta property="og:description" content="Was Kund:innen über die Zusammenarbeit mit AyCaramba sagen — und ausgewählte Projekte, an denen wir gearbeitet haben.">
+  <meta property="og:url" content="https://aycaramba.at/referenzen">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Referenzen — Ay Caramba!">
+  <meta name="twitter:description" content="Was Kund:innen über die Zusammenarbeit mit AyCaramba sagen — und ausgewählte Projekte, an denen wir gearbeitet haben.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Reviews ---------- */
+    .reviews-cartoon {
+      background: var(--color-white);
+      color: var(--color-ink);
+      text-align: center;
+    }
+
+    .reviews-cartoon .rating-badge {
+      margin: 0 auto 3rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: var(--color-orange);
+      color: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-pop-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .testimonial-card:nth-child(2) {
+      background: var(--color-pink);
+    }
+
+    .testimonial-card:nth-child(3) {
+      background: var(--color-teal);
+    }
+
+    .testimonial-card:nth-child(4) {
+      background: var(--color-orange);
+    }
+
+    .testimonial-card .stars {
+      color: var(--color-white);
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--color-white);
+      margin: 0;
+      flex: 1;
+    }
+
+    .testimonial-author {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .testimonial-author strong {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--color-white);
+    }
+
+    .testimonial-author span,
+    .testimonial-author a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-white);
+    }
+
+    .testimonial-author a {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .testimonial-author a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1100px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- Projekt-Galerie ---------- */
+    .gallery-cartoon {
+      background: var(--color-cream);
+    }
+
+    .gallery-cartoon .eyebrow-script {
+      display: block;
+      text-align: center;
+    }
+
+    .gallery-cartoon h2 {
+      text-align: center;
+      max-width: 20ch;
+      margin: 0 auto 3rem;
+    }
+
+    .gallery-carousel {
+      position: relative;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 1.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0.5rem clamp(1.5rem, 14vw, 16vw) 2rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-card {
+      flex: 0 0 min(620px, 78vw);
+      scroll-snap-align: center;
+      background: var(--color-ink);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      overflow: hidden;
+      opacity: 0.45;
+      transform: scale(0.93);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover:not(.is-active) {
+      opacity: 0.7;
+    }
+
+    .gallery-card:focus-visible {
+      outline: 3px solid var(--color-orange);
+      outline-offset: 4px;
+    }
+
+    .gallery-card.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-card-media {
+      aspect-ratio: 16 / 10;
+      background: var(--color-ink-soft);
+    }
+
+    .gallery-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card-body {
+      padding: 1.5rem 1.75rem 1.85rem;
+    }
+
+    .gallery-card-body h3 {
+      color: var(--color-white);
+      font-size: 1.15rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .gallery-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag-chip {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-white);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.35rem 0.9rem;
+    }
+
+    .gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery-dots {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gallery-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(23, 18, 20, 0.25);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: width 0.25s ease, background 0.25s ease;
+    }
+
+    .gallery-dot.is-active {
+      width: 26px;
+      border-radius: 4px;
+      background: var(--color-ink);
+    }
+
+    .gallery-arrows {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .gallery-arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .gallery-arrow:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop);
+    }
+
+    .gallery-arrow:active {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-card {
+        transition: none;
+      }
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-band {
+      background: transparent;
+    }
+
+    .site-header {
+      background: var(--color-teal);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    .page-header {
+      background: var(--color-teal);
+      border-bottom: var(--cs-border-xthick);
+      padding-top: 1rem;
+    }
+
+    .page-header h1,
+    .page-header-lead,
+    .page-header .eyebrow-script {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .page-header-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header-text {
+        margin: 0 auto;
+      }
+
+      .page-header-cta {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+            <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+            <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html" aria-current="page">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-row">
+          <div class="page-header-text">
+            <h1>Referenzen</h1>
+            <p class="page-header-lead">Kein Kunde ist wie der andere und trotzdem sagen alle irgendwie dasselbe: Die Zusammenarbeit war unkompliziert, schnell und hat sich am Ende ausgezahlt. Lies selbst.</p>
+          </div>
+          <a href="kontakt.html" class="btn-cartoon btn-cartoon-primary page-header-cta">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section-cartoon reviews-cartoon">
+      <div class="container">
+        <div class="rating-badge">
+          <span class="stars">★★★★★</span>
+          <strong>5,0</strong> Durchschnittsbewertung
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba ist seit Jahren unser verlässlicher Partner in Sachen Marketing und Branding. Kreativ, schnell und immer genau auf unsere Wünsche zugeschnitten. Uneingeschränkte Empfehlung.“</p>
+            <div class="testimonial-author">
+              <strong>Horst Kriechbaum</strong>
+              <a href="https://hausverkauf-klosterneuburg.at" target="_blank" rel="noopener">hausverkauf-klosterneuburg.at</a>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba hat uns bei unserem Offline-Funnel enorm unterstützt – unkompliziert, schnell und auf den Punkt. Die Designs haben bei unseren Kunden für echtes Erstaunen gesorgt. Vielen Dank für die tolle Arbeit!“</p>
+            <div class="testimonial-author">
+              <strong>Marco Brunner</strong>
+              <span>auxilio Assistenzsysteme</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba hat für mich Online-Kampagnen gestaltet – absolut top! Sehr professionell, gestartet mit einem Workshop und perfekt umgesetzt. Auch mit 30 Jahren Berufserfahrung: eine zweite Meinung bei AyCaramba lohnt sich :-).“</p>
+            <div class="testimonial-author">
+              <strong>Bert Heinen</strong>
+              <span>Kraftquell INSIDE</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„Der KI-Workflow von AyCaramba erspart mir mindestens 10 Stunden administrative Arbeit pro Monat und läuft fehlerfrei im Hintergrund. Auch wenn ich zuerst skeptisch war: Diese Agentur weiß, wie man KI effizient einsetzt!“</p>
+            <div class="testimonial-author">
+              <strong>Valentin Skopek</strong>
+              <span>Personal Trainer</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekt-Galerie -->
+    <section class="section-cartoon gallery-cartoon">
+      <div class="container">
+        <h2>Ausgewählte Arbeiten</h2>
+      </div>
+      <div class="gallery-carousel">
+        <div class="gallery-track" id="galleryTrack">
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%236%20Peppi%20SaaS%20Tool.jpg" alt="Peppi Content-Creator Tool">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Peppi Content Creator</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">SaaS Tool</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%231%20Kanzlei%20Machac%20%26%20H%C3%A4ussler,%20Erotikmesse.jpg" alt="Print-Kampagne für Kanzlei Machac &amp; Häussler zur Erotikmesse">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Kanzlei Machac &amp; Häussler — Erotikmesse</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Print-Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%232%20FirstFloor.png" alt="Social-Media-Content für die FirstFloor Bar Wien">
+            </div>
+            <div class="gallery-card-body">
+              <h3>FirstFloor Bar Wien — Social Media</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Content Production</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.png" alt="LinkedIn-Kampagne für Kraftquell Inside">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Kraftquell Inside LinkedIn-Kampagne</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Online Lead Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%233%20Auxilio%20CARE%20UI.jpg" alt="UI-Design der Auxilio CARE Webapp">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Auxilio Webapps Entwicklung &amp; Design</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">UI &amp; UX Design</span>
+                <span class="tag-chip">SaaS Tools</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%234%20Efficient%20Print.png" alt="Corporate Design für efficent">
+            </div>
+            <div class="gallery-card-body">
+              <h3>efficent Corporate Design</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Print-Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%235%20Efficent%20Website.jpg" alt="Website für efficent">
+            </div>
+            <div class="gallery-card-body">
+              <h3>efficent Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Website</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%237%20AyCaramba%20Website%20old.png" alt="AyCaramba Website">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%239%20AyCaramba%20Online%20Shops%20Website.png" alt="AyCaramba Online Shops Website">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Online Shops</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%239%20Kriechbaums.png" alt="Website Stadthaus Klosterneuburg">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Hausverkauf Klosterneuburg</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="container">
+        <div class="gallery-controls">
+          <div class="gallery-dots" id="galleryDots"></div>
+          <div class="gallery-arrows">
+            <button class="gallery-arrow" type="button" data-dir="prev" aria-label="Vorheriges Projekt">←</button>
+            <button class="gallery-arrow" type="button" data-dir="next" aria-label="Nächstes Projekt">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-cartoon cta-band">
+      <div class="container">
+        <div class="cta-banner">
+          <p class="cta-banner-text">Hör auf zu lesen &amp; fang an zu verdienen.</p>
+          <a href="kontakt.html" class="cta-badge">
+            <span>Vamos!</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

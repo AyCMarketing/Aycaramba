@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ay Caramba! — Marketing mit System, verstärkt durch KI</title>
+  <meta name="description" content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <style>
+
+    /* ---------- Shared section rhythm ---------- */
+    .section {
+      padding-block: var(--space-section);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4.2vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 20ch;
+    }
+
+    .section-title.wide {
+      max-width: 26ch;
+    }
+
+    .accent-orange { color: var(--color-orange); }
+    .accent-teal { color: var(--color-teal); }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 1.4rem;
+      color: var(--color-orange);
+      transform: rotate(-3deg);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- Hero (full-bleed) ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      min-height: 100vh;
+      background: var(--color-ink);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: -10% 0;
+      width: 100%;
+      height: 120%;
+      object-fit: cover;
+      z-index: -2;
+      animation: heroFlow 16s ease-in-out infinite alternate;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(23, 18, 20, 0.35) 0%, rgba(23, 18, 20, 0.15) 30%, rgba(23, 18, 20, 0.65) 100%);
+    }
+
+    @keyframes heroFlow {
+      from { transform: translateY(-4%); }
+      to   { transform: translateY(4%); }
+    }
+
+    .hero-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      background: transparent;
+    }
+
+    .hero-header-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 1.5rem clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .hero-header-row .site-logo {
+      justify-self: start;
+    }
+
+    .hero-header-row .nav-toggle {
+      justify-self: end;
+      grid-column: 3;
+    }
+
+    .nav-brandmark {
+      grid-column: 2;
+      font-family: var(--font-accent);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      white-space: nowrap;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .hero-content {
+      max-width: min(90vw, 1400px);
+      color: var(--color-white);
+    }
+
+    .hero-headline {
+      text-transform: uppercase;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-headline .line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .hero-subheadline {
+      font-family: var(--font-body);
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 46ch;
+      margin: 0 auto 2.25rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-ctas .btn-secondary {
+      border-color: var(--color-white);
+      color: var(--color-white);
+    }
+
+    .hero-ctas .btn-secondary:hover {
+      background: var(--color-white);
+      color: var(--color-ink);
+    }
+
+    /* ---------- Scroll reveal ---------- */
+    .reveal-section {
+      position: relative;
+      min-height: 220vh;
+      background: var(--color-teal);
+    }
+
+    .reveal-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .reveal-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.6vw, 3rem);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      max-width: 900px;
+      text-align: center;
+      color: var(--color-white);
+    }
+
+    .reveal-text .word {
+      opacity: 0.2;
+      transition: opacity 0.05s linear;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-text .word {
+        opacity: 1 !important;
+        transition: none;
+      }
+    }
+
+    .reveal-brand {
+      font-family: var(--font-accent);
+      color: var(--color-white);
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
+      text-align: center;
+      margin: 1.5rem 0 0;
+    }
+
+    /* ---------- Problem ---------- */
+    .problem {
+      background: var(--color-white);
+      text-align: center;
+    }
+
+    .problem .section-title {
+      max-width: 22ch;
+      margin-inline: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .problem-card {
+      background: var(--color-cream);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .problem-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--color-white);
+    }
+
+    .problem-card:nth-child(odd) .problem-icon { background: var(--color-orange); }
+    .problem-card:nth-child(even) .problem-icon { background: var(--color-teal); }
+
+    .problem-card h3 {
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .problem-card p {
+      font-size: 0.95rem;
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+
+    /* ---------- Calculator agitate ---------- */
+    .calc-section {
+      background: var(--color-cream);
+      text-align: center;
+    }
+
+    .calc-section .section-title {
+      max-width: 24ch;
+      margin-inline: auto;
+      margin-bottom: 2.5rem;
+    }
+
+    .calc-card {
+      background: var(--color-ink);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 4vw, 3.5rem);
+      max-width: 720px;
+      margin-inline: auto;
+      text-align: left;
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* ---------- Quote ---------- */
+    .quote-section {
+      background: var(--color-orange);
+      text-align: center;
+      color: var(--color-white);
+    }
+
+    .quote-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.4vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+      margin: 0 auto 1.5rem;
+    }
+
+    .quote-attribution {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    /* ---------- Equation accordion ---------- */
+    .equation-section {
+      background: var(--color-cream);
+    }
+
+    .equation-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .equation-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .equation-operator {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--color-ink-soft);
+      text-align: left;
+      padding-left: 0.1em;
+      margin: 0.5rem 0;
+    }
+
+    .accordion-item {
+      border-top: 1px solid rgba(23, 18, 20, 0.12);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: 1px solid rgba(23, 18, 20, 0.12);
+    }
+
+    .accordion-trigger {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .accordion-label {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      letter-spacing: -0.02em;
+      color: rgba(23, 18, 20, 0.35);
+      transition: color 0.25s ease;
+    }
+
+    .accordion-item.is-open .accordion-label {
+      color: var(--color-orange);
+    }
+
+    .accordion-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .accordion-item.is-open .accordion-panel {
+      grid-template-rows: 1fr;
+    }
+
+    .accordion-panel-inner {
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .accordion-item.is-open .accordion-panel-inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .accordion-panel-content {
+      padding-bottom: 1.75rem;
+    }
+
+    .accordion-panel-content p {
+      color: var(--color-ink-soft);
+      max-width: 48ch;
+      margin: 0 0 1rem;
+    }
+
+    .accordion-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .accordion-tags span {
+      border: 1px solid rgba(23, 18, 20, 0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.45rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .equation-visual {
+      position: relative;
+      width: clamp(200px, 24vw, 320px);
+      height: clamp(200px, 24vw, 320px);
+      margin-inline: auto;
+    }
+
+    .visual-icon {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .visual-icon.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .visual-icon { transition: opacity 0.15s linear; }
+    }
+
+    @media (max-width: 860px) {
+      .equation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .equation-visual {
+        order: -1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .equation-visual svg { animation: none; }
+    }
+
+    /* ---------- Process ---------- */
+    .process {
+      background: var(--color-white);
+    }
+
+    .process .section-title {
+      max-width: 26ch;
+      margin-bottom: 3rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .process-col {
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .process-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .process-col-chaos {
+      background: var(--color-cream);
+      box-shadow: inset 0 2px 6px rgba(23, 18, 20, 0.05);
+    }
+
+    .chaos-canvas {
+      position: relative;
+      flex: 1;
+      min-height: 320px;
+    }
+
+    .chaos-canvas svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .chip {
+      position: absolute;
+      background: var(--color-white);
+      border-radius: var(--radius-pill);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-ink-soft);
+      box-shadow: 0 8px 16px -8px rgba(23, 18, 20, 0.18);
+      white-space: nowrap;
+    }
+
+    .process-col-system {
+      background: linear-gradient(165deg, var(--color-ink) 0%, var(--color-teal-dark) 100%);
+      color: var(--color-white);
+    }
+
+    .system-flow {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .system-step {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+
+    .system-step strong {
+      font-family: var(--font-display);
+      display: block;
+      font-size: 1.05rem;
+    }
+
+    .system-step span {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .system-step.final {
+      background: var(--color-orange);
+      border-color: var(--color-orange);
+    }
+
+    .system-step.final span {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .system-arrow {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 1.1rem;
+    }
+
+    .process-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 1.25rem;
+      color: var(--color-ink-soft);
+    }
+
+    .process-col-system .process-caption {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- Offering ---------- */
+    .offering {
+      background: var(--color-cream);
+      text-align: center;
+    }
+
+    .offering .section-title {
+      max-width: 22ch;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+
+    /* ---------- About teaser ---------- */
+    .about-teaser {
+      background: var(--color-white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-grid img {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-grid p {
+      color: var(--color-ink-soft);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .testimonials {
+      background: var(--color-cream);
+      text-align: center;
+    }
+
+    .testimonials .section-title {
+      margin-inline: auto;
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stars {
+      color: var(--color-orange);
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p.quote {
+      font-size: 0.95rem;
+      color: var(--color-ink-soft);
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-card .who {
+      border-top: 1px solid rgba(23, 18, 20, 0.1);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-card .who strong {
+      font-family: var(--font-display);
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card .who span {
+      color: var(--color-teal);
+    }
+
+    /* ---------- FAQ placeholder ---------- */
+    .faq {
+      background: var(--color-white);
+      text-align: center;
+    }
+
+    .faq-placeholder {
+      max-width: 640px;
+      margin: 2rem auto 0;
+      padding: 2.5rem;
+      border: 2px dashed rgba(23, 18, 20, 0.15);
+      border-radius: var(--radius-lg);
+      color: var(--color-ink-soft);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      .problem-grid,
+      .process-grid,
+      .about-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 1.5rem;
+      }
+
+      .about-grid .about-image {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-headline .line {
+        white-space: normal;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/img/hero-waves.jpg" alt="" aria-hidden="true">
+
+      <header class="site-header hero-header">
+        <div class="hero-header-row">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.png" alt="Ay Caramba!">
+          </a>
+          <span class="nav-brandmark" aria-hidden="true">AyCaramba!</span>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+            <span class="nav-toggle-icon"></span>
+          </button>
+          <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            <span class="line">Dein Marketing</span>
+            <span class="line">wird’s dir danken</span>
+            
+          </h1>
+          <p class="hero-subheadline">Handcrafted quality meets AI-powered efficiency.</p>
+          <div class="hero-ctas">
+            <a href="#problem" class="btn btn-secondary">Mehr erfahren</a>
+            <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1b. Scroll reveal -->
+    <section class="reveal-section">
+      <div class="reveal-sticky">
+        <div>
+          <p class="reveal-text"><span class="word">„Wir</span> <span class="word">kombinieren</span> <span class="word">jahrelange</span> <span class="word">Funnel-Expertise,</span> <span class="word">KI-Automatisierung</span> <span class="word">und</span> <span class="word">Verrücktheit</span> <span class="word">und</span> <span class="word">schaffen</span> <span class="word">dadurch</span> <span class="word">einzigartige</span> <span class="word">Wege</span> <span class="word">der</span> <span class="word">Kundengewinnung.</span> <span class="word">Kurz</span> <span class="word">gesagt:</span> <span class="word">wir</span> <span class="word">sind</span> <span class="word">die</span> <span class="word">letzte</span> <span class="word">Agentur,</span> <span class="word">die</span> <span class="word">du</span> <span class="word">jemals</span> <span class="word">brauchen</span> <span class="word">wirst.“</span></p>
+          <p class="reveal-brand">AyCaramba</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1c. Equation accordion -->
+    <section class="section equation-section">
+      <div class="container equation-grid">
+        <div class="equation-list">
+          <div class="accordion-item is-open" data-visual="heart">
+            <button class="accordion-trigger" aria-expanded="true">
+              <span class="accordion-label">Funneldesign mit Liebe</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  <p>Wir bauen Funnels, die wirklich konvertieren – von der ersten Idee bis zum letzten Klick, von Hand durchdacht statt von der Stange.</p>
+                  <div class="accordion-tags">
+                    <span>Landingpages</span>
+                    <span>Ad-Creatives</span>
+                    <span>Copywriting</span>
+                    <span>Conversion-Optimierung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="equation-operator">*</p>
+
+          <div class="accordion-item" data-visual="speed">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-label">KI-Effizienz</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  <p>Wiederkehrende Arbeit übernimmt die KI – Content, Qualifizierung, Reporting. Du sparst Zeit, ohne an Qualität zu verlieren.</p>
+                  <div class="accordion-tags">
+                    <span>Content-Automatisierung</span>
+                    <span>Lead-Qualifizierung</span>
+                    <span>Reporting</span>
+                    <span>Workflows</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="equation-operator">=</p>
+
+          <div class="accordion-item" data-visual="money">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-label">Deine Umsatzsteigerung</span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                <div class="accordion-panel-content">
+                  <p>Am Ende zählt nur eins: planbar neue Kunden gewinnen. Ein System, das läuft, statt Kampagnen, die nur einmal funktionieren.</p>
+                  <div class="accordion-tags">
+                    <span>Planbare Leads</span>
+                    <span>Wiederkehrender Umsatz</span>
+                    <span>Skalierbares System</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="equation-visual" aria-hidden="true">
+          <svg class="visual-icon is-active" data-visual="heart" viewBox="0 0 200 200">
+            <path fill="var(--color-orange)" d="M100,178 C36,132 8,92 8,56 C8,26 32,6 60,6 C82,6 96,20 100,38 C104,20 118,6 140,6 C168,6 192,26 192,56 C192,92 164,132 100,178 Z"/>
+          </svg>
+
+          <svg class="visual-icon" data-visual="speed" viewBox="0 0 200 200">
+            <g fill="var(--color-orange)">
+              <path d="M20,65 L68,100 L20,135 Z"/>
+              <path d="M72,50 L130,100 L72,150 Z"/>
+              <path d="M134,35 L192,100 L134,165 Z"/>
+            </g>
+          </svg>
+
+          <svg class="visual-icon" data-visual="money" viewBox="0 0 200 200">
+            <path fill="var(--color-orange)" d="M100,190 C58,190 32,160 32,122 C32,95 48,78 64,64 L55,42 L78,42 L84,56 C89,54.5 94.5,53.5 100,53.5 C105.5,53.5 111,54.5 116,56 L122,42 L145,42 L136,64 C152,78 168,95 168,122 C168,160 142,190 100,190 Z"/>
+            <text x="100" y="132" text-anchor="middle" font-family="Basement Grotesque, sans-serif" font-size="46" fill="var(--color-cream)">$</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Problem -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <h2 class="section-title">Wie schaut's aus? Ein Blick ins jetzt:</h2>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">💸</div>
+            <h3>Agenturen sind schweineteuer</h3>
+            <p>Fünfstellige Retainer, monatelange Projekte, null Transparenz. Und wenn du kündigst, bleibt: nichts. Kein System, kein Wissen, keine Leads. Nur die Rechnungen.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">🤯</div>
+            <h3>Marketing ist confusing</h3>
+            <p>SEO, Ads, Social, E-Mail, Funnels, und jetzt noch 47 KI-Tools obendrauf. Jeder LinkedIn-Guru erzählt dir was anderes. Was fehlt, ist nicht noch ein Kanal – sondern ein System.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">🎲</div>
+            <h3>Kundengewinnung ist Zufall</h3>
+            <p>Mal empfiehlt dich jemand, mal ist Flaute. Deine Pipeline ist ein Glücksspiel, dein Forecast ein Bauchgefühl. So planst du kein Wachstum – so hoffst du drauf.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">⏰</div>
+            <h3>Keine Zeit, keine Nerven</h3>
+            <p>Du führst ein Unternehmen. Du kannst nicht nebenbei noch KI-Expertin, Funnel-Architekt und Performance-Marketerin werden. Solltest du auch nicht müssen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Agitate: Calculator -->
+    <section class="section calc-section">
+      <div class="container">
+        <h2 class="section-title">Hier ein Beispiel: Wie viel Zeit verschwendest du im Monat für Social Media?</h2>
+
+        <div class="calc-card">
+          <h3 style="color:#fff;font-size:1.1rem;margin-bottom:1.75rem;text-align:center;">Social Media verbrennt dein Geld.</h3>
+
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;">
+            <label style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;flex-shrink:0;">
+              Aufwand / Woche
+            </label>
+            <div style="flex:1;min-width:160px;">
+              <input id="cmp-slider" type="range" min="1" max="40" value="3" step="1" style="width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;outline:none;cursor:pointer;background:rgba(255,255,255,0.08);">
+            </div>
+            <div style="flex-shrink:0;font-family:'Basement Grotesque',sans-serif;font-size:22px;font-weight:800;color:#fff;min-width:72px;text-align:right;">
+              <span id="cmp-week-val">3</span> Std.
+            </div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin-bottom:28px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.4);">= <span id="cmp-month-info">~13 Std. / Monat</span></span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+            <div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
+                <span style="font-size:13px;color:rgba(255,255,255,0.55);font-weight:500;">Ohne KI-Content-System</span>
+                <span id="cmp-before-label" style="font-family:'Basement Grotesque',sans-serif;font-size:14px;font-weight:800;color:rgba(255,255,255,0.35);">13 Std. / Monat</span>
+              </div>
+              <div style="height:8px;border-radius:6px;background:rgba(255,255,255,0.06);overflow:hidden;border:1px solid rgba(255,255,255,0.07);">
+                <div id="cmp-before-bar" style="height:100%;width:65%;background:rgba(255,255,255,0.18);border-radius:6px;transition:width 0.35s cubic-bezier(0.4,0,0.2,1);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
+                <span style="font-size:13px;color:#fff;font-weight:600;">Mit KI-Content-System</span>
+                <span id="cmp-after-label" style="font-family:'Basement Grotesque',sans-serif;font-size:14px;font-weight:800;color:var(--color-orange-light);">~4 Std. / Monat</span>
+              </div>
+              <div style="height:8px;border-radius:6px;background:rgba(255,255,255,0.06);overflow:hidden;border:1px solid rgba(244,104,10,0.2);">
+                <div id="cmp-after-bar" style="height:100%;width:22%;background:linear-gradient(90deg,var(--color-orange),var(--color-orange-light));border-radius:6px;box-shadow:0 0 8px rgba(244,104,10,0.4);transition:width 0.35s cubic-bezier(0.4,0,0.2,1);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid rgba(244,104,10,0.2);">
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px;">Zeitersparnis / Monat</div>
+                <div id="cmp-time-saving" style="font-family:'Basement Grotesque',sans-serif;font-size:20px;font-weight:800;color:var(--color-orange-light);">≈ 9 Std.</div>
+              </div>
+              <div style="width:1px;height:36px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px;">Kostenersparnis / Monat</div>
+                <div id="cmp-cost-saving" style="font-family:'Basement Grotesque',sans-serif;font-size:20px;font-weight:800;color:var(--color-teal-light);">≈ 360 €</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Agitate: Quote -->
+    <section class="section quote-section">
+      <div class="container">
+        <p class="quote-text">„A man who dares to waste one hour of time has not discovered the value of life.“</p>
+        <p class="quote-attribution">— Charles Darwin</p>
+      </div>
+    </section>
+
+    <!-- 5. Prozess -->
+    <section class="section process">
+      <div class="container">
+        <h2 class="section-title wide">Der Unterschied zwischen Marketing-Chaos und einem System, das läuft.</h2>
+        <div class="process-grid">
+          <div class="process-col process-col-chaos">
+            <h3>Ohne System</h3>
+            <div class="chaos-canvas">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <g stroke="rgba(23,18,20,0.15)" stroke-width="0.5">
+                  <line x1="14" y1="10" x2="60" y2="35" />
+                  <line x1="64" y1="6" x2="12" y2="38" />
+                  <line x1="12" y1="38" x2="66" y2="58" />
+                  <line x1="64" y1="35" x2="18" y2="62" />
+                  <line x1="18" y1="62" x2="62" y2="84" />
+                  <line x1="66" y1="58" x2="20" y2="86" />
+                  <line x1="14" y1="10" x2="20" y2="86" />
+                  <line x1="64" y1="6" x2="62" y2="84" />
+                </g>
+              </svg>
+              <span class="chip" style="top:4%; left:6%; transform: rotate(-3deg);">Social Media?</span>
+              <span class="chip" style="top:0%; left:52%; transform: rotate(2deg);">SEO</span>
+              <span class="chip" style="top:32%; left:2%; transform: rotate(2deg);">Ads</span>
+              <span class="chip" style="top:29%; left:50%; transform: rotate(-2deg);">Newsletter</span>
+              <span class="chip" style="top:56%; left:8%; transform: rotate(3deg);">47 KI-Tools</span>
+              <span class="chip" style="top:52%; left:54%; transform: rotate(-3deg);">Blog?</span>
+              <span class="chip" style="top:82%; left:10%; transform: rotate(-2deg);">Webinar</span>
+              <span class="chip" style="top:80%; left:52%; transform: rotate(2deg);">Kaltakquise</span>
+            </div>
+            <p class="process-caption">= Zufall, Chaos, verbranntes Budget</p>
+          </div>
+
+          <div class="process-col process-col-system">
+            <h3>Mit AyCaramba</h3>
+            <div class="system-flow">
+              <div class="system-step">
+                <strong>Aufmerksamkeit</strong>
+                <span>planbar durch KI-Content</span>
+              </div>
+              <div class="system-arrow">↓</div>
+              <div class="system-step">
+                <strong>Leads</strong>
+                <span>automatisch qualifiziert</span>
+              </div>
+              <div class="system-arrow">↓</div>
+              <div class="system-step">
+                <strong>Termine</strong>
+                <span>ohne Kaltakquise</span>
+              </div>
+              <div class="system-arrow">↓</div>
+              <div class="system-step final">
+                <strong>Kunden</strong>
+                <span>planbar</span>
+              </div>
+            </div>
+            <p class="process-caption">= ein System, das läuft</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Offering -->
+    <section class="section offering">
+      <div class="container">
+        <h2 class="section-title">Hast du wirklich Lust, alles selbst zu machen &amp; teure Agenturen für wenig Ergebnisse anzustellen?</h2>
+        <p style="margin-bottom: 2rem; color: var(--color-ink-soft);">Wenn nicht, solltest du mit uns in Kontakt treten.</p>
+        <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+      </div>
+    </section>
+
+    <!-- 7. Über uns Teaser -->
+    <section class="section about-teaser">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/img/team-about.jpg" alt="Die Gründer von AyCaramba im Gespräch">
+        </div>
+        <div>
+          <h2 class="section-title" style="margin-bottom:1.25rem;">Über uns</h2>
+          <p>AyCaramba ist eine junge Marketingagentur aus Wien. Nach jahrelanger Arbeit mit Kund:innen im Bereich des digitalen Marketings fokussieren wir uns seit 2025 auf Marketing mit KI und kombinieren dabei Expertise in Marketingstrategie mit effizienter KI-Nutzung und -Einsetzbarkeit.</p>
+          <a href="ueber-uns.html" class="btn btn-secondary">Mehr über uns</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section class="section testimonials">
+      <div class="container">
+        <h2 class="section-title" style="margin-inline:auto; text-align:center;">Wenn die Connection stimmt.</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„Hiermit möchten wir AyCaramba und insbesondere den Inhaber, Herrn Markes als äußerst kompetenten und verlässlichen Partner im Bereich Marketing und Branding empfehlen. Seit Jahren unterstützt er uns mit modernen, kreativen Ansätzen rund um Werbestrategie und Promotion. Er überzeugt durch ausgeprägte Kreativität, schnelle Arbeitsweise und die Fähigkeit, sich exakt auf unsere Wünsche einzustellen. Uneingeschränkte Empfehlung.“</p>
+            <div class="who">
+              <strong>Horst Kriechbaum</strong>
+              <span>hausverkauf-klosterneuburg.at</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„AyCaramba hat uns bei der Erstellung unseres Offline-Funnels enorm unterstützt. Von der ersten Idee bis zur finalen Umsetzung war die Zusammenarbeit unkompliziert, schnell und auf den Punkt – genau das, was man sich als Kunde wünscht. Die produzierten Designs haben bei vielen unserer Kunden für echtes Erstaunen gesorgt und uns spürbar nach vorne gebracht. Vielen Dank für die tolle Arbeit!“</p>
+            <div class="who">
+              <strong>Marco Brunner</strong>
+              <span>auxilio Assistenzsysteme</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„AyCaramba hat für mich u.a. Online-Kampagnen gestaltet. Das war absolut top! Die Herangehensweise war sehr professionell – gestartet mit einem Workshop, daraus abgeleitet, wie die Kampagne auszusehen hat, und dann perfekt umgesetzt. Ich bin seit über 30 Jahren im Berufsleben und habe ein klares Bild – wir werden in Zukunft noch intensiver zusammenarbeiten. Auch wenn man schon jemanden hat: Man sollte sich bei AyCaramba eine zweite Meinung einholen :-).“</p>
+            <div class="who">
+              <strong>Bert Heinen</strong>
+              <span>Kraftquell INSIDE</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">„Der KI-Workflow von AyCaramba erspart mir mindestens 10 Stunden an administrativer Arbeit pro Monat – Zeit, die ich sinnvoller für andere Aufgaben nutzen kann. Außerdem ist der automatisierte Workflow im Vergleich zu manuellen Arbeitsschritten nicht anfällig für Fehler und lässt mich dadurch ruhig schlafen, eine enorme Erleichterung für meinen Arbeitsalltag. Auch wenn ich zuerst skeptisch war, diese Agentur weiß, wie man KI effizient einsetzt!“</p>
+            <div class="who">
+              <strong>Valentin Skopek</strong>
+              <span>Personal Trainer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Q&A Placeholder -->
+    <section class="section faq">
+      <div class="container">
+        <h2 class="section-title" style="margin-inline:auto;">Häufige Fragen</h2>
+        <div class="faq-placeholder">
+          Platzhalter — Fragen &amp; Antworten folgen, sobald Inhalte final sind.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+      </a>
+      <nav class="footer-nav" aria-label="Footer-Navigation">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+      </div>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var sl = document.getElementById('cmp-slider');
+      if (!sl) return;
+      var weekVal = document.getElementById('cmp-week-val');
+      var monthInfo = document.getElementById('cmp-month-info');
+      var beforeLabel = document.getElementById('cmp-before-label');
+      var afterLabel = document.getElementById('cmp-after-label');
+      var beforeBar = document.getElementById('cmp-before-bar');
+      var afterBar = document.getElementById('cmp-after-bar');
+      var timeSaving = document.getElementById('cmp-time-saving');
+      var costSaving = document.getElementById('cmp-cost-saving');
+      var MAX_W = 40;
+      var MAX_M = Math.round(MAX_W * 4.33);
+
+      function update(w) {
+        w = parseInt(w) || 1;
+        var monthly = Math.round(w * 4.33);
+        var withKI = Math.max(1, Math.round(monthly / 3));
+        var saved = monthly - withKI;
+        var cost = saved * 40;
+        weekVal.textContent = w;
+        monthInfo.textContent = '~' + monthly + ' Std. / Monat';
+        beforeLabel.textContent = monthly + ' Std. / Monat';
+        afterLabel.textContent = '~' + withKI + ' Std. / Monat';
+        timeSaving.textContent = '≈ ' + saved + ' Std.';
+        costSaving.textContent = '≈ ' + cost + ' €';
+        var pct = (w / MAX_W * 100).toFixed(1) + '%';
+        beforeBar.style.width = Math.min(100, (monthly / MAX_M * 100)).toFixed(1) + '%';
+        afterBar.style.width = Math.min(100, (withKI / MAX_M * 100)).toFixed(1) + '%';
+      }
+
+      sl.addEventListener('input', function () { update(this.value); });
+      update(3);
+    })();
+  </script>
+</body>
+</html>

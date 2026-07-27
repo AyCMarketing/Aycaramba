@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Ay Caramba!</title>
+  <meta name="description" content="Einblicke in Marketing, Websites und KI — direkt aus dem AyCaramba Agenturalltag.">
+  <link rel="canonical" href="https://aycaramba.at/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — Ay Caramba!">
+  <meta property="og:description" content="Einblicke in Marketing, Websites und KI — direkt aus dem AyCaramba Agenturalltag.">
+  <meta property="og:url" content="https://aycaramba.at/blog">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — Ay Caramba!">
+  <meta name="twitter:description" content="Einblicke in Marketing, Websites und KI — direkt aus dem AyCaramba Agenturalltag.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .site-header {
+      background: var(--color-pink);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    .page-header {
+      background: var(--color-pink);
+      border-bottom: var(--cs-border-xthick);
+      padding-top: 1rem;
+    }
+
+    .page-header h1,
+    .page-header-lead {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .page-header-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header-text {
+        margin: 0 auto;
+      }
+
+      .page-header-cta {
+        margin: 0 auto;
+      }
+    }
+
+    /* ---------- Post grid ---------- */
+    .post-grid-section {
+      background: var(--color-white);
+      padding-top: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .post-card {
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .post-card:hover,
+    .post-card:focus-visible {
+      transform: translate(-3px, -3px);
+      box-shadow: 11px 11px 0 0 var(--color-ink);
+    }
+
+    .post-card:focus-visible {
+      outline: none;
+    }
+
+    .post-card-media {
+      aspect-ratio: 16 / 10;
+      border-bottom: var(--cs-border-thick);
+      overflow: hidden;
+    }
+
+    .post-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-card-body {
+      padding: 1.5rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .post-card-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--color-ink);
+      background: var(--color-teal-light);
+      border: var(--cs-border);
+      border-radius: var(--radius-pill);
+      padding: 0.3rem 0.85rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .post-card h3 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.2rem;
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .post-card p {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+      flex: 1;
+    }
+
+    .post-card-meta {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--color-ink-soft);
+    }
+
+    @media (max-width: 860px) {
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+            <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+            <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-row">
+          <div class="page-header-text">
+            <h1>Blog</h1>
+            <p class="page-header-lead">Einblicke in Marketing, Websites und KI — direkt aus unserem Agenturalltag.</p>
+          </div>
+          <a href="kontakt.html" class="btn-cartoon btn-cartoon-teal page-header-cta">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post grid -->
+    <section class="section-cartoon post-grid-section">
+      <div class="container">
+        <div class="post-grid">
+          <a href="blog-wie-funktioniert-online-kundengewinnung.html" class="post-card">
+            <div class="post-card-media">
+              <img src="assets/img/blog/online-kundengewinnung-hero.jpg" alt="Kleines Team bespricht die Strategie für Online-Kundengewinnung am Tisch">
+            </div>
+            <div class="post-card-body">
+              <span class="post-card-badge">Kundengewinnung &amp; Leads</span>
+              <h3>Wie funktioniert Online-Kundengewinnung? Der Praxis-Guide</h3>
+              <p>SEO, Google Ads, Social Media und Bewertungen: die Kanäle, der Prozess dahinter und die Fehler, die dich Kund:innen kosten.</p>
+              <span class="post-card-meta">Niklas Markes · 9 Min. Lesezeit</span>
+            </div>
+          </a>
+          <a href="blog-was-ist-ein-marketing-funnel.html" class="post-card">
+            <div class="post-card-media">
+              <img src="assets/img/blog/marketing-funnel-hero.jpg" alt="Marketing-Team analysiert Kennzahlen und Diagramme am Konferenztisch">
+            </div>
+            <div class="post-card-body">
+              <span class="post-card-badge">Funnel &amp; Conversion</span>
+              <h3>Was ist ein Marketing-Funnel? Definition, Phasen &amp; Aufbau</h3>
+              <p>TOFU, MOFU, BOFU, AIDA-Modell und ein Bauplan, mit dem du aus Fremden planbar Kund:innen machst.</p>
+              <span class="post-card-meta">Niklas Markes · 11 Min. Lesezeit</span>
+            </div>
+          </a>
+          <a href="blog-was-ist-leadgenerierung.html" class="post-card">
+            <div class="post-card-media">
+              <img src="assets/img/blog/leadgenerierung-hero.jpg" alt="Marketing-Team bespricht Wachstumszahlen und Leadgenerierung anhand von Diagrammen">
+            </div>
+            <div class="post-card-body">
+              <span class="post-card-badge">Kundengewinnung &amp; Leads</span>
+              <h3>Was ist Leadgenerierung? Der Guide für planbare Neukundengewinnung</h3>
+              <p>Definition, Prozess und die Maßnahmen, mit denen du aus Fremden zahlende Kund:innen machst — ohne auf Zufall zu hoffen.</p>
+              <span class="post-card-meta">Niklas Markes · 8 Min. Lesezeit</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html" aria-current="page">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -2,1418 +2,1525 @@
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aycaramba — Marketing Agentur</title>
-
-  <!-- Google Fonts: Inter (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Brevo Form -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ay Caramba! — Dein Marketing wird’s dir danken</title>
+  <meta name="description"
+    content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
+  <link rel="canonical" href="https://aycaramba.at/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ay Caramba! — Marketing mit System, verstärkt durch KI">
+  <meta property="og:description"
+    content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
+  <meta property="og:url" content="https://aycaramba.at/">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ay Caramba! — Marketing mit System, verstärkt durch KI">
+  <meta name="twitter:description"
+    content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    /* Override Brevo defaults to match AyC dark theme */
-    #sib-container {
-      background-color: transparent !important;
-      border: 1px solid rgba(255, 255, 255, 0.10) !important;
-      border-radius: 8px !important;
-      max-width: 100% !important;
-      padding: 0 !important;
+    /* ---------- Hero (full-bleed) ---------- */
+    .hero {
+      position: relative;
+      z-index: 5;
+      overflow: hidden;
+      isolation: isolate;
+      min-height: 100vh;
+      background: var(--color-ink);
     }
 
-    #sib-form-container {
-      max-width: 100% !important;
+    .hero-bg {
+      position: absolute;
+      inset: -30% 0;
+      width: 100%;
+      height: 160%;
+      object-fit: cover;
+      object-position: 15% 50%;
+      z-index: -2;
+      animation: heroFlow 16s ease-in-out infinite alternate;
     }
 
-    .sib-form {
-      text-align: left !important;
-      background-color: transparent !important;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(23, 18, 20, 0.35) 0%, rgba(23, 18, 20, 0.15) 30%, rgba(23, 18, 20, 0.65) 100%);
     }
 
-    .sib-container--large {
-      padding: 1.5rem !important;
-    }
-
-    .entry__label {
-      font-family: 'Roboto', sans-serif !important;
-      font-size: 0.74rem !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      color: rgba(244, 239, 233, 0.45) !important;
-    }
-
-    .input,
-    .sib-container--large .input {
-      background: rgba(255, 255, 255, 0.05) !important;
-      border: 1px solid rgba(255, 255, 255, 0.12) !important;
-      border-radius: 4px !important;
-      color: var(--off-white) !important;
-      font-family: 'Inter', sans-serif !important;
-      font-size: 0.95rem !important;
-      padding: 0.65rem 1rem !important;
-      width: 100% !important;
-      transition: border-color 0.2s ease !important;
-    }
-
-    .input:focus {
-      border-color: var(--pink) !important;
-      outline: none !important;
-    }
-
-    #sib-container input::placeholder,
-    #sib-container textarea::placeholder {
-      color: rgba(244, 239, 233, 0.25) !important;
-      font-family: 'Inter', sans-serif !important;
-    }
-
-    .sib-form-block__button {
-      background: transparent !important;
-      border: 2px solid var(--pink) !important;
-      border-radius: 3px !important;
-      color: var(--pink) !important;
-      font-family: 'BasementGrotesque', sans-serif !important;
-      font-size: 0.9rem !important;
-      font-weight: 900 !important;
-      letter-spacing: 0.1em !important;
-      padding: 0.9rem 2rem !important;
-      width: 100% !important;
-      cursor: pointer !important;
-      transition: background 0.2s ease, color 0.2s ease !important;
-      margin-top: 0.5rem !important;
-    }
-
-    .sib-form-block__button:hover {
-      background: var(--pink) !important;
-      color: #fff !important;
-    }
-
-    .sib-form-message-panel {
-      max-width: 100% !important;
-      margin-bottom: 1rem;
-    }
-
-    .entry__choice label {
-      color: rgba(244, 239, 233, 0.6) !important;
-      font-size: 0.83rem !important;
-    }
-
-    .checkbox {
-      border-color: rgba(255, 255, 255, 0.25) !important;
-    }
-
-    .sib-sms-input {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .sib-sms-input select.input {
-      width: auto !important;
-      min-width: 90px !important;
-    }
-
-    #sib-container a {
-      color: var(--pink) !important;
-    }
-  </style>
-
-  <style>
-    /* ── Brand Tokens ── */
-    :root {
-      --dark: #0c0c0c;
-      --dark-2: #111111;
-      --dark-3: #171717;
-      --dark-4: #1e1e1e;
-      --pink: #e53a69;
-      --pink-hover: #f04878;
-      --red: #cd033a;
-      --orange: #fea651;
-      --off-white: #f4efe9;
-      --muted: rgba(244, 239, 233, 0.55);
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--dark);
-      background-image: url('brand_assets/BG%20Main.png');
-      background-size: 420px auto;
-      background-attachment: fixed;
-      background-repeat: repeat;
-      color: var(--off-white);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    /* ── Fonts ── */
-    @font-face {
-      font-family: 'Roboto';
-      src: url('brand_assets/Fonts/Roboto/Roboto-Black.ttf') format('truetype');
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Basement';
-      src: url('brand_assets/Fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Yakin';
-      src: url('brand_assets/Fonts/Yakin-rgZBp.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Krisha';
-      src: url('brand_assets/Fonts/Krisha/KrishaRegular-518Zx.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    /* ── Display ── */
-    .display {
-      font-family: 'Basement', sans-serif;
-      letter-spacing: 0.02em;
-    }
-
-    .yakin {
-      font-family: 'Yakin', cursive;
-    }
-
-    /* ── Marquee ── */
-    @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .marquee-track {
-      animation: marquee 45s linear infinite;
-      white-space: nowrap;
-      display: inline-flex;
-    }
-
-    /* ── Fade up ── */
-    @keyframes fadeUp {
+    @keyframes heroFlow {
       from {
-        opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(-4%);
       }
 
       to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateY(4%);
       }
     }
 
-    .fu {
-      opacity: 0;
-      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-
-    .d1 {
-      animation-delay: 0.08s;
-    }
-
-    .d2 {
-      animation-delay: 0.18s;
-    }
-
-    .d3 {
-      animation-delay: 0.3s;
-    }
-
-    .d4 {
-      animation-delay: 0.44s;
-    }
-
-    .d5 {
-      animation-delay: 0.58s;
-    }
-
-    /* ── NAV ── */
-    #nav {
+    .hero-header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 100;
-      background: rgba(12, 12, 12, 0.92);
-      backdrop-filter: blur(16px) saturate(1.4);
-      border-bottom: 1px solid rgba(244, 239, 233, 0.07);
-      height: 68px;
+      z-index: 3;
+      background: transparent;
     }
 
-    .nav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      height: 100%;
+    .hero-header-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 1.5rem clamp(1.5rem, 6vw, 5rem);
+      --nav-anchor: clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .hero-header-row .site-logo {
+      justify-self: start;
+    }
+
+    .hero-header .site-logo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      flex-shrink: 0;
     }
 
-    .nav-links {
+    .hero-header .site-logo img {
+      height: 39px;
+      width: auto;
+    }
+
+    .hero-header-row .nav-toggle {
+      justify-self: end;
+      grid-column: 3;
+    }
+
+    .nav-brandmark {
+      grid-column: 2;
+      font-family: var(--font-accent);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      white-space: nowrap;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem clamp(1.5rem, 6vw, 5rem) 4rem;
+    }
+
+    .hero-content {
+      max-width: min(90vw, 1400px);
+      color: var(--color-white);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-accent);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      color: var(--color-white);
+      margin-bottom: 2.5rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 640px) {
+      .hero-eyebrow {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .hero-headline {
+      text-transform: uppercase;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-headline .line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .hero-subheadline {
+      font-family: var(--font-body);
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 46ch;
+      margin: 0 auto 3.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+      .hero-headline .line {
+        white-space: normal;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg {
+        animation: none;
+      }
+    }
+
+    /* ---------- 1. Zitat (scroll reveal) ---------- */
+    .reveal-section {
+      position: relative;
+      min-height: 220vh;
+      background: var(--color-teal-dark);
+    }
+
+    .reveal-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem clamp(1.5rem, 6vw, 5rem);
+      text-align: center;
+    }
+
+    .reveal-eyebrow {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-white);
+    }
+
+    .reveal-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.9rem, 4.4vw, 3.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 22ch;
+      margin: 0 auto;
+      color: var(--color-white);
+    }
+
+    .reveal-text .word {
+      opacity: 0.2;
+      transition: opacity 0.05s linear;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-text .word {
+        opacity: 1 !important;
+        transition: none;
+      }
+    }
+
+    /* ---------- Mobile-Reihenfolge: türkiser Referenzen-Banner rutscht vor
+       die Projekt-Galerie. Desktop-Reihenfolge bleibt unangetastet. ---------- */
+    @media (max-width: 640px) {
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero {
+        order: 1;
+      }
+
+      .reveal-section {
+        order: 2;
+      }
+
+      .wave-zone {
+        order: 3;
+      }
+
+      .references-cartoon {
+        order: 4;
+      }
+
+      .gallery-cartoon {
+        order: 5;
+      }
+
+      .tools-wave-zone {
+        order: 6;
+      }
+
+      .reveal-section.reveal-section-team {
+        order: 7;
+      }
+
+      .wave-zone.blog-wave-zone {
+        order: 8;
+      }
+
+      .chat-banner {
+        order: 9;
+      }
+
+      .booking-cartoon {
+        order: 10;
+      }
+
+      .partners-cartoon {
+        order: 11;
+      }
+    }
+
+    /* ---------- Wave-Zone: Leistungen + CTA teilen sich einen Wellen-Hintergrund,
+       der genau an der Grenze zur (dunklen) Referenzen-Sektion ausläuft. ---------- */
+    .wave-zone {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-white);
+    }
+
+    .wave-zone .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-wave-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .services-wave-bg-mirror {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32%;
+      width: 100%;
+      height: auto;
+      transform: scaleX(-1);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .services-wave-bg {
+        bottom: 22%;
+      }
+
+      .services-wave-bg-mirror {
+        display: block;
+        bottom: 46%;
+      }
+
+      /* Kürzerer Wave-Zone-Abschnitt bei den Tools: gleiche Optik (Streifen
+         größtenteils hinter dem Produktbild versteckt) braucht hier einen
+         höheren Bottom-Wert, weil der Container viel niedriger ist. */
+      .tools-wave-zone .services-wave-bg,
+      .tools-wave-zone .services-wave-bg-mirror {
+        display: none;
+      }
+
+      .blog-wave-zone .services-wave-bg,
+      .blog-wave-zone .services-wave-bg-mirror {
+        display: none;
+      }
+    }
+
+    /* ---------- 2. Leistungen ---------- */
+    .services-cartoon {
+      background: transparent;
+      text-align: center;
+    }
+
+    .services-cartoon .eyebrow-script {
+      font-size: 1.4rem;
+    }
+
+    .services-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      max-width: 18ch;
+      margin: 0 auto 3rem;
+    }
+
+    .services-grid .card-cartoon:nth-child(1) {
+      background: var(--color-orange);
+    }
+
+    .services-grid .card-cartoon:nth-child(2) {
+      background: var(--color-teal);
+    }
+
+    .services-grid .card-cartoon:nth-child(3) {
+      background: var(--color-pink);
+    }
+
+    .services-grid .card-cartoon h3,
+    .services-grid .card-cartoon-cta {
+      color: var(--color-white);
+    }
+
+    .services-grid .card-cartoon p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .services-grid .card-cartoon-cta {
+      border-top-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .services-grid .card-cartoon-icon {
+      background: var(--color-white) !important;
+    }
+
+    /* ---------- 3. CTA ---------- */
+    .cta-band {
+      background: transparent;
+    }
+
+    .wave-zone .services-cartoon {
+      padding-bottom: 1.75rem;
+    }
+
+    .wave-zone .cta-band {
+      padding-top: 1.5rem;
+    }
+
+    /* ---------- 3b. Projekt-Galerie (Teaser) ---------- */
+    .gallery-cartoon {
+      background: transparent;
+      text-align: center;
+    }
+
+    .gallery-carousel {
+      position: relative;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 1.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0.5rem clamp(1.5rem, 14vw, 16vw) 2rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-card {
+      flex: 0 0 min(620px, 78vw);
+      scroll-snap-align: center;
+      background: var(--color-ink);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      overflow: hidden;
+      opacity: 0.45;
+      transform: scale(0.93);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover:not(.is-active) {
+      opacity: 0.7;
+    }
+
+    .gallery-card:focus-visible {
+      outline: 3px solid var(--color-orange);
+      outline-offset: 4px;
+    }
+
+    .gallery-card.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-card-media {
+      aspect-ratio: 16 / 10;
+      background: var(--color-ink-soft);
+    }
+
+    .gallery-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card-body {
+      padding: 1.5rem 1.75rem 1.85rem;
+      text-align: left;
+    }
+
+    .gallery-card-body h3 {
+      color: var(--color-white);
+      font-size: 1.15rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .gallery-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag-chip {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-white);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.35rem 0.9rem;
+    }
+
+    .gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery-dots {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gallery-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(23, 18, 20, 0.25);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.25s ease, border-radius 0.25s ease;
+    }
+
+    /* Invisible hit-area: expands the tappable region to ~44px without
+       changing the small dot's visual size (touch-target accessibility). */
+    .gallery-dot::before {
+      content: '';
+      position: absolute;
+      inset: -18px -13px;
+    }
+
+    .gallery-dot.is-active {
+      width: 26px;
+      border-radius: 4px;
+      background: var(--color-ink);
+    }
+
+    .gallery-arrows {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .gallery-arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .gallery-arrow:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop);
+    }
+
+    .gallery-arrow:active {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-card {
+        transition: none;
+      }
+    }
+
+    /* ---------- 4. Referenzen ---------- */
+    .references-cartoon {
+      background: var(--color-orange);
+      color: var(--color-white);
+      text-align: center;
+      padding-block: 2.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .references-cartoon {
+        padding-block: 1.75rem;
+      }
+
+      .gallery-cartoon {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .tools-overview {
+        padding-top: 1.5rem;
+      }
+    }
+
+    .references-cartoon h2 {
+      color: var(--color-white);
+      white-space: nowrap;
+      margin: 0 auto 2rem;
+    }
+
+    /* Logo-Ticker: zwei identische Sets nebeneinander, per Keyframe von -50% auf 0%
+       (also von links nach rechts) verschoben — bei -50% Versatz deckt sich Set 2
+       exakt mit der Startposition von Set 1, dadurch kein sichtbarer Sprung im Loop. */
+    .reference-logos-viewport {
+      overflow: hidden;
+      margin-bottom: 2rem;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    .reference-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      width: max-content;
+      animation: reference-logos-scroll 24s linear infinite;
+    }
+
+    .reference-logos img {
+      height: 68px;
+      width: auto;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    @keyframes reference-logos-scroll {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reference-logos {
+        animation: none;
+      }
+    }
+
+    /* ---------- 5. SaaS Tools ---------- */
+    .tools-overview {
+      background: transparent;
+      text-align: center;
+    }
+
+    .tools-overview-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      max-width: 18ch;
+      margin: 0 auto 3rem;
+    }
+
+    .tool-showcase-list {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .tool-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .tool-showcase:nth-child(even) .tool-showcase-media {
+      order: 2;
+    }
+
+    .tool-showcase-media img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .tool-showcase-media.is-mockup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-teal);
+      padding: 2rem;
+      border-radius: 24px;
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .tool-showcase-media.is-mockup img {
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .tool-showcase-body h3 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .tool-showcase-body p {
+      color: var(--color-ink-soft);
+      max-width: 52ch;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (max-width: 860px) {
+      .tool-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-showcase:nth-child(even) .tool-showcase-media {
+        order: -1;
+      }
+    }
+
+    /* ---------- 5b. Zitat: Wer wir sind (scroll reveal) ----------
+       Das Hintergrundbild sitzt bewusst auf .reveal-sticky (100vh, position:sticky) statt
+       auf der 220vh hohen .reveal-section-team selbst: Ein Hintergrund auf dem riesigen
+       Scroll-Träger wurde von "cover" auf dessen ganze Höhe skaliert — auf Mobile extrem
+       verzerrt zugeschnitten (nur ein schmaler Ausschnitt sichtbar) und schien beim Scrollen
+       mitzuwandern, obwohl der Text stehen blieb. Auf dem sticky-Element selbst ist die Box
+       genauso groß wie der Viewport, "cover" croppt also normal — und weil das Element beim
+       Scrollen fix am Viewport klebt, bleibt auch der Hintergrund fix stehen. */
+    .reveal-section-team {
+      background: var(--color-orange);
+      min-height: 160vh;
+    }
+
+    .reveal-section-team .reveal-sticky {
+      z-index: 1;
+      background: url('brand_assets/Images/Lambo_AyC.jpg') center/cover no-repeat;
+    }
+
+    .reveal-section-team .reveal-sticky::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(23, 18, 20, 0.55);
+      z-index: 0;
+    }
+
+    .reveal-section-team .reveal-sticky>div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .reveal-section-team .reveal-text {
+      color: var(--color-cream);
+      text-transform: uppercase;
+      max-width: 26ch;
+      font-size: clamp(1.4rem, 3vw, 2.3rem);
+    }
+
+    .reveal-section-team .reveal-note {
+      display: block;
+      margin: 1.5rem 0 0;
+      color: var(--color-cream);
+      opacity: 0.85;
+      font-size: 0.8rem;
+      font-family: var(--font-display);
+    }
+
+    .reveal-section-team .reveal-cta {
+      display: inline-block;
+      margin-top: 2.5rem;
+    }
+
+    /* ---------- 7. Partner ---------- */
+    .partners-cartoon {
+      background: var(--color-white);
+      text-align: center;
+    }
+
+    .partners-cartoon h2 {
+      margin-bottom: 2.5rem;
+    }
+
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       gap: 2.5rem;
     }
 
-    .nav-link {
-      color: rgba(244, 239, 233, 0.65);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      position: relative;
-      padding-bottom: 2px;
-      transition: color 0.2s;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--pink);
-      transition: width 0.25s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--off-white);
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .nav-link:focus-visible {
-      outline: 2px solid var(--yellow);
-      outline-offset: 4px;
-    }
-
-    /* ── BUTTONS ── */
-    .btn {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      font-size: 1rem;
-      text-transform: uppercase;
-      padding: 0.65rem 1.75rem;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s, background 0.15s, color 0.15s;
-    }
-
-    .btn:focus-visible {
-      outline: 2px solid var(--orange);
-      outline-offset: 3px;
-    }
-
-    /* Both hero buttons: outlined */
-    .btn-pink {
-      background: transparent;
-      color: var(--pink);
-      border: 2px solid var(--pink);
-    }
-
-    .btn-pink:hover {
-      background: var(--pink);
-      color: #fff;
-      transform: translate(-2px, -3px);
-      box-shadow: 5px 6px 0 rgba(229, 58, 105, 0.28);
-    }
-
-    .btn-pink:active {
-      transform: translate(1px, 1px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--orange);
-      border: 2px solid var(--orange);
-    }
-
-    .btn-outline:hover {
-      background: var(--orange);
-      color: var(--dark);
-      transform: translate(-2px, -3px);
-      box-shadow: 5px 6px 0 rgba(254, 166, 81, 0.25);
-    }
-
-    .btn-outline:active {
-      transform: translate(1px, 1px);
-    }
-
-    /* ── SECTION LABEL ── */
-    .label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 0.75rem;
-    }
-
-    /* ── SERVICE CARDS ── */
-    .service-card {
-      background: var(--dark-3);
-      border: 1px solid rgba(244, 239, 233, 0.07);
-      padding: 2rem 1.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-        box-shadow 0.25s, border-color 0.25s;
-    }
-
-    .service-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--pink);
-      transition: width 0.35s ease;
-    }
-
-    .service-card:hover::after {
-      width: 100%;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 20px 56px rgba(200, 48, 74, 0.13), 0 4px 16px rgba(0, 0, 0, 0.5);
-      border-color: rgba(200, 48, 74, 0.22);
-    }
-
-    .service-icon {
-      width: 48px;
+    .partner-logos img {
       height: 48px;
-      object-fit: contain;
+      width: auto;
+      filter: grayscale(1);
+      opacity: 0.75;
+      transition: opacity 0.2s ease, filter 0.2s ease;
     }
 
-    /* ── LEISTUNGEN ICON TILES ── */
-    .leistung-icon-tile {
-      width: 80px;
-      height: 80px;
-      background: var(--dark-3);
-      border: 1.5px solid rgba(244, 239, 233, 0.12);
+    .partner-logos img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .partner-logos img.is-tile {
+      border-radius: 10px;
+    }
+
+    /* ---------- 7b. Chat-Banner ---------- */
+    .chat-banner {
+      background: var(--color-pink);
+    }
+
+    .chat-banner-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      max-width: var(--page-max-width);
+      margin-inline: auto;
+      padding: 2rem clamp(1.5rem, 6vw, 5rem);
+      text-decoration: none;
+    }
+
+    .chat-banner-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(2rem, 5.5vw, 3.5rem);
+      letter-spacing: -0.02em;
+      color: var(--color-white);
+    }
+
+    .chat-banner-icon {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-cream);
+      color: var(--color-pink);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      font-size: 1.6rem;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .chat-banner-link:hover .chat-banner-icon,
+    .chat-banner-link:focus-visible .chat-banner-icon {
+      transform: translateY(4px);
+      background: var(--color-white);
+    }
+
+    /* ---------- 6b. Blog-Vorschau ---------- */
+    .blog-preview {
+      padding-block: clamp(2rem, 4vw, 3rem);
+    }
+
+    .blog-preview h2 {
+      text-align: center;
+      max-width: 20ch;
+      margin: 0 auto 2rem;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    }
+
+    .blog-preview-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      max-width: 760px;
+      margin: 0 auto 2rem;
+    }
+
+    .blog-preview-card {
+      flex: 0 1 300px;
+      max-width: 300px;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 20px;
+      box-shadow: var(--shadow-pop-lg);
       overflow: hidden;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s, box-shadow 0.15s;
     }
 
-    .leistung-icon-tile::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--pink);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-      z-index: 0;
+    .blog-preview-card:hover,
+    .blog-preview-card:focus-visible {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 0 var(--color-ink);
     }
 
-    .leistung-icon-tile:hover::after {
-      transform: scaleY(1);
+    .blog-preview-media {
+      aspect-ratio: 16 / 10;
+      border-bottom: var(--cs-border-thick);
     }
 
-    .leistung-icon-tile:hover {
-      border-color: var(--pink);
-      box-shadow: 0 0 18px rgba(229, 58, 105, 0.35);
-    }
-
-    .leistung-icon-tile img {
-      position: relative;
-      z-index: 1;
-      transition: filter 0.25s ease;
-    }
-
-    .leistung-icon-tile:hover img {
-      filter: brightness(0) invert(1);
-    }
-
-    /* ── LEISTUNGEN BUTTON VISIBILITY ── */
-    .leistungen-btn-wrap {
-      display: none;
-    }
-
-    /* hidden on desktop */
-    .leistungen-btn-desktop {
-      display: inline-flex;
-    }
-
-    /* visible on desktop */
-
-    /* ── PORTFOLIO GRID (masonry via CSS columns) ── */
-    .port-grid {
-      columns: 3;
-      column-gap: 1.25rem;
-    }
-
-    /* ── PORTFOLIO CARD ── */
-    .port-card {
-      position: relative;
-      display: inline-block;
+    .blog-preview-media img {
       width: 100%;
-      break-inside: avoid;
-      margin-bottom: 1.25rem;
-      cursor: pointer;
-      overflow: hidden;
-    }
-
-    .port-card img {
-      width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
-    .port-card:hover img {
-      transform: scale(1.04);
+    .blog-preview-body {
+      padding: 1.1rem 1.25rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
-    .port-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(12, 12, 12, 0.85) 0%, rgba(12, 12, 12, 0.08) 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
+    .blog-preview-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--color-ink);
+      background: var(--color-teal-light);
+      border: var(--cs-border);
+      border-radius: var(--radius-pill);
+      padding: 0.28rem 0.8rem;
+      margin-bottom: 0.75rem;
     }
 
-    .port-card:hover .port-overlay {
-      opacity: 1;
+    .blog-preview-body h3 {
+      font-size: 1.02rem;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
     }
 
-    .port-caption {
-      position: absolute;
-      bottom: 1rem;
-      left: 1.1rem;
-      right: 1.1rem;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity 0.3s, transform 0.3s;
-      z-index: 2;
+    .blog-preview-excerpt {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+      font-size: 0.85rem;
+      margin: 0 0 0.85rem;
+      flex: 1;
     }
 
-    .port-card:hover .port-caption {
-      opacity: 1;
-      transform: translateY(0);
+    .blog-preview-meta {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.76rem;
+      color: var(--color-ink-soft);
     }
 
-    /* ── FORM ── */
-    .form-field {
-      width: 100%;
-      background: rgba(244, 239, 233, 0.04);
-      border: 1px solid rgba(244, 239, 233, 0.12);
-      color: var(--off-white);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.92rem;
-      padding: 0.85rem 1.1rem;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-    }
-
-    .form-field::placeholder {
-      color: rgba(244, 239, 233, 0.3);
-    }
-
-    .form-field:focus {
-      border-color: var(--pink);
-      background: rgba(200, 48, 74, 0.06);
-      box-shadow: 0 0 0 3px rgba(200, 48, 74, 0.12);
-    }
-
-    /* ── GRAIN TEXTURE ── */
-    .grain-overlay {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.055'/%3E%3C/svg%3E");
-      opacity: 0.5;
-    }
-
-    /* ── SCROLLED NAV STATE ── */
-    #nav.scrolled {
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Hide mobile-only hero buttons on desktop */
-    .hero-btns-mobile {
-      display: none;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-
-      /* Hero */
-      .hero-grid {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center;
-        padding-bottom: 0 !important;
+    @media (max-width: 640px) {
+      .blog-preview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+        max-width: 100%;
       }
 
-      .hero-text {
-        align-self: center !important;
-        padding-bottom: 0.5rem !important;
-        max-width: 100% !important;
+      .blog-preview-card {
+        flex: none;
+        max-width: none;
       }
 
-      /* Hide desktop buttons on mobile */
-      .hero-btns-desktop {
-        display: none !important;
+      .blog-preview-body {
+        padding: 0.85rem 0.9rem 1rem;
       }
 
-      /* Show mobile buttons – above the image */
-      .hero-btns-mobile {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        order: 2 !important;
+      .blog-preview-badge {
+        font-size: 0.66rem;
+        padding: 0.22rem 0.6rem;
+        margin-bottom: 0.5rem;
       }
 
-      .hero-grid .hero-woman {
-        display: flex !important;
-        justify-content: center;
-        width: 100%;
-        flex-shrink: 0;
-        align-self: flex-end !important;
-        order: 3 !important;
-        margin-bottom: 0 !important;
+      .blog-preview-body h3 {
+        font-size: 0.88rem;
+        line-height: 1.22;
       }
 
-      /* Image sits at the bottom edge */
-      .hero-grid .hero-woman img {
-        height: clamp(220px, 52vw, 340px) !important;
-        margin: 0 auto;
-        display: block;
-        margin-bottom: -4px !important;
-      }
-
-      .hero-btns-mobile .btn {
-        width: 100%;
-        max-width: 320px;
-        text-align: center;
-      }
-
-      /* Social media bar */
-      .social-bar {
-        flex-direction: column !important;
-        gap: 0.4rem !important;
-        text-align: center;
-        padding: 0.6rem 1.5rem !important;
-      }
-
-      .social-bar span {
-        font-size: 0.75rem !important;
-      }
-
-      .social-bar img {
-        height: 28px !important;
-      }
-
-      .social-bar>div {
-        gap: 1.75rem !important;
-      }
-
-      .social-bar a {
-        padding: 0.5rem !important;
-      }
-
-      /* About section */
-      .about-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2rem !important;
-        text-align: center;
-      }
-
-      .about-btn-desktop {
-        display: none !important;
-      }
-
-      .about-btn-mobile {
-        display: inline-block !important;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .about-grid>div:last-child {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .about-grid>div:last-child>div:first-child {
-        margin-left: 0;
-        margin-right: auto;
-        max-width: 420px;
-        width: 100%;
-      }
-
-      .leistungen-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2.5rem !important;
-      }
-
-      .leistungen-grid>div:first-child {
-        text-align: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .leistungen-grid>div:first-child>div {
-        justify-content: center;
-      }
-
-      .leistungen-btn-desktop {
-        display: none !important;
-      }
-
-      .leistungen-btn-wrap {
-        display: flex;
-        justify-content: center;
-      }
-
-      .port-grid {
-        columns: 2 !important;
-      }
-
-      .ki-grid {
-        grid-template-columns: 1fr !important;
-      }
-
-      .ki-grid>div {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .ki-grid p,
-      .ki-grid h2 {
-        max-width: 100% !important;
-        text-align: center;
-      }
-
-      .ki-grid .btn {
-        margin-top: 1.5rem;
-        align-self: center;
-      }
-
-      .tv-wrap {
+      .blog-preview-excerpt {
         display: none;
       }
 
-      .nav-links {
-        gap: 1.5rem;
-      }
-
-      .nav-links .btn {
-        display: none;
+      .blog-preview-meta {
+        font-size: 0.7rem;
       }
     }
 
-    @media (max-width: 600px) {
-      .service-grid {
-        grid-template-columns: 1fr !important;
-      }
-
-      .port-grid {
-        columns: 1 !important;
-      }
-
-      .form-name-row {
-        grid-template-columns: 1fr !important;
-      }
-
-      .nav-links .nav-link {
-        display: none;
-      }
+    .blog-preview-cta {
+      display: flex;
+      justify-content: center;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ══════════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════════ -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#" aria-label="Aycaramba Home">
-        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba" style="height:36px;width:auto;" />
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/img/hero-waves-2.jpg" alt="" aria-hidden="true" width="2400" height="1601"
+        fetchpriority="high" decoding="async">
+
+      <header class="site-header hero-header">
+        <div class="hero-header-row">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!" width="260" height="151"
+              fetchpriority="high">
+          </a>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+            <span class="nav-toggle-icon"></span>
+          </button>
+          <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <div class="site-nav-group">
+              <div class="site-nav-row">
+                <a href="leistungen.html">Leistungen</a>
+                <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen"
+                  aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+              </div>
+              <div class="site-nav-sub" id="nav-sub-leistungen">
+                <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+                <a href="leistungen-digitale-kundengewinnung.html#konzeption">Konzeption</a>
+                <a href="leistungen-digitale-kundengewinnung.html#kampagnen">Kampagnen</a>
+                <a href="leistungen-digitale-kundengewinnung.html#content-erstellung">Content Erstellung</a>
+                <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+                <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+                <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+                <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+                <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+                <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+                <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+                <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+                <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+                <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+                <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+                <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+              </div>
+            </div>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="blog.html">Blog</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">AyCaramba!</p>
+          <h1 class="hero-headline">
+            <span class="line">Dein Marketing</span>
+            <span class="line">wird’s dir danken</span>
+          </h1>
+          <p class="hero-subheadline">Digital Marketing that gets your business booked out.</p>
+          <div class="hero-ctas">
+            <a href="#leistungen" class="btn-cartoon" aria-label="Mehr über unsere Leistungen erfahren">Mehr
+              erfahren</a>
+            <a href="kontakt.html" class="btn-cartoon btn-cartoon-primary">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Zitat (scroll reveal) -->
+    <section class="reveal-section">
+      <div class="reveal-sticky">
+        <div>
+          <p class="eyebrow-script reveal-eyebrow">AyCaramba in einem Gefühl:</p>
+          <p class="reveal-text"><span class="word">…wenn</span> <span class="word">Kundengewinnung</span> <span
+              class="word">planbar</span> <span class="word">wird,</span> <span class="word">Marketing</span> <span
+              class="word">endlich</span> <span class="word">wieder</span> <span class="word">einzigartig</span> <span
+              class="word">ist</span> <span class="word">und</span> <span class="word">KI</span> <span
+              class="word">die</span> <span class="word">langweilige</span> <span class="word">Arbeit</span> <span
+              class="word">übernimmt.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Leistungen + 3. CTA teilen sich einen Wellen-Hintergrund -->
+    <div class="wave-zone">
+      <img class="services-wave-bg" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400" height="812"
+        loading="lazy" decoding="async">
+      <img class="services-wave-bg-mirror" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400"
+        height="812" loading="lazy" decoding="async">
+
+      <section class="section-cartoon services-cartoon" id="leistungen">
+        <div class="container">
+          <h2 class="services-title">Unsere Leistungen</h2>
+          <div class="services-grid">
+            <a href="leistungen-digitale-kundengewinnung.html" class="card-cartoon card-cartoon-link">
+              <div class="card-cartoon-icon">🎯</div>
+              <h3>Umsatz-Wahnsinn</h3>
+              <p>Wär's nicht fein, aus der Masse herauszustechen und endlich planbar Kunden zu gewinnen?</p>
+              <span class="card-cartoon-cta">Leistungen ansehen →</span>
+            </a>
+            <a href="leistungen-happy-websites.html" class="card-cartoon card-cartoon-link">
+              <div class="card-cartoon-icon">🌐</div>
+              <h3>Website-Perfektion</h3>
+              <p>Wär's nicht fein, eine eigene Website zu haben, die nicht nur geil aussieht, sondern auch Kunden am
+                laufenden Band bringt?</p>
+              <span class="card-cartoon-cta">Leistungen ansehen →</span>
+            </a>
+            <a href="leistungen-ai-caramba.html" class="card-cartoon card-cartoon-link">
+              <div class="card-cartoon-icon">🤖</div>
+              <h3>KI-Irrsinn</h3>
+              <p>Wär's nicht fein, das Maximale aus deiner Zeit herauszuholen und erfolgreiches Marketing auf Autopilot
+                zu
+                betreiben?</p>
+              <span class="card-cartoon-cta">Leistungen ansehen →</span>
+            </a>
+          </div>
+          <a href="leistungen.html" class="btn-cartoon btn-cartoon-dark">Alle Leistungen ansehen</a>
+        </div>
+      </section>
+
+      <section class="section-cartoon cta-band">
+        <div class="container">
+          <div class="cta-banner">
+            <p class="cta-banner-text">Hör auf zu lesen &amp; fang an zu verdienen.</p>
+            <a href="kontakt.html" class="cta-badge">
+              <span>Vamos!</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3c. Projekt-Galerie (Teaser) -->
+    <section class="section-cartoon gallery-cartoon">
+      <div class="gallery-carousel">
+        <div class="gallery-track" id="galleryTrack">
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%236%20Peppi%20SaaS%20Tool.jpg" alt="Peppi Content-Creator Tool"
+                width="920" height="503" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Peppi Content Creator</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">SaaS Tool</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img
+                src="brand_assets/Projekte/Projekt%20%231%20Kanzlei%20Machac%20%26%20H%C3%A4ussler,%20Erotikmesse.jpg"
+                alt="Print-Kampagne für Kanzlei Machac &amp; Häussler zur Erotikmesse" width="920" height="503"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Kanzlei Machac &amp; Häussler — Erotikmesse</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Print-Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%232%20FirstFloor.png"
+                alt="Social-Media-Content für die FirstFloor Bar Wien" width="920" height="503" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>FirstFloor Bar Wien — Social Media</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Content Production</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.png"
+                alt="LinkedIn-Kampagne für Kraftquell Inside" width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Kraftquell Inside LinkedIn-Kampagne</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Online Lead Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%233%20Auxilio%20CARE%20UI.jpg"
+                alt="UI-Design der Auxilio CARE Webapp" width="920" height="503" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Auxilio Webapps Entwicklung &amp; Design</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">UI &amp; UX Design</span>
+                <span class="tag-chip">SaaS Tools</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%234%20Efficient%20Print.png"
+                alt="Corporate Design für efficent" width="920" height="503" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>efficent Corporate Design</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Print-Kampagne</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%235%20Efficent%20Website.jpg" alt="Website für efficent"
+                width="920" height="503" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>efficent Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Website</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%237%20AyCaramba%20Website%20old.png" alt="AyCaramba Website"
+                width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%239%20AyCaramba%20Online%20Shops%20Website.png"
+                alt="AyCaramba Online Shops Website" width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Online Shops</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%239%20Kriechbaums.png" alt="Website Stadthaus Klosterneuburg"
+                width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Hausverkauf Klosterneuburg</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="container">
+        <div class="gallery-controls">
+          <div class="gallery-dots" id="galleryDots"></div>
+          <div class="gallery-arrows">
+            <button class="gallery-arrow" type="button" data-dir="prev" aria-label="Vorheriges Projekt">←</button>
+            <button class="gallery-arrow" type="button" data-dir="next" aria-label="Nächstes Projekt">→</button>
+          </div>
+        </div>
+        <a href="referenzen.html" class="btn-cartoon btn-cartoon-primary">Alle Referenzen ansehen</a>
+      </div>
+    </section>
+
+    <!-- 4. Referenzen -->
+    <section class="section-cartoon references-cartoon">
+      <div class="container">
+        <h2>Wenn die Connection einfach passt</h2>
+        <div class="reference-logos-viewport">
+          <div class="reference-logos">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png"
+              alt="Auxilio Lebensraum" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="First Floor" width="320" height="125"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="Valentin Skopek" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="KI Caramba" width="320" height="134"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="Referenz-Logo" width="320" height="184"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png" alt=""
+              aria-hidden="true" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="" aria-hidden="true" width="320"
+              height="125" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="" aria-hidden="true" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="" aria-hidden="true" width="320"
+              height="134" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="" aria-hidden="true" width="320"
+              height="184" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SaaS Tools -->
+    <div class="wave-zone tools-wave-zone">
+      <img class="services-wave-bg" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400" height="812"
+        loading="lazy" decoding="async">
+      <img class="services-wave-bg-mirror" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400"
+        height="812" loading="lazy" decoding="async">
+
+      <section class="section-cartoon tools-overview">
+        <div class="container">
+          <h2 class="tools-overview-title">Unsere Tools zum Mitnehmen</h2>
+          <div class="tool-showcase-list">
+
+            <article class="tool-showcase">
+              <div class="tool-showcase-media">
+                <img src="brand_assets/Projekte/Projekt%20%236%20Peppi%20SaaS%20Tool.jpg"
+                  alt="Peppi Content-Creator Oberfläche" width="920" height="503" loading="lazy" decoding="async">
+              </div>
+              <div class="tool-showcase-body">
+                <h3>Peppi</h3>
+                <p>Peppi ist unser hauseigenes Social-Media-Tool für deutschsprachige Unternehmen – gebaut für alle,
+                  denen Social Media gehörig auf die Nerven geht. Keine Zeit für Marketing, aber trotzdem Bock auf
+                  Sichtbarkeit? Genau dafür gibt's Peppi: Ideen finden, Postings für alle gängigen Plattformen und
+                  Content-Formate erstellen, im Kalender einplanen – fertig. Ein Tool. Alles drin. Nerven geschont.</p>
+                <a href="saas-tools.html" class="btn-cartoon btn-cartoon-pink">Zu Peppi →</a>
+              </div>
+            </article>
+
+            <article class="tool-showcase">
+              <div class="tool-showcase-media is-mockup">
+                <img src="brand_assets/Visitors_Mockup_hell.png" alt="Vega Besucher-Übersicht" width="900" height="529"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="tool-showcase-body">
+                <h3>Vega</h3>
+                <p>Eine KI, die Kaufabsichten in Echtzeit erkennt? Das ist kein Nice-to-have, das ist ein unfairer
+                  Vorteil. VEGA fängt Absprünge ab und führt Unentschlossene zum Abschluss – mit KI-Agents, die nicht
+                  nur beraten, sondern verkaufen.</p>
+                <p>Das Beste: VEGA ist unser Partner und bei uns fest inkludiert. Andere bauen Funnels und hoffen. Wir
+                  bauen Funnels, die aktiv verkaufen. Eigene Liga – und du ab jetzt auch.</p>
+                <a href="https://www.vega.company" target="_blank" rel="noopener"
+                  class="btn-cartoon btn-cartoon-teal">Zu Vega ↗</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 5b. Zitat: Wer wir sind (scroll reveal) -->
+    <section class="reveal-section reveal-section-team">
+      <div class="reveal-sticky">
+        <div>
+          <p class="reveal-text"><span class="word">Wir</span> <span class="word">sind</span> <span
+              class="word">junge</span> <span class="word">Bastler,</span> <span class="word">Nerds,</span> <span
+              class="word">Kaffeejunkies</span> <span class="word">und</span> <span class="word">von</span>
+            <span class="word">Natur</span> <span class="word">aus</span> <span class="word">Macher.</span> <span
+              class="word">Wir</span> <span class="word">hinterfragen</span> <span class="word">grundsätzlich</span>
+            <span class="word">alles</span> <span class="word">und</span>
+            <span class="word">sind</span> <span class="word">getrieben</span> <span class="word">von</span> <span
+              class="word">Neugier</span> <span class="word">und</span> <span class="word">spannenden</span> <span
+              class="word">Projekten.</span>
+          </p>
+          <p class="eyebrow-script reveal-note">(Das Auto im Hintergrund existiert nur in unseren Träumen)</p>
+          <a href="ueber-uns.html" class="btn-cartoon btn-cartoon-primary reveal-cta">Mehr über uns</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6b. Blog-Vorschau -->
+    <div class="wave-zone blog-wave-zone">
+      <img class="services-wave-bg" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400" height="812" loading="lazy" decoding="async">
+      <img class="services-wave-bg-mirror" src="Vectorized_vertical.png" alt="" aria-hidden="true" width="2400" height="812" loading="lazy" decoding="async">
+
+      <section class="blog-preview">
+        <div class="container">
+          <h2>Lesestoff, der wirklich was bringt.</h2>
+          <div class="blog-preview-grid">
+            <a class="blog-preview-card" href="blog-was-ist-ein-marketing-funnel.html">
+              <div class="blog-preview-media">
+                <img src="assets/img/blog/marketing-funnel-hero.jpg" width="1600" height="1067" alt="Marketing-Team analysiert Kennzahlen und Diagramme am Konferenztisch" loading="lazy">
+              </div>
+              <div class="blog-preview-body">
+                <span class="blog-preview-badge">Funnel &amp; Conversion</span>
+                <h3>Was ist ein Marketing-Funnel?</h3>
+                <p class="blog-preview-excerpt">TOFU, MOFU, BOFU, AIDA-Modell und ein Bauplan, mit dem du aus Fremden planbar Kund:innen machst.</p>
+                <span class="blog-preview-meta">Niklas Markes · 11 Min. Lesezeit</span>
+              </div>
+            </a>
+            <a class="blog-preview-card" href="blog-wie-funktioniert-online-kundengewinnung.html">
+              <div class="blog-preview-media">
+                <img src="assets/img/blog/online-kundengewinnung-hero.jpg" width="1600" height="1067" alt="Kleines Team bespricht die Strategie für Online-Kundengewinnung am Tisch" loading="lazy">
+              </div>
+              <div class="blog-preview-body">
+                <span class="blog-preview-badge">Kundengewinnung &amp; Leads</span>
+                <h3>Online-Kundengewinnung erklärt</h3>
+                <p class="blog-preview-excerpt">SEO, Google Ads, Social Media und Bewertungen: die Kanäle, der Prozess dahinter und die Fehler, die dich Kund:innen kosten.</p>
+                <span class="blog-preview-meta">Niklas Markes · 9 Min. Lesezeit</span>
+              </div>
+            </a>
+          </div>
+          <div class="blog-preview-cta">
+            <a href="blog.html" class="btn-cartoon btn-cartoon-primary">Blogs ansehen</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 7b. Chat-Banner -->
+    <section class="chat-banner">
+      <a href="#kontakt" class="chat-banner-link">
+        <span class="chat-banner-text">Let's Chat!</span>
+        <span class="chat-banner-icon" aria-hidden="true">↓</span>
       </a>
-      <div class="nav-links">
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#leistungen" class="nav-link">Leistungen</a>
-        <a href="#about" class="nav-link">Über uns</a>
-        <a href="#kontakt" class="nav-link">Kontakt</a>
-        <a href="#kontakt" class="btn btn-pink" style="font-size:0.82rem;padding:0.5rem 1.25rem;">Jetzt Loslegen</a>
-      </div>
-    </div>
-  </nav>
+    </section>
 
+    <!-- 8. Terminbuchung -->
+    <section class="section-cartoon booking-cartoon" id="kontakt">
+      <div class="container">
+        <div class="booking-embed">
+          <h2>Sprich mit uns, wenn Du dich traust.</h2>
+          <p class="booking-lead">Kein Verkaufsgespräch, kein Bla — nur 15 Minuten, um zu schauen, ob's zwischen uns
+            passt. Wähl dir einfach einen freien Termin aus.</p>
 
-  <!-- ══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section id="hero"
-    style="position:relative;min-height:calc(100vh - 68px);display:flex;align-items:stretch;overflow:hidden;padding-top:68px;padding-bottom:0;">
-
-    <!-- Background: palm trees -->
-    <div
-      style="position:absolute;inset:0;background-image:url('brand_assets/Background_Hero.png');background-size:cover;background-position:center;z-index:0;">
-    </div>
-    <!-- Overlay -->
-    <div
-      style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,12,12,0.96) 0%,rgba(12,12,12,0.75) 50%,rgba(12,12,12,0.12) 100%);z-index:1;">
-    </div>
-    <!-- Grain -->
-    <div class="grain-overlay"></div>
-
-    <!-- Content -->
-    <div
-      style="position:relative;z-index:3;max-width:1280px;margin:0 auto;padding:4rem 2rem 0;width:100%;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex:1;"
-      class="hero-grid">
-
-      <!-- Left: headline -->
-      <div class="hero-text" style="flex:1;max-width:720px;align-self:center;padding-bottom:3rem;order:1;">
-        <h1 class="display fu d1"
-          style="font-size:clamp(2.4rem,4.8vw,5rem);line-height:0.95;text-transform:uppercase;color:var(--off-white);margin-bottom:0.1em;">
-          READY<br>
-          FOR THE<br>
-          <span class="yakin"
-            style="font-size:clamp(2.8rem,5.6vw,5.8rem);color:var(--pink);text-transform:none;line-height:1.1;display:block;">AyCaramba!</span>
-          MARKETING?
-        </h1>
-        <!-- Buttons: desktop only (hidden on mobile) -->
-        <div class="hero-btns-desktop fu d3" style="display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;">
-          <a href="#kontakt" class="btn btn-pink" style="font-size:1.05rem;padding:0.8rem 2.2rem;">Jetzt Loslegen</a>
-          <a href="#about" class="btn btn-outline" style="font-size:1.05rem;padding:0.8rem 2.2rem;">Mehr erfahren</a>
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/d/dz5m-ztm-tkf?primary_color=f4680a"
+            style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
         </div>
       </div>
+    </section>
 
-      <!-- Right: hero woman -->
-      <div class="hero-woman fu d2" style="flex-shrink:0;position:relative;order:2;">
-        <img src="brand_assets/Hero_Woman.png" alt="" style="height:clamp(320px,44vw,600px);width:auto;display:block;vertical-align:bottom;margin-bottom:0;
-                    filter:drop-shadow(0 8px 56px rgba(229,58,105,0.2)) drop-shadow(0 2px 12px rgba(0,0,0,0.5));" />
-      </div>
-
-      <!-- Buttons: mobile only (shown below image) -->
-      <div class="hero-btns-mobile fu d4"
-        style="order:3;width:100%;justify-content:center;gap:1rem;flex-wrap:wrap;padding:1.5rem 0 2rem;">
-        <a href="#kontakt" class="btn btn-pink" style="font-size:1.05rem;padding:0.8rem 2.2rem;">Jetzt Loslegen</a>
-        <a href="#about" class="btn btn-outline" style="font-size:1.05rem;padding:0.8rem 2.2rem;">Mehr erfahren</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       SOCIAL MEDIA BAR
-  ═══════════════════════════════════════════ -->
-  <div style="background:#ffffff;padding:1.1rem 2rem;border-top:3px solid #1a1a1a;border-bottom:3px solid #1a1a1a;">
-    <div class="social-bar"
-      style="max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;">
-      <span
-        style="font-family:'Roboto',sans-serif;font-weight:900;font-size:1.35rem;letter-spacing:0.1em;text-transform:uppercase;color:#1a1a1a;">Folge
-        uns auf Social Media:</span>
-      <div style="display:flex;align-items:center;gap:1.25rem;">
-        <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" target="_blank" rel="noopener"
-          aria-label="LinkedIn" style="display:flex;align-items:center;opacity:0.85;transition:opacity 0.2s;"
-          onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-          <img src="brand_assets/Icons/Brands/linkedin.png" alt="LinkedIn" style="height:28px;width:auto;" />
-        </a>
-        <a href="https://www.instagram.com/aycaramba_marketing" target="_blank" rel="noopener" aria-label="Instagram"
-          style="display:flex;align-items:center;opacity:0.85;transition:opacity 0.2s;"
-          onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-          <img src="brand_assets/Icons/Brands/instagram.png" alt="Instagram" style="height:28px;width:auto;" />
-        </a>
-      </div>
-      <span
-        style="font-family:'Roboto',sans-serif;font-weight:900;font-size:1.35rem;letter-spacing:0.1em;text-transform:uppercase;color:#1a1a1a;">Good
-        Job!</span>
-    </div>
-  </div>
-
-
-  <!-- ══════════════════════════════════════════
-       ABOUT
-  ═══════════════════════════════════════════ -->
-  <section id="about" style="padding:7rem 2rem;background:transparent;position:relative;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;"
-      class="about-grid">
-
-      <!-- Left: text -->
-      <div>
-        <h2 class="display"
-          style="font-size:clamp(2rem,3.5vw,3.6rem);line-height:1;white-space:nowrap;color:var(--off-white);margin-bottom:0.15em;">
-          "¡AY, CARAMBA!"</h2>
-        <p
-          style="font-size:clamp(1.1rem,2vw,1.8rem);color:var(--off-white);font-family:'DM Sans',sans-serif;font-style:italic;font-weight:300;margin-bottom:1.75rem;letter-spacing:0.01em;margin-top:0;">
-          ['aj ka'ramba]</p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:1rem;">
-          Von den spanischen Interjektionen "ay" und "caramba". Ist ein Ausruf, der im Portugiesischen und Spanischen
-          verwendet wird, um Überraschung zu bezeichnen.
-        </p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:2rem;">
-          Du hast genug von leeren Versprechungen und ergebnislosen Werbungen? Du willst wirklich gutes Marketing, hast
-          aber weder die Zeit, Dich selbst darum zu kümmern, noch das Budget, um eine teure "Abzocker-Agentur" zu
-          engagieren? Dann hol Dir jetzt Deinen "AY CARAMBA!"-Moment bei uns.
-        </p>
-        <a href="#kontakt" class="btn btn-pink about-btn-desktop">• Jetzt Loslegen!</a>
-      </div>
-
-      <!-- Right: stacked face images -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
-        <div style="display:flex;flex-direction:column;gap:0;width:100%;max-width:420px;margin-left:0;">
-          <img src="brand_assets/Rectangle_Woman_eyes%201.png" alt="Eyes"
-            style="width:100%;height:auto;display:block;" />
-          <img
-            src="brand_assets/F%20is%20for%20Flout%20Convention_%20Why%20Use%20Just%20One_%20Cocktail%20With%20Two%20or%20More%20Serums%20to%20Customize%20Your%20Skincare%201.png"
-            alt="Lips" style="width:55%;height:auto;display:block;margin-left:33%;" />
+    <!-- 7. Partner -->
+    <section class="section-cartoon partners-cartoon">
+      <div class="container">
+        <h2>Unsere Partner</h2>
+        <div class="partner-logos">
+          <a href="https://cindr.la/" target="_blank" rel="noopener"><img class="is-tile"
+              src="brand_assets/Partners/Cindr.la.svg" alt="Cindr.la" width="1400" height="500" loading="lazy"
+              decoding="async"></a>
+          <a href="https://vega.company/" target="_blank" rel="noopener"><img
+              src="brand_assets/Partners/vega_logo_white-1.png" alt="Vega" width="700" height="126" loading="lazy"
+              decoding="async"></a>
+          <a href="https://www.alldialog.com/" target="_blank" rel="noopener"><img
+              src="brand_assets/Partners/unnamed.png" alt="alldialog" width="350" height="143" loading="lazy"
+              decoding="async"></a>
         </div>
-        <a href="#kontakt" class="btn btn-pink about-btn-mobile"
-          style="display:none;margin-top:2rem;text-align:center;">• Jetzt Loslegen!</a>
       </div>
+    </section>
 
-    </div>
-  </section>
+  </main>
 
-
-  <!-- ══════════════════════════════════════════
-       PINK BANNER MARQUEE
-  ═══════════════════════════════════════════ -->
-  <div id="ayc-banner"
-    style="position:relative;overflow:hidden;height:90px;display:flex;align-items:center;justify-content:space-evenly;background-image:url('brand_assets/Banner_Pink.png');background-size:cover;background-position:center;">
-    <span style="font-family:'Yakin',cursive;font-size:2.6rem;color:#0c0c0c;">Vamos!</span>
-    <span style="font-family:'Yakin',cursive;font-size:2.6rem;color:#0c0c0c;">Vamos!</span>
-    <span style="font-family:'Yakin',cursive;font-size:2.6rem;color:#0c0c0c;">Vamos!</span>
-  </div>
-
-
-  <!-- ══════════════════════════════════════════
-       SERVICES / LEISTUNGEN
-  ═══════════════════════════════════════════ -->
-  <section id="leistungen" style="padding:7rem 2rem clamp(2rem,4vw,4rem);background:transparent;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;"
-      class="leistungen-grid">
-
-      <!-- Left: text + icons -->
-      <div>
-        <h2 class="display"
-          style="font-size:clamp(2.4rem,4vw,4rem);line-height:0.93;text-transform:uppercase;color:var(--off-white);margin-bottom:1.5rem;">
-          DEINE VISION.<br>UNSERE MISSION.
-        </h2>
-        <p style="font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:0.75rem;">
-          Dein Unternehmen, Deine Vision, Deine Projekte. Sie alle verdienen mehr als 0815 Designs, sie verdienen
-          außergewöhnliche Ideen und Umsetzungen, die wirklichen Impact bewirken.
-        </p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:2.5rem;">
-          Das Beste? Bei uns findest Du all das.
-        </p>
-
-        <!-- Icon row -->
-        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
-            <div class="leistung-icon-tile">
-              <img src="brand_assets/Leistungen Icons/Branding 1.png" alt="Branding"
-                style="width:44px;height:44px;object-fit:contain;" />
-            </div>
-            <span
-              style="font-family:'Roboto',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--off-white);">Branding</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
-            <div class="leistung-icon-tile">
-              <img src="brand_assets/Leistungen Icons/Ads 1.png" alt="ADS"
-                style="width:44px;height:44px;object-fit:contain;" />
-            </div>
-            <span
-              style="font-family:'Roboto',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--off-white);">ADS</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
-            <div class="leistung-icon-tile">
-              <img src="brand_assets/Leistungen Icons/Social Media 1.png" alt="Social"
-                style="width:44px;height:44px;object-fit:contain;" />
-            </div>
-            <span
-              style="font-family:'Roboto',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--off-white);">Social</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
-            <div class="leistung-icon-tile">
-              <img src="brand_assets/Leistungen Icons/Developement 1.png" alt="Website"
-                style="width:44px;height:44px;object-fit:contain;" />
-            </div>
-            <span
-              style="font-family:'Roboto',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--off-white);">Website</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
-            <div class="leistung-icon-tile">
-              <img src="brand_assets/Leistungen Icons/Print 2.png" alt="Print"
-                style="width:44px;height:44px;object-fit:contain;" />
-            </div>
-            <span
-              style="font-family:'Roboto',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--off-white);">Print</span>
-          </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon" aria-label="Alle Leistungen im Detail entdecken">Mehr
+            erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
         </div>
-
-        <!-- Desktop-only button -->
-        <a href="#kontakt" class="btn btn-pink leistungen-btn-desktop">• Jetzt Loslegen!</a>
       </div>
-
-      <!-- Right: woman image -->
-      <div style="position:relative;display:flex;align-items:center;justify-content:center;">
-        <img src="brand_assets/Zeichenfläche%202%201.png" alt="AY CARAMBA"
-          style="width:75%;height:auto;display:block;max-width:420px;" />
-      </div>
-
-      <!-- Mobile-only button (below image) -->
-      <div class="leistungen-btn-wrap">
-        <a href="#kontakt" class="btn btn-pink">• Jetzt Loslegen!</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       PORTFOLIO / LATEST WORK
-  ═══════════════════════════════════════════ -->
-  <section id="portfolio" style="padding:clamp(1rem,3vw,3rem) 2rem clamp(4rem,7vw,7rem);background:transparent;">
-    <div style="max-width:1280px;margin:0 auto;">
-
-      <div
-        style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;">
-        <div>
-          <p class="label">Referenzen</p>
-          <h2 class="display"
-            style="font-size:clamp(2.8rem,5vw,4.5rem);line-height:0.93;text-transform:uppercase;color:var(--off-white);">
-            OUR LATEST <span style="color:var(--pink);">WORK</span>
-          </h2>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!" width="1938" height="1095" loading="lazy">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
         </div>
-        <a href="#kontakt" class="btn btn-outline">Projekt starten →</a>
-      </div>
-
-      <!-- Single featured case study preview -->
-      <div class="case-preview-link">
-
-        <!-- Meta row above the window -->
-        <div class="case-meta">
-          <span class="case-index">01</span>
-          <span class="case-title">Kanzlei Machac &amp; Häussler</span>
-          <span class="case-tags">2026 – Messeauftritt für Erotikmesse</span>
-          <span class="case-cta">Case öffnen <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-              style="vertical-align:-2px">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></span>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
         </div>
-
-        <!-- The preview window -->
-        <div class="case-window">
-          <!-- fake window chrome -->
-          <div class="case-chrome">
-            <span class="chrome-dot" style="background:#ff5f57;"></span>
-            <span class="chrome-dot" style="background:#febc2e;"></span>
-            <span class="chrome-dot" style="background:#28c840;"></span>
-            <span class="chrome-url">machac-haeussler.html</span>
-          </div>
-          <!-- image viewport — crops to show just a slice -->
-          <div class="case-viewport">
-            <img src="brand_assets/Referenzen%20Machac/Arthur_Sticker_FINAL2.png"
-              alt="Kanzlei Machac Häussler – Sticker Campaign" class="case-img" />
-            <img src="brand_assets/Referenzen%20Machac/Arthur_Sticker_FINAL.png"
-              alt="Kanzlei Machac Häussler – Sticker Campaign" class="case-img" />
-            <!-- pink tint overlay on hover -->
-            <div class="case-tint"></div>
-          </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
         </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <style>
-    /* ── Case Preview ─────────────────────────────── */
-    .case-preview-link {
-      display: block;
-      text-decoration: none;
-      cursor: default;
-    }
-
-    .case-meta {
-      display: flex;
-      align-items: baseline;
-      gap: 1.4rem;
-      margin-bottom: 1.1rem;
-      flex-wrap: wrap;
-    }
-
-    .case-index {
-      font-family: var(--font-display);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      color: var(--pink);
-      opacity: 0.9;
-    }
-
-    .case-title {
-      font-family: var(--font-display);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--off-white);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .case-tags {
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.42);
-      letter-spacing: 0.04em;
-      flex: 1;
-    }
-
-    .case-cta {
-      font-size: 0.82rem;
-      color: var(--pink);
-      letter-spacing: 0.05em;
-      opacity: 0;
-      transform: translateX(-6px);
-      transition: opacity 0.28s ease, transform 0.28s ease;
-    }
-
-    .case-preview-link:hover .case-cta {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* Browser window frame */
-    .case-window {
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.45),
-        0 24px 64px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.04);
-      transition: transform 0.45s cubic-bezier(.22, 1, .36, 1), box-shadow 0.45s cubic-bezier(.22, 1, .36, 1);
-    }
-
-    .case-preview-link:hover .case-window {
-      transform: translateY(-6px) scale(1.005);
-      box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.55),
-        0 40px 80px rgba(0, 0, 0, 0.55),
-        0 0 0 1px rgba(255, 60, 120, 0.18);
-    }
-
-    /* Chrome bar */
-    .case-chrome {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 16px;
-      background: #1c1c1c;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .chrome-dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .chrome-url {
-      margin-left: 12px;
-      font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.28);
-      letter-spacing: 0.03em;
-      font-family: monospace;
-    }
-
-    /* Image viewport — fixed height, image fully visible */
-    .case-viewport {
-      position: relative;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      gap: 2rem;
-    }
-
-    .case-img {
-      width: auto;
-      max-width: 100%;
-      max-height: clamp(260px, 35vw, 420px);
-      object-fit: contain;
-      display: block;
-      transition: transform 0.7s cubic-bezier(.22, 1, .36, 1);
-    }
-
-    @media (max-width: 640px) {
-      .case-img+.case-img {
-        display: none;
-      }
-
-      .case-img {
-        max-height: clamp(220px, 70vw, 320px);
-        max-width: 90%;
-      }
-    }
-
-    .case-preview-link:hover .case-img {
-      transform: scale(1.03);
-    }
-
-    /* Pink tint that fades in on hover */
-    .case-tint {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(160deg,
-          rgba(255, 40, 100, 0.10) 0%,
-          rgba(255, 40, 100, 0.04) 50%,
-          transparent 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .case-preview-link:hover .case-tint {
-      opacity: 1;
-    }
-  </style>
-
-
-  <!-- ══════════════════════════════════════════
-       KI / AI SECTION
-  ═══════════════════════════════════════════ -->
-  <section id="ki" style="position:relative;padding:7rem 2rem;overflow:hidden;background:transparent;">
-
-    <!-- Background: Creation of Adam -->
-    <div
-      style="position:absolute;inset:0;background-image:url('brand_assets/Group%202.png');background-size:cover;background-position:center 70%;z-index:0;opacity:0.28;">
-    </div>
-    <!-- Overlay -->
-    <div
-      style="position:absolute;inset:0;background:linear-gradient(to bottom,var(--dark-3) 0%,rgba(23,23,23,0.7) 50%,var(--dark) 100%);z-index:1;">
-    </div>
-
-    <div
-      style="position:relative;z-index:2;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;"
-      class="ki-grid">
-
-      <div>
-        <p class="label">AyCaramba goes KI</p>
-        <h2 class="display"
-          style="font-size:clamp(2.8rem,5.5vw,5.5rem);line-height:0.91;text-transform:uppercase;color:var(--off-white);margin-bottom:1.5rem;">
-          EINZIGARTIGES MARKETING<br><span style="color:var(--yellow);">IN DEINEN HÄNDEN</span>
-        </h2>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--muted);max-width:520px;margin-bottom:2rem;">
-          Du möchtest kein großes Budget für individuelle Agenturdienstleistungen ausgeben?
-          <br>Nutze unsere "einfach genialen" KI-Systeme und erhalte unfassbare Ergebnisse in sekundenschnelle.
-        </p>
-        <a href="#kontakt" class="btn btn-pink" style="font-size:1.05rem;padding:0.8rem 2.2rem;">Jetzt informieren →</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       CONTACT FORM / LASS UNS LOSLEGEN
-  ═══════════════════════════════════════════ -->
-  <section id="kontakt" style="padding:7rem 2rem;background:transparent;">
-    <div style="max-width:680px;margin:0 auto;">
-
-      <div style="text-align:center;margin-bottom:3rem;">
-        <p class="label" style="text-align:center;">Kontakt</p>
-        <h2 class="display"
-          style="font-size:clamp(2.8rem,5.5vw,5rem);line-height:0.93;text-transform:uppercase;color:var(--off-white);margin-bottom:0.75rem;">
-          LASS UNS<br>LOSLEGEN
-        </h2>
-        <p style="font-size:0.95rem;line-height:1.75;color:var(--muted);">Erzähl uns von deinem Projekt. Wir melden uns
-          innerhalb von 24 Stunden.</p>
-      </div>
-
-      <form id="sib-form" method="POST"
-        action="https://65400575.sibforms.com/serve/MUIFAON66yIKvlV1WvQ5B1eNyu_GdRvSEEz7UJjVIaZ9ESQJMpaMrZLr5-XkDTLnQjN3cuoppHjhS_ahowDyjtnDpLtWkXP9cw4ALh8KY_gUhHth7jT6kq_I93evexMxv3Z36wmwVmW6xoO4Fxhb3Lefv5rlDN-Jy_TTSoyfXk2Hd7Lx0gSa6wTY8QDkYMqc5MGqp4J0jV6umZbF"
-        data-type="subscription" style="display:flex;flex-direction:column;gap:1.25rem;">
-
-        <div>
-          <label
-            style="display:block;font-size:0.74rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,239,233,0.45);margin-bottom:0.45rem;">Name</label>
-          <input type="text" name="NAME" placeholder="Dein Name" class="form-field" autocomplete="name" />
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog.html">Blog</a>
+          </nav>
         </div>
-
-        <div>
-          <label
-            style="display:block;font-size:0.74rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,239,233,0.45);margin-bottom:0.45rem;">E-Mail</label>
-          <input type="email" name="EMAIL" placeholder="max@beispiel.de" class="form-field" autocomplete="email"
-            required />
-        </div>
-
-        <div>
-          <label
-            style="display:block;font-size:0.74rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,239,233,0.45);margin-bottom:0.45rem;">Nachricht</label>
-          <textarea rows="5" name="NACHRICHT"
-            placeholder="Erzähl uns von deinem Projekt, deinen Zielen und deinem Budget…" class="form-field"
-            style="resize:vertical;min-height:130px;"></textarea>
-        </div>
-
-        <div style="display:flex;align-items:flex-start;gap:0.75rem;">
-          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1"
-            style="width:17px;height:17px;margin-top:2px;accent-color:var(--pink);cursor:pointer;flex-shrink:0;" />
-          <label for="OPT_IN" style="font-size:0.83rem;line-height:1.6;color:var(--muted);cursor:pointer;">
-            Ich stimme der <a href="#"
-              style="color:var(--pink);text-decoration:underline;text-underline-offset:2px;">Datenschutzerklärung</a> zu
-            und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
-          </label>
-        </div>
-
-        <button type="submit" class="btn btn-pink"
-          style="font-size:1.05rem;padding:0.9rem 2rem;text-align:center;width:100%;margin-top:0.5rem;">
-          NACHRICHT SENDEN →
-        </button>
-
-        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
-        <input type="hidden" name="locale" value="de">
-      </form>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer id="footer" style="padding:2.5rem 2rem;background:transparent;border-top:1px solid rgba(244,239,233,0.06);">
-    <div
-      style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
-
-      <a href="#" aria-label="Aycaramba Home">
-        <img src="brand_assets/Logo/Aycaramba_Logo_Grain%203.svg" alt="Aycaramba"
-          style="height:32px;width:auto;opacity:0.9;" />
-      </a>
-
-      <p style="font-size:0.8rem;color:rgba(244,239,233,0.3);letter-spacing:0.03em;">
-        © 2025 Aycaramba. Alle Rechte vorbehalten.
-      </p>
-
-      <div style="display:flex;align-items:center;gap:1.5rem;">
-        <a href="impressum.html"
-          style="font-size:0.8rem;color:rgba(244,239,233,0.3);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;"
-          onmouseover="this.style.color='var(--off-white)'"
-          onmouseout="this.style.color='rgba(244,239,233,0.3)'">Impressum</a>
-        <a href="datenschutz.html"
-          style="font-size:0.8rem;color:rgba(244,239,233,0.3);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;"
-          onmouseover="this.style.color='var(--off-white)'"
-          onmouseout="this.style.color='rgba(244,239,233,0.3)'">Datenschutz</a>
       </div>
-
-      <div style="display:flex;align-items:center;gap:1.25rem;">
-        <a href="#" aria-label="Instagram"
-          style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(244,239,233,0.12);
-                  opacity:0.55;transition:opacity 0.2s,border-color 0.2s,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);"
-          onmouseover="this.style.opacity='1';this.style.borderColor='rgba(200,48,74,0.5)';this.style.transform='translateY(-3px)'"
-          onmouseout="this.style.opacity='0.55';this.style.borderColor='rgba(244,239,233,0.12)';this.style.transform='translateY(0)'">
-          <img src="brand_assets/Icons/Brands/instagram.png" alt="Instagram"
-            style="width:18px;height:18px;object-fit:contain;filter:invert(1);" />
-        </a>
-        <a href="#" aria-label="LinkedIn"
-          style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(244,239,233,0.12);
-                  opacity:0.55;transition:opacity 0.2s,border-color 0.2s,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);"
-          onmouseover="this.style.opacity='1';this.style.borderColor='rgba(200,48,74,0.5)';this.style.transform='translateY(-3px)'"
-          onmouseout="this.style.opacity='0.55';this.style.borderColor='rgba(244,239,233,0.12)';this.style.transform='translateY(0)'">
-          <img src="brand_assets/Icons/Brands/linkedin.png" alt="LinkedIn"
-            style="width:18px;height:18px;object-fit:contain;filter:invert(1);" />
-        </a>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png"
+              alt="" width="32" height="32" loading="lazy"></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png"
+              alt="" width="32" height="32" loading="lazy"></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
       </div>
-
     </div>
   </footer>
 
-
-  <script>
-    // ── Nav scroll state ──
-    window.addEventListener('scroll', () => {
-      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
-
-    // ── Form submit ──
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Nachricht gesendet ✓';
-      btn.style.background = '#1a6641';
-      btn.style.pointerEvents = 'none';
-    }
-
-    // ── Scroll-triggered fade-ups for non-hero sections ──
-    const fadeTargets = document.querySelectorAll('#about, #leistungen, #portfolio, #ki, #kontakt');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.service-card, .port-card').forEach((el, i) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(24px)';
-            el.style.transition = `opacity 0.55s ease ${i * 0.07}s, transform 0.55s cubic-bezier(0.22,1,0.36,1) ${i * 0.07}s`;
-            setTimeout(() => {
-              el.style.opacity = '1';
-              el.style.transform = 'translateY(0)';
-            }, 50 + i * 70);
-          });
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    fadeTargets.forEach(el => io.observe(el));
-  </script>
-
-
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

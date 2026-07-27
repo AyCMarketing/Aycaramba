@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeitvergleich Widget — Export</title>
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link href="https://fonts.cdnfonts.com/css/basement-grotesque" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --orange: #FEA651;
+      --orange-l: #FFB96B;
+      --bg: #000000;
+      --bg2: #050504;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #ebebeb;
+      --text-sub: #888888;
+      --text-mute: #505050;
+    }
+
+    * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Basement Grotesque', 'Space Grotesk', sans-serif;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+     ZEITVERGLEICH BANNER (Standalone Export)
+════════════════════════════════════════ -->
+  <section
+    style="background:radial-gradient(ellipse 80% 100% at 50% 50%, rgba(254,166,81,0.10) 0%, rgba(254,166,81,0.03) 55%, transparent 100%), var(--bg2);padding:52px 24px;position:relative;overflow:hidden;border-top:1px solid rgba(254,166,81,0.18);border-bottom:1px solid rgba(254,166,81,0.18);">
+    <div
+      style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(254,166,81,0.07) 0%,transparent 70%);pointer-events:none;">
+    </div>
+
+    <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
+
+      <h3
+        style="font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin:0 0 28px;text-align:center;">
+        Social Media verbrennt dein Geld.
+      </h3>
+
+      <!-- Slider row -->
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;">
+        <label
+          style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-mute);white-space:nowrap;flex-shrink:0;">
+          Aufwand / Woche
+        </label>
+        <div style="flex:1;min-width:160px;">
+          <input id="cmp-slider" type="range" min="1" max="40" value="3" step="1"
+            style="width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;outline:none;cursor:pointer;" />
+          <style>
+            #cmp-slider {
+              background: rgba(255, 255, 255, 0.08);
+            }
+
+            #cmp-slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #FFB96B, #FEA651);
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              box-shadow: 0 0 10px rgba(254, 166, 81, 0.55);
+              cursor: pointer;
+              transition: transform 0.1s ease;
+            }
+
+            #cmp-slider::-webkit-slider-thumb:hover {
+              transform: scale(1.15);
+            }
+
+            #cmp-slider::-webkit-slider-runnable-track {
+              height: 6px;
+              border-radius: 6px;
+              background: linear-gradient(90deg, var(--orange) var(--cmp-pct, 15%), rgba(255, 255, 255, 0.08) var(--cmp-pct, 15%));
+            }
+
+            #cmp-slider::-moz-range-thumb {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #FFB96B, #FEA651);
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              box-shadow: 0 0 10px rgba(254, 166, 81, 0.55);
+              cursor: pointer;
+            }
+
+            #cmp-slider::-moz-range-track {
+              height: 6px;
+              border-radius: 6px;
+              background: rgba(255, 255, 255, 0.08);
+            }
+
+            #cmp-slider::-moz-range-progress {
+              height: 6px;
+              border-radius: 6px;
+              background: var(--orange);
+            }
+          </style>
+        </div>
+        <div
+          style="flex-shrink:0;font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:22px;font-weight:800;color:#fff;min-width:72px;text-align:right;">
+          <span id="cmp-week-val">3</span> Std.
+        </div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:28px;">
+        <span style="font-size:11px;color:var(--text-mute);">= <span id="cmp-month-info">~13 Std. / Monat</span></span>
+      </div>
+
+      <!-- Comparison bars -->
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
+            <span style="font-size:13px;color:var(--text-sub);font-weight:500;">Ohne KI-Content System</span>
+            <span id="cmp-before-label"
+              style="font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:14px;font-weight:800;color:rgba(255,255,255,0.35);">13
+              Std. / Monat</span>
+          </div>
+          <div
+            style="height:8px;border-radius:6px;background:rgba(255,255,255,0.06);overflow:hidden;border:1px solid rgba(255,255,255,0.07);">
+            <div id="cmp-before-bar"
+              style="height:100%;width:65%;background:rgba(255,255,255,0.18);border-radius:6px;transition:width 0.35s cubic-bezier(0.4,0,0.2,1);">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
+            <span style="font-size:13px;color:#fff;font-weight:600;">Mit KI-Content System</span>
+            <span id="cmp-after-label"
+              style="font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:14px;font-weight:800;background:linear-gradient(135deg,#FEA651,#FFD4A0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">~4
+              Std. / Monat</span>
+          </div>
+          <div
+            style="height:8px;border-radius:6px;background:rgba(255,255,255,0.06);overflow:hidden;border:1px solid rgba(254,166,81,0.15);">
+            <div id="cmp-after-bar"
+              style="height:100%;width:22%;background:linear-gradient(90deg,var(--orange),#FFD4A0);border-radius:6px;box-shadow:0 0 8px rgba(254,166,81,0.35);transition:width 0.35s cubic-bezier(0.4,0,0.2,1);">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Savings row -->
+      <div
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid rgba(254,166,81,0.15);">
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+          <div>
+            <div
+              style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mute);margin-bottom:4px;">
+              Zeitersparnis / Monat</div>
+            <div id="cmp-time-saving"
+              style="font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:20px;font-weight:800;background:linear-gradient(135deg,#FEA651,#FFD4A0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              ≈ 9 Std.</div>
+          </div>
+          <div style="width:1px;height:36px;background:rgba(254,166,81,0.2);flex-shrink:0;"></div>
+          <div>
+            <div
+              style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mute);margin-bottom:4px;">
+              Kostenersparnis / Monat</div>
+            <div id="cmp-cost-saving"
+              style="font-family:'Basement Grotesque','Space Grotesk',sans-serif;font-size:20px;font-weight:800;background:linear-gradient(135deg,#FEA651,#FFD4A0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              ≈ 360 €</div>
+          </div>
+        </div>
+        <a href="calculator.html"
+          style="font-size:12px;font-weight:600;color:var(--orange);text-decoration:none;opacity:0.8;white-space:nowrap;">Genau
+          ausrechnen →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var sl = document.getElementById('cmp-slider');
+      var weekVal = document.getElementById('cmp-week-val');
+      var monthInfo = document.getElementById('cmp-month-info');
+      var beforeLabel = document.getElementById('cmp-before-label');
+      var afterLabel = document.getElementById('cmp-after-label');
+      var beforeBar = document.getElementById('cmp-before-bar');
+      var afterBar = document.getElementById('cmp-after-bar');
+      var timeSaving = document.getElementById('cmp-time-saving');
+      var costSaving = document.getElementById('cmp-cost-saving');
+      var MAX_W = 40;
+      var MAX_M = Math.round(MAX_W * 4.33);
+      function update(w) {
+        w = parseInt(w) || 1;
+        var monthly = Math.round(w * 4.33);
+        var withKI = Math.max(1, Math.round(monthly / 3));
+        var saved = monthly - withKI;
+        var cost = saved * 40;
+        weekVal.textContent = w;
+        monthInfo.textContent = '~' + monthly + ' Std. / Monat';
+        beforeLabel.textContent = monthly + ' Std. / Monat';
+        afterLabel.textContent = '~' + withKI + ' Std. / Monat';
+        timeSaving.textContent = '≈ ' + saved + ' Std.';
+        costSaving.textContent = '≈ ' + cost + ' €';
+        var pct = (w / MAX_W * 100).toFixed(1) + '%';
+        sl.style.setProperty('--cmp-pct', pct);
+        sl.style.background = 'linear-gradient(90deg,var(--orange) ' + pct + ',rgba(255,255,255,0.08) ' + pct + ')';
+        beforeBar.style.width = Math.min(100, (monthly / MAX_M * 100)).toFixed(1) + '%';
+        afterBar.style.width = Math.min(100, (withKI / MAX_M * 100)).toFixed(1) + '%';
+      }
+      sl.addEventListener('input', function () { update(this.value); });
+      update(3);
+    })();
+  </script>
+
+</body>
+</html>

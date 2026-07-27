@@ -1,6 +1,7 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
+import zlib from 'zlib';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -20,7 +21,12 @@ const MIME = {
   '.woff2': 'font/woff2',
   '.ttf': 'font/ttf',
   '.pdf': 'application/pdf',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain',
 };
+
+const COMPRESSIBLE = new Set(['.html', '.css', '.js', '.json', '.svg', '.xml', '.txt']);
+const LONG_CACHE = new Set(['.png', '.jpg', '.jpeg', '.svg', '.woff', '.woff2', '.ttf']);
 
 http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
@@ -36,7 +42,23 @@ http.createServer((req, res) => {
       res.end('Not found');
       return;
     }
-    res.writeHead(200, { 'Content-Type': contentType });
+
+    const headers = { 'Content-Type': contentType };
+    if (LONG_CACHE.has(ext)) {
+      headers['Cache-Control'] = 'public, max-age=31536000, immutable';
+    } else if (ext === '.css' || ext === '.js') {
+      headers['Cache-Control'] = 'public, max-age=2592000';
+    }
+
+    const acceptEncoding = req.headers['accept-encoding'] || '';
+    if (COMPRESSIBLE.has(ext) && acceptEncoding.includes('gzip')) {
+      headers['Content-Encoding'] = 'gzip';
+      res.writeHead(200, headers);
+      res.end(zlib.gzipSync(data));
+      return;
+    }
+
+    res.writeHead(200, headers);
     res.end(data);
   });
 }).listen(PORT, () => {

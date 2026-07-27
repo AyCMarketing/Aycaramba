@@ -3,31 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum — Ay Caramba!</title>
-  <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://aycaramba.at/impressum">
+  <title>Kontakt — Ay Caramba!</title>
+  <meta name="description" content="Vereinbare ein unverbindliches Erstgespräch mit AyCaramba — wähl dir einfach einen freien Termin aus.">
+  <link rel="canonical" href="https://aycaramba.at/kontakt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontakt — Ay Caramba!">
+  <meta property="og:description" content="Vereinbare ein unverbindliches Erstgespräch mit AyCaramba — wähl dir einfach einen freien Termin aus.">
+  <meta property="og:url" content="https://aycaramba.at/kontakt">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kontakt — Ay Caramba!">
+  <meta name="twitter:description" content="Vereinbare ein unverbindliches Erstgespräch mit AyCaramba — wähl dir einfach einen freien Termin aus.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
   <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    .legal-content {
-      max-width: 720px;
-      padding-block: var(--space-section);
-      margin-inline: auto;
+    /* ---------- Terminbuchung (Calendly) ---------- */
+    .booking-cartoon {
+      background: var(--color-cream);
+      text-align: center;
     }
-    .legal-content h2 {
-      font-size: 1.25rem;
-      margin-top: 2rem;
+
+    .booking-cartoon h1 {
+      margin: 0.5rem auto 0.75rem;
+      max-width: 18ch;
     }
-    .legal-content dl {
+
+    .booking-lead {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+      max-width: 52ch;
+      margin: 0 auto 0.5rem;
+    }
+
+    .booking-embed {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: 1.75rem clamp(1.5rem, 4vw, 3rem) 1.5rem;
+      overflow: hidden;
+    }
+
+    /* ---------- Direktkontakt ---------- */
+    .direct-contact-cartoon {
+      background: var(--color-ink);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .direct-contact-cartoon h2 {
+      color: var(--color-white);
+    }
+
+    .direct-contact-grid {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.5rem 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .direct-contact-grid .tile-cartoon {
+      align-items: center;
+    }
+
+    .direct-contact-grid .tile-cartoon h3 {
+      color: var(--color-ink);
+    }
+
+    .direct-contact-grid a {
+      color: var(--color-orange);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .direct-contact-grid a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 860px) {
+      .direct-contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -70,43 +137,59 @@
         <a href="referenzen.html">Referenzen</a>
         <a href="ueber-uns.html">Über uns</a>
         <a href="blog.html">Blog</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <div class="legal-content">
-      <h1>Impressum</h1>
+  <main>
 
-      <h2>Angaben gemäß § 5 ECG, § 25 Mediengesetz</h2>
-      <dl>
-        <dt>Firmenname:</dt><dd>AyCaramba e.U.</dd>
-        <dt>Anschrift:</dt><dd>Martinstraße 25, 3400 Klosterneuburg, Österreich</dd>
-        <dt>Steuernummer:</dt><dd>07 402/0223</dd>
-        <dt>UID-Nummer:</dt><dd>ATU83303649</dd>
-        <dt>Firmenbuchgericht:</dt><dd>Handelsgericht Korneuburg</dd>
-      </dl>
+    <!-- Terminbuchung -->
+    <section class="section-cartoon booking-cartoon">
+      <div class="container">
+        <div class="booking-embed">
+          <p class="eyebrow-script">Kontakt</p>
+          <h1>Lass uns quatschen</h1>
+          <p class="booking-lead">Kein Verkaufsgespräch, kein Bla — nur 15 Minuten, um zu schauen, ob's zwischen uns passt. Wähl dir einfach einen freien Termin aus.</p>
 
-      <h2>Kontakt</h2>
-      <dl>
-        <dt>Ansprechpartner:</dt><dd>Niklas Markes</dd>
-        <dt>Telefon:</dt><dd><a href="tel:+436603222837">+43 660 32 22 837</a></dd>
-        <dt>E-Mail:</dt><dd><a href="mailto:office@aycaramba.at">office@aycaramba.at</a></dd>
-      </dl>
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/d/dz5m-ztm-tkf?primary_color=f4680a" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+    </section>
 
-      <h2>Unternehmensgegenstand</h2>
-      <p>Gewerbebezeichnung: Werbeagentur</p>
+    <!-- Direktkontakt -->
+    <section class="section-cartoon direct-contact-cartoon">
+      <div class="container">
+        <h2>Lieber direkt?</h2>
+        <div class="direct-contact-grid">
+          <div class="tile-cartoon">
+            <div class="tile-cartoon-icon" style="background: var(--color-orange-light);">📞</div>
+            <div>
+              <h3>Telefon</h3>
+              <p><a href="tel:+436603222837">+43 660 32 22 837</a></p>
+            </div>
+          </div>
+          <div class="tile-cartoon">
+            <div class="tile-cartoon-icon" style="background: var(--color-teal-light);">✉️</div>
+            <div>
+              <h3>E-Mail</h3>
+              <p><a href="mailto:office@aycaramba.at">office@aycaramba.at</a></p>
+            </div>
+          </div>
+          <div class="tile-cartoon">
+            <div class="tile-cartoon-icon" style="background: var(--color-pink-mid);">📱</div>
+            <div>
+              <h3>Social</h3>
+              <p><a href="https://www.instagram.com/aycaramba_marketing/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Aufsichtsbehörde / Gewerbebehörde</h2>
-      <p>Bezirkshauptmannschaft Tulln</p>
-
-      <h2>Mitgliedschaften</h2>
-      <p>Mitglied der Wirtschaftskammer Österreich (WKO).</p>
-
-      <h2>Anwendbare Rechtsvorschriften</h2>
-      <p>Gewerbeordnung – <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a></p>
-    </div>
   </main>
 
   <footer class="site-footer">
@@ -159,7 +242,7 @@
           <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
         </div>
         <div class="footer-legal">
-          <a href="impressum.html" aria-current="page">Impressum</a>
+          <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
