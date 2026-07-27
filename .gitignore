@@ -1,6 +1,7 @@
 node_modules/
 temporary screenshots/
 .claude/
+netlify-deploy/
 brand_assets/.env
 .env
 brand_assets/Videoclips/

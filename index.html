@@ -40,8 +40,8 @@
       z-index: 5;
       overflow: hidden;
       isolation: isolate;
-      height: 100vh;
-      height: 100dvh;
+      min-height: 100vh;
+      min-height: 100svh;
       background: var(--color-ink);
     }
 
@@ -125,6 +125,7 @@
       position: relative;
       z-index: 2;
       min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -192,6 +193,13 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .hero-bg {
+        animation: none;
+        transform: none;
+      }
+    }
+
     /* ---------- 1. Zitat (scroll reveal) ---------- */
     .reveal-section {
       position: relative;
@@ -245,6 +253,7 @@
       main {
         display: flex;
         flex-direction: column;
+        overflow-x: clip;
       }
 
       main > * {
