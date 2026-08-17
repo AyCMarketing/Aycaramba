@@ -47,12 +47,36 @@
       order: 2;
     }
 
+    .story-media {
+      position: relative;
+    }
+
     .story-media img {
       width: 100%;
       border-radius: 24px;
       border: var(--cs-border-thick);
       box-shadow: var(--shadow-pop-lg);
       display: block;
+    }
+
+    .ai-image-badge {
+      position: absolute;
+      z-index: 3;
+      top: 1rem;
+      left: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(23, 18, 20, 0.78);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
     }
 
     .story-credit {
@@ -239,6 +263,7 @@
     }
 
     .gallery-card-media {
+      position: relative;
       aspect-ratio: 16 / 10;
       background: var(--color-ink-soft);
     }
@@ -413,10 +438,6 @@
           </div>
           <div class="site-nav-sub" id="nav-sub-leistungen">
             <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
-            <a href="leistungen-digitale-kundengewinnung.html#positionierung">Angebot & Positionierung</a>
-            <a href="leistungen-digitale-kundengewinnung.html#anziehen">Anziehen</a>
-            <a href="leistungen-digitale-kundengewinnung.html#einsammeln">Einsammeln</a>
-            <a href="leistungen-digitale-kundengewinnung.html#abschliessen">Abschließen</a>
             <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
             <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
             <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
@@ -473,6 +494,7 @@
           <article class="story-block">
             <div class="story-media">
               <img src="brand_assets/Images/Lambo_AyC.jpg" alt="Von Natur aus Verrückt">
+              <span class="ai-image-badge">✨ KI-generiertes Bild</span>
             </div>
             <div class="story-body">
               <h2>Von Natur aus Verrückt</h2>
@@ -636,6 +658,7 @@
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
               <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.png" alt="LinkedIn-Kampagne für Kraftquell Inside">
+              <span class="ai-image-badge">✨ KI-generiertes Bild</span>
             </div>
             <div class="gallery-card-body">
               <h3>Kraftquell Inside LinkedIn-Kampagne</h3>

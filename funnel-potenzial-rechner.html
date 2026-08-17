@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funnel-Potenzial-Rechner — Ay Caramba!</title>
+  <meta name="description" content="Finde in 5 kurzen Fragen heraus, wie viel Lead- und Umsatzpotenzial in deinem Werbebudget steckt — kostenlos und unverbindlich.">
+  <link rel="canonical" href="https://aycaramba.at/funnel-potenzial-rechner">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Funnel-Potenzial-Rechner — Ay Caramba!">
+  <meta property="og:description" content="Finde in 5 kurzen Fragen heraus, wie viel Lead- und Umsatzpotenzial in deinem Werbebudget steckt — kostenlos und unverbindlich.">
+  <meta property="og:url" content="https://aycaramba.at/funnel-potenzial-rechner">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Funnel-Potenzial-Rechner — Ay Caramba!">
+  <meta name="twitter:description" content="Finde in 5 kurzen Fragen heraus, wie viel Lead- und Umsatzpotenzial in deinem Werbebudget steckt — kostenlos und unverbindlich.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Seitenkopf (wie auf den anderen Unterseiten) ---------- */
+    .site-header {
+      background: var(--color-teal);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+    }
+
+    .page-header {
+      background: var(--color-teal);
+      border-bottom: var(--cs-border-xthick);
+      padding-top: 1rem;
+    }
+
+    .page-header h1,
+    .page-header-lead {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .page-header-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-header-text {
+        margin: 0 auto;
+      }
+    }
+
+    /* ---------- Rechner-Sektion ---------- */
+    .calc-section {
+      background: var(--color-cream);
+      padding-block: 1rem 6rem;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .calc-form h2,
+    .calc-results h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .form-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--color-ink);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .form-label-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: var(--color-cream);
+      border: var(--cs-border);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .form-hint {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+
+    .form-input,
+    .form-select {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-ink);
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 14px;
+      padding: 0.8rem 1rem;
+      transition: box-shadow 0.15s, transform 0.15s;
+      width: 100%;
+    }
+
+    .form-input:focus-visible,
+    .form-select:focus-visible {
+      outline: none;
+      box-shadow: var(--shadow-pop-sm);
+      transform: translate(-1px, -1px);
+    }
+
+    .budget-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .budget-row .form-input {
+      max-width: 140px;
+      flex-shrink: 0;
+    }
+
+    .budget-slider {
+      flex: 1;
+      accent-color: var(--color-orange);
+      height: 6px;
+    }
+
+    .calc-results {
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .stat-block {
+      background: var(--color-surface-alt);
+      border: var(--cs-border);
+      border-radius: 18px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .stat-block.is-leads {
+      background: var(--color-teal-light);
+    }
+
+    .stat-block.is-umsatz {
+      background: var(--color-orange-light);
+    }
+
+    .stat-value {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+      color: var(--color-ink);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--color-ink-soft);
+      margin-top: 0.35rem;
+    }
+
+    .calc-disclaimer {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--color-ink-soft);
+      margin: 1rem 0 0;
+    }
+
+    .calc-budget-hint {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--color-orange-dark);
+      background: rgba(244, 104, 10, 0.12);
+      border-radius: 12px;
+      padding: 0.7rem 0.9rem;
+      margin: 1rem 0 0;
+    }
+
+    .calc-cta {
+      width: 100%;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+
+    .calc-cta:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* ---------- Modal ---------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(23, 18, 20, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay[hidden] {
+      display: none;
+    }
+
+    .modal-card {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-card h2 {
+      font-size: 1.4rem;
+      margin: 0.3rem 0 0.75rem;
+    }
+
+    .modal-lead {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+      font-size: 0.95rem;
+      margin: 0 0 1.5rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border);
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .modal-close:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--color-ink-soft);
+      margin: 0.5rem 0 1.5rem;
+      cursor: pointer;
+    }
+
+    .checkbox-row input {
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-orange);
+    }
+
+    .checkbox-row a {
+      color: var(--color-ink);
+      text-decoration: underline;
+    }
+
+    .modal-submit {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .form-error {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #C21818;
+      margin: -0.9rem 0 1.1rem;
+      display: none;
+    }
+
+    .form-error.is-visible {
+      display: block;
+    }
+
+    #modalConfirmView h2 {
+      margin-top: 0.3rem;
+    }
+
+    #modalConfirmView p {
+      font-family: var(--font-body);
+      color: var(--color-ink-soft);
+    }
+
+    #modalDone {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="leistungen.html">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
+            <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
+            <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
+            <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
+            <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
+            <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
+            <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
+            <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
+            <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-row">
+          <div class="page-header-text">
+            <h1>Sichere dir deinen gratis Funnelblueprint</h1>
+            <p class="page-header-lead">Beantworte 5 kurze Fragen zu deinem Geschäft — wir zeigen dir sofort dein geschätztes Lead- und Umsatzpotenzial pro Monat. Unverbindlich, konservativ gerechnet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-grid">
+
+          <div class="card-cartoon calc-form">
+            <h2>Deine Eckdaten</h2>
+            <form id="calcForm" novalidate>
+
+              <div class="form-field">
+                <label class="form-label" for="zielgruppe"><span class="form-label-icon">🎯</span> An wen verkaufst du? *</label>
+                <select class="form-select" id="zielgruppe" name="zielgruppe" required>
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="b2b_demo">Geschäftskunden (B2B)</option>
+                  <option value="b2c_highticket">Privatkunden, hochpreisig</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="auftragswert"><span class="form-label-icon">💶</span> Ø Auftragswert (€) *</label>
+                <input class="form-input" type="number" id="auftragswert" name="auftragswert" min="1" step="1" placeholder="z. B. 2500" required>
+                <p class="form-hint" id="auftragswertHint">Typischer Wert eines Auftrags oder Projekts.</p>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="margin"><span class="form-label-icon">📊</span> Deckungsmarge *</label>
+                <select class="form-select" id="margin" name="margin" required>
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="unter_30">unter 30 %</option>
+                  <option value="30_bis_50">30–50 %</option>
+                  <option value="ueber_50">über 50 %</option>
+                  <option value="unbekannt">weiß ich nicht</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="naechsterSchritt"><span class="form-label-icon">📅</span> Was ist der nächste Schritt für einen Interessenten? *</label>
+                <select class="form-select" id="naechsterSchritt" name="naechsterSchritt" required>
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="online_call">Online-Call / Erstgespräch</option>
+                  <option value="demo_termin">Demo- / Probetermin</option>
+                  <option value="webinar">Webinar</option>
+                  <option value="unbekannt">Weiß ich noch nicht</option>
+                </select>
+                <p class="form-hint">Wie geht es weiter, nachdem sich jemand gemeldet hat?</p>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="budget"><span class="form-label-icon">📢</span> Geplantes Werbebudget pro Monat (€) *</label>
+                <div class="budget-row">
+                  <input class="form-input" type="number" id="budget" name="budget" min="500" max="20000" step="100" value="2000" required>
+                  <input class="budget-slider" type="range" id="budgetRange" min="500" max="20000" step="100" value="2000" aria-label="Werbebudget Schieberegler">
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="card-cartoon calc-results" id="resultsCard">
+            <p class="eyebrow-script">Deine Ersteinschätzung</p>
+            <h2>Potenzial pro Monat</h2>
+
+            <div class="stat-block is-leads">
+              <span class="stat-value" id="leadsValue">– – –</span>
+              <span class="stat-label">qualifizierte Leads / Monat</span>
+            </div>
+
+            <div class="stat-block is-umsatz">
+              <span class="stat-value" id="umsatzValue">– – –</span>
+              <span class="stat-label">mögliches Umsatzpotenzial pro Monat bei solider Vertriebsleistung</span>
+            </div>
+
+            <p class="calc-disclaimer" id="calcDisclaimer">Konservative Ersteinschätzung auf Basis aktueller Markt-Benchmarks. Die vollständige Berechnung mit Rechenweg und individuellen Empfehlungen bekommst du im Funnel Blueprint.</p>
+
+            <p class="calc-budget-hint" id="budgetHint" hidden>Bei diesem Budget sind die Ergebnisse noch wenig belastbar — für aussagekräftigere Zahlen empfehlen wir mindestens 1.000 € Werbebudget pro Monat.</p>
+
+            <button type="button" class="btn-cartoon btn-cartoon-primary calc-cta" id="ctaOpenModal" disabled>Funnel PDF Blueprint herunterladen</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="leistungen.html" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
+            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-card card-cartoon" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Schließen">✕</button>
+
+      <div id="modalFormView">
+        <p class="eyebrow-script">Fast geschafft</p>
+        <h2 id="modalTitle">Deinen Funnel Blueprint anfordern</h2>
+        <p class="modal-lead">Wir senden dir die vollständige Berechnung inkl. Termin- und Auftragsprognose sowie Wirtschaftlichkeits-Check innerhalb von 10 Minuten per E-Mail.</p>
+
+        <form id="leadForm" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="leadEmail">E-Mail-Adresse *</label>
+            <input class="form-input" type="email" id="leadEmail" name="email" autocomplete="email" placeholder="name@unternehmen.at" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="leadPhone">Telefonnummer *</label>
+            <input class="form-input" type="tel" id="leadPhone" name="phone" autocomplete="tel" placeholder="+43 660 1234567" pattern="^[+]?[0-9\s\-\/()]{6,20}$" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="leadCompanyName">Unternehmensname *</label>
+            <input class="form-input" type="text" id="leadCompanyName" name="companyName" autocomplete="organization" placeholder="z. B. Muster GmbH" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="leadBranche">Branche / Produkt *</label>
+            <input class="form-input" type="text" id="leadBranche" name="brancheProdukt" autocomplete="off" placeholder="z. B. Maschinenbau, Coaching, SaaS" required>
+          </div>
+
+          <div class="form-field" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+            <label class="form-label" for="leadWebsite">Website</label>
+            <input class="form-input" type="text" id="leadWebsite" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="form-error" id="leadFormError">Bitte überprüfe deine Angaben.</p>
+
+          <label class="checkbox-row" for="leadConsent">
+            <input type="checkbox" id="leadConsent" required>
+            <span>Ich bin damit einverstanden, dass AyCaramba mich zur Zusendung des Reports und für eine anschließende Kontaktaufnahme per E-Mail oder Telefon kontaktiert. Weitere Infos in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span>
+          </label>
+
+          <button type="submit" class="btn-cartoon btn-cartoon-primary modal-submit">Blueprint anfordern</button>
+        </form>
+      </div>
+
+      <div id="modalConfirmView" hidden>
+        <p class="eyebrow-script">Danke!</p>
+        <h2>Dein Funnel Blueprint ist unterwegs</h2>
+        <p id="confirmText">Dein persönlicher Funnel Blueprint ist unterwegs — wir senden ihn innerhalb von 10 Minuten an deine E-Mail-Adresse.</p>
+        <button type="button" class="btn-cartoon btn-cartoon-dark" id="modalDone">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // ---------------------------------------------------------------
+      // Konfiguration — Vertriebsmodell-Profile (erweiterbar, siehe Briefing Abschnitt 8)
+      // ---------------------------------------------------------------
+      // CPL-Staffel je Auftragswert: je höher der Auftragswert, desto teurer &
+      // spezifischer der Lead. "bis" = obere Grenze des Auftragswert-Bands.
+      const B2B_CPL_STAFFELN = [
+        { bis: 1000, cplKons: 35, cplOpt: 20 },
+        { bis: 5000, cplKons: 55, cplOpt: 35 },
+        { bis: 15000, cplKons: 80, cplOpt: 50 },
+        { bis: Infinity, cplKons: 120, cplOpt: 80 },
+      ];
+
+      // B2C-Leads sind durchgehend günstiger (Privatpersonen billiger erreichbar
+      // als Entscheider) — eigene Staffel + eigene Sicherheitsgrenzen.
+      const B2C_CPL_STAFFELN = [
+        { bis: 2000, cplKons: 20, cplOpt: 10 },
+        { bis: 8000, cplKons: 35, cplOpt: 18 },
+        { bis: 20000, cplKons: 55, cplOpt: 30 },
+        { bis: Infinity, cplKons: 80, cplOpt: 45 },
+      ];
+
+      // Zielgruppe bestimmt AUSSCHLIESSLICH die CPL-Staffel (Lead-Kosten) —
+      // NICHT mehr die Funnel-Quoten (siehe QUOTEN_NAECHSTER_SCHRITT unten).
+      // Drei-Achsen-Modell: Zielgruppe + Auftragswert → CPL; Nächster Schritt → Quoten.
+      const PROFILES = {
+        b2b_demo: {
+          label: 'Geschäftskunden (B2B)',
+          cplStaffeln: B2B_CPL_STAFFELN,
+          cplMin: 15,
+          cplMax: 150,
+        },
+        b2c_highticket: {
+          label: 'Privatkunden, hochpreisig',
+          cplStaffeln: B2C_CPL_STAFFELN,
+          cplMin: 8,
+          cplMax: 100,
+        },
+      };
+
+      // Anteil des Deckungsbeitrags, der maximal in Akquise fließen darf (interne Ampel).
+      const AKQUISE_BUDGET_ANTEIL = 0.50;
+
+      // Funnel-Quoten je nächstem Schritt — zielgruppenunabhängig (ein B2B- und ein
+      // B2C-Demotermin konvertieren gleich gut, nur die Lead-Kosten unterscheiden sich).
+      const QUOTEN_NAECHSTER_SCHRITT = {
+        online_call: { leadZuTermin: 0.45, showup: 0.70, terminZuSale: 0.22 },
+        demo_termin: { leadZuTermin: 0.32, showup: 0.80, terminZuSale: 0.30 },
+        webinar: { leadZuTermin: 0.58, showup: 0.45, terminZuSale: 0.18 },
+        unbekannt: { leadZuTermin: 0.33, showup: 0.68, terminZuSale: 0.20 },
+      };
+
+      const NAECHSTER_SCHRITT_LABELS = {
+        online_call: 'Online-Call / Erstgespräch',
+        demo_termin: 'Demo- / Probetermin',
+        webinar: 'Webinar',
+        unbekannt: 'Weiß ich noch nicht',
+      };
+
+      // Der CTA selbst beeinflusst die Lead-Kosten: ein niederschwelliger Ask
+      // (Webinar) bringt günstigere, ein hochschwelliger Ask (Demo-Termin)
+      // teurere Leads. Wird auf die Auftragswert-Staffel multipliziert, VOR
+      // dem Clamp auf CPL_MIN/CPL_MAX.
+      const CPL_MULTIPLIER_NAECHSTER_SCHRITT = {
+        online_call: 1.0,
+        demo_termin: 1.2,
+        webinar: 0.7,
+        unbekannt: 1.0,
+      };
+
+      function clamp(value, min, max) {
+        return Math.min(max, Math.max(min, value));
+      }
+
+      // Wählt die erste Staffel, deren "bis" >= auftragswert, wendet den
+      // CPL-Multiplikator des nächsten Schritts an und klemmt die Werte auf
+      // die Sicherheitsgrenzen des Profils (gegen absurde Eingaben).
+      function ermittleCpl(profile, auftragswert, cplMultiplier) {
+        const staffel = profile.cplStaffeln.find((s) => auftragswert <= s.bis);
+        return {
+          cplKonservativ: clamp(staffel.cplKons * cplMultiplier, profile.cplMin, profile.cplMax),
+          cplOptimiert: clamp(staffel.cplOpt * cplMultiplier, profile.cplMin, profile.cplMax),
+        };
+      }
+
+      const MARGIN_MAP = {
+        unter_30: 0.25,
+        '30_bis_50': 0.40,
+        ueber_50: 0.55,
+        unbekannt: 0.35,
+      };
+
+      const MARGIN_LABELS = {
+        unter_30: 'unter 30 %',
+        '30_bis_50': '30–50 %',
+        ueber_50: 'über 50 %',
+        unbekannt: 'weiß ich nicht',
+      };
+
+      const ZIELGRUPPE_LABELS = {
+        b2b_demo: 'Geschäftskunden (B2B)',
+        b2c_highticket: 'Privatkunden, hochpreisig',
+      };
+
+      const AUFTRAGSWERT_HINT_TEXT = {
+        default: 'Typischer Wert eines Auftrags oder Projekts.',
+        b2b_demo: 'Typischer Wert eines Auftrags oder Projekts — bei laufenden Verträgen der Wert des ersten Jahres.',
+        b2c_highticket: 'Was zahlt ein Kunde durchschnittlich für einen Abschluss?',
+      };
+
+      const DISCLAIMER_TEXT = {
+        default: 'Konservative Ersteinschätzung auf Basis aktueller Markt-Benchmarks. Die vollständige Berechnung mit Rechenweg und individuellen Empfehlungen bekommst du im Funnel Blueprint.',
+        b2b_demo: 'Konservative Ersteinschätzung auf Basis von B2B-Benchmarks. Die vollständige Berechnung mit Rechenweg und individuellen Empfehlungen bekommst du im Funnel Blueprint.',
+        b2c_highticket: 'Konservative Ersteinschätzung auf Basis von B2C-Benchmarks. Die vollständige Berechnung mit Rechenweg und individuellen Empfehlungen bekommst du im Funnel Blueprint.',
+      };
+
+      // ---------------------------------------------------------------
+      // Elemente
+      // ---------------------------------------------------------------
+      const zielgruppeSelect = document.getElementById('zielgruppe');
+      const auftragswertInput = document.getElementById('auftragswert');
+      const auftragswertHintEl = document.getElementById('auftragswertHint');
+      const marginSelect = document.getElementById('margin');
+      const naechsterSchrittSelect = document.getElementById('naechsterSchritt');
+      const budgetInput = document.getElementById('budget');
+      const budgetRange = document.getElementById('budgetRange');
+
+      const leadsValueEl = document.getElementById('leadsValue');
+      const umsatzValueEl = document.getElementById('umsatzValue');
+      const calcDisclaimerEl = document.getElementById('calcDisclaimer');
+      const budgetHintEl = document.getElementById('budgetHint');
+      const ctaOpenModalBtn = document.getElementById('ctaOpenModal');
+
+      const modalOverlay = document.getElementById('modalOverlay');
+      const modalClose = document.getElementById('modalClose');
+      const modalFormView = document.getElementById('modalFormView');
+      const modalConfirmView = document.getElementById('modalConfirmView');
+      const leadForm = document.getElementById('leadForm');
+      const leadFormError = document.getElementById('leadFormError');
+      const confirmText = document.getElementById('confirmText');
+      const modalDone = document.getElementById('modalDone');
+
+      let lastResult = null;
+      let lastInputs = null;
+
+      // ---------------------------------------------------------------
+      // Berechnung
+      // ---------------------------------------------------------------
+      function getInputs() {
+        return {
+          zielgruppe: zielgruppeSelect.value,
+          auftragswert: parseFloat(auftragswertInput.value),
+          marginKey: marginSelect.value,
+          naechsterSchritt: naechsterSchrittSelect.value,
+          budget: parseFloat(budgetInput.value),
+        };
+      }
+
+      function isValid(inputs) {
+        return (
+          PROFILES[inputs.zielgruppe] !== undefined &&
+          Number.isFinite(inputs.auftragswert) && inputs.auftragswert > 0 &&
+          MARGIN_MAP[inputs.marginKey] !== undefined &&
+          QUOTEN_NAECHSTER_SCHRITT[inputs.naechsterSchritt] !== undefined &&
+          Number.isFinite(inputs.budget) && inputs.budget >= 500
+        );
+      }
+
+      function calculate(inputs) {
+        const profile = PROFILES[inputs.zielgruppe];
+        const margin = MARGIN_MAP[inputs.marginKey];
+        const q = QUOTEN_NAECHSTER_SCHRITT[inputs.naechsterSchritt];
+        const cplMultiplier = CPL_MULTIPLIER_NAECHSTER_SCHRITT[inputs.naechsterSchritt];
+        const leadToSale = q.leadZuTermin * q.showup * q.terminZuSale;
+
+        const { cplKonservativ, cplOptimiert } = ermittleCpl(profile, inputs.auftragswert, cplMultiplier);
+
+        const leadsMinRaw = inputs.budget / cplKonservativ;
+        const leadsMaxRaw = inputs.budget / cplOptimiert;
+
+        const auftraegeMin = leadsMinRaw * leadToSale;
+        const auftraegeMax = leadsMaxRaw * leadToSale;
+
+        const umsatzMinRaw = auftraegeMin * inputs.auftragswert;
+        const umsatzMaxRaw = auftraegeMax * inputs.auftragswert;
+
+        let leadsMin = Math.round(leadsMinRaw);
+        let leadsMax = Math.round(leadsMaxRaw);
+        const budgetKnapp = inputs.budget < 1000;
+        if (budgetKnapp) {
+          leadsMin = Math.max(leadsMin, 5);
+          leadsMax = Math.max(leadsMax, 7, leadsMin + 1);
+        }
+
+        const umsatzMin = Math.round(umsatzMinRaw / 100) * 100;
+        const umsatzMax = Math.round(umsatzMaxRaw / 100) * 100;
+
+        // Intern berechnet, NICHT im Teaser angezeigt (Briefing Abschnitt 5.3)
+        const termineMin = leadsMinRaw * q.leadZuTermin * q.showup;
+        const termineMax = leadsMaxRaw * q.leadZuTermin * q.showup;
+        const dbProAuftrag = inputs.auftragswert * margin;
+        const maxCacProAuftrag = dbProAuftrag * AKQUISE_BUDGET_ANTEIL;
+        // Mittelwert aus optimiertem und konservativem CPL statt nur dem teuren Wert,
+        // damit die Ampel dieselbe Bandbreite widerspiegelt wie die Leads/Umsatz-Range oben.
+        const cplDurchschnitt = (cplKonservativ + cplOptimiert) / 2;
+        const adSpendProAuftrag = cplDurchschnitt / leadToSale;
+
+        let ampel;
+        if (adSpendProAuftrag <= 0.8 * maxCacProAuftrag) ampel = 'gruen';
+        else if (adSpendProAuftrag <= maxCacProAuftrag) ampel = 'gelb';
+        else ampel = 'rot';
+
+        return {
+          leadsMin, leadsMax,
+          umsatzMin, umsatzMax,
+          budgetKnapp,
+          termineMin: Math.round(termineMin * 10) / 10,
+          termineMax: Math.round(termineMax * 10) / 10,
+          auftraegeMin: Math.round(auftraegeMin * 10) / 10,
+          auftraegeMax: Math.round(auftraegeMax * 10) / 10,
+          dbProAuftrag: Math.round(dbProAuftrag),
+          maxCacProAuftrag: Math.round(maxCacProAuftrag),
+          adSpendProAuftrag: Math.round(adSpendProAuftrag),
+          cplKonservativ,
+          cplOptimiert,
+          rateLeadZuTermin: q.leadZuTermin,
+          rateShowup: q.showup,
+          rateTerminZuSale: q.terminZuSale,
+          leadToSaleRate: leadToSale,
+          ampel,
+        };
+      }
+
+      function formatEuro(n) {
+        return n.toLocaleString('de-DE') + ' €';
+      }
+
+      function updateCalculation() {
+        const inputs = getInputs();
+        lastInputs = inputs;
+
+        auftragswertHintEl.textContent = AUFTRAGSWERT_HINT_TEXT[inputs.zielgruppe] || AUFTRAGSWERT_HINT_TEXT.default;
+        calcDisclaimerEl.textContent = DISCLAIMER_TEXT[inputs.zielgruppe] || DISCLAIMER_TEXT.default;
+
+        if (!isValid(inputs)) {
+          leadsValueEl.textContent = '– – –';
+          umsatzValueEl.textContent = '– – –';
+          budgetHintEl.hidden = true;
+          ctaOpenModalBtn.disabled = true;
+          lastResult = null;
+          return;
+        }
+
+        const result = calculate(inputs);
+        lastResult = result;
+
+        leadsValueEl.textContent = `${result.leadsMin}–${result.leadsMax}`;
+        umsatzValueEl.textContent = `${result.umsatzMin.toLocaleString('de-DE')}–${result.umsatzMax.toLocaleString('de-DE')} €`;
+        budgetHintEl.hidden = !result.budgetKnapp;
+        ctaOpenModalBtn.disabled = false;
+      }
+
+      [zielgruppeSelect, auftragswertInput, marginSelect, naechsterSchrittSelect].forEach((el) => {
+        el.addEventListener('input', updateCalculation);
+        el.addEventListener('change', updateCalculation);
+      });
+
+      budgetInput.addEventListener('input', () => {
+        budgetRange.value = budgetInput.value;
+        updateCalculation();
+      });
+      budgetRange.addEventListener('input', () => {
+        budgetInput.value = budgetRange.value;
+        updateCalculation();
+      });
+
+      // ---------------------------------------------------------------
+      // Lead-Übermittlung an n8n-Webhook
+      // ---------------------------------------------------------------
+      const FUNNEL_LEAD_WEBHOOK_URL = 'https://vmi2941324.contaboserver.net/webhook/funnel-blueprint-lead';
+
+      function getUtmParams() {
+        const params = new URLSearchParams(window.location.search);
+        const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+        const out = {};
+        keys.forEach((k) => {
+          const v = params.get(k);
+          if (v) out[k] = v;
+        });
+        return out;
+      }
+
+      async function submitLead(payload) {
+        try {
+          const response = await fetch(FUNNEL_LEAD_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          return response.ok;
+        } catch (e) {
+          console.error('[Funnel-Rechner] Lead-Versand fehlgeschlagen:', e);
+          return false;
+        }
+      }
+
+      // ---------------------------------------------------------------
+      // Modal-Steuerung
+      // ---------------------------------------------------------------
+      function openModal() {
+        if (!lastResult) return;
+        modalFormView.hidden = false;
+        modalConfirmView.hidden = true;
+        leadFormError.textContent = 'Bitte überprüfe deine Angaben.';
+        leadFormError.classList.remove('is-visible');
+        modalOverlay.hidden = false;
+        document.getElementById('leadEmail').focus();
+      }
+
+      function closeModal() {
+        modalOverlay.hidden = true;
+      }
+
+      ctaOpenModalBtn.addEventListener('click', openModal);
+      modalClose.addEventListener('click', closeModal);
+      modalDone.addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modalOverlay.hidden) closeModal();
+      });
+
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!leadForm.checkValidity()) {
+          leadForm.reportValidity();
+          leadFormError.classList.add('is-visible');
+          return;
+        }
+        if (!lastResult || !lastInputs) return;
+
+        const email = document.getElementById('leadEmail').value.trim();
+        const phone = document.getElementById('leadPhone').value.trim();
+        const companyName = document.getElementById('leadCompanyName').value.trim() || null;
+        const brancheProdukt = document.getElementById('leadBranche').value.trim() || null;
+        const website = document.getElementById('leadWebsite').value.trim();
+
+        const payload = {
+          zeitstempel: new Date().toISOString(),
+          utm: getUtmParams(),
+          vertriebsmodell: lastInputs.zielgruppe,
+          website,
+          eingaben: {
+            zielgruppe: ZIELGRUPPE_LABELS[lastInputs.zielgruppe],
+            auftragswert: lastInputs.auftragswert,
+            deckungsmargeAuswahl: MARGIN_LABELS[lastInputs.marginKey],
+            deckungsmargeWert: MARGIN_MAP[lastInputs.marginKey],
+            naechsterSchritt: NAECHSTER_SCHRITT_LABELS[lastInputs.naechsterSchritt],
+            naechsterSchrittWert: lastInputs.naechsterSchritt,
+            werbebudgetProMonat: lastInputs.budget,
+            brancheProdukt,
+          },
+          berechnung: {
+            leadsMin: lastResult.leadsMin,
+            leadsMax: lastResult.leadsMax,
+            umsatzMin: lastResult.umsatzMin,
+            umsatzMax: lastResult.umsatzMax,
+            termineMin: lastResult.termineMin,
+            termineMax: lastResult.termineMax,
+            auftraegeMin: lastResult.auftraegeMin,
+            auftraegeMax: lastResult.auftraegeMax,
+            dbProAuftrag: lastResult.dbProAuftrag,
+            maxCacProAuftrag: lastResult.maxCacProAuftrag,
+            adSpendProAuftrag: lastResult.adSpendProAuftrag,
+            cplKonservativ: lastResult.cplKonservativ,
+            cplOptimiert: lastResult.cplOptimiert,
+            rateLeadZuTermin: lastResult.rateLeadZuTermin,
+            rateShowup: lastResult.rateShowup,
+            rateTerminZuSale: lastResult.rateTerminZuSale,
+            leadToSaleRate: lastResult.leadToSaleRate,
+            ampel: lastResult.ampel,
+          },
+          lead: { email, telefon: phone, unternehmensname: companyName, einwilligung: true },
+        };
+
+        const submitBtn = leadForm.querySelector('.modal-submit');
+        submitBtn.disabled = true;
+        leadFormError.classList.remove('is-visible');
+
+        const success = await submitLead(payload);
+
+        submitBtn.disabled = false;
+
+        if (!success) {
+          leadFormError.textContent = 'Der Versand hat leider nicht geklappt. Bitte versuche es erneut oder schreib uns direkt an office@aycaramba.at.';
+          leadFormError.classList.add('is-visible');
+          return;
+        }
+
+        confirmText.textContent = `Dein persönlicher Funnel Blueprint ist unterwegs — wir senden ihn innerhalb von 10 Minuten an ${email}.`;
+        modalFormView.hidden = true;
+        modalConfirmView.hidden = false;
+      });
+
+      updateCalculation();
+    })();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

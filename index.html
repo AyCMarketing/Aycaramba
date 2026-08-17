@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ay Caramba! — Dein Marketing wird’s dir danken</title>
+  <title>Ay Caramba! — Dein Umsatz wird’s dir danken</title>
   <meta name="description"
     content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
   <link rel="canonical" href="https://aycaramba.at/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ay Caramba! — Marketing mit System, verstärkt durch KI">
+  <meta property="og:title" content="Ay Caramba! — Dein Umsatz wird’s dir danken">
   <meta property="og:description"
     content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
   <meta property="og:url" content="https://aycaramba.at/">
   <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ay Caramba! — Marketing mit System, verstärkt durch KI">
+  <meta name="twitter:title" content="Ay Caramba! — Dein Umsatz wird’s dir danken">
   <meta name="twitter:description"
     content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
   <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
@@ -476,6 +476,7 @@
     }
 
     .gallery-card-media {
+      position: relative;
       aspect-ratio: 16 / 10;
       background: var(--color-ink-soft);
     }
@@ -643,6 +644,8 @@
     .reference-logos img {
       height: 68px;
       width: auto;
+      max-width: 260px;
+      object-fit: contain;
       border-radius: 12px;
       flex-shrink: 0;
     }
@@ -791,6 +794,26 @@
     .reveal-section-team .reveal-cta {
       display: inline-block;
       margin-top: 2.5rem;
+    }
+
+    .ai-image-badge {
+      position: absolute;
+      z-index: 3;
+      top: 1.5rem;
+      left: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(23, 18, 20, 0.78);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
     }
 
     /* ---------- 7. Partner ---------- */
@@ -1042,10 +1065,6 @@
               </div>
               <div class="site-nav-sub" id="nav-sub-leistungen">
                 <a class="site-nav-sub-label" href="leistungen-digitale-kundengewinnung.html">Umsatz-Wahnsinn</a>
-                <a href="leistungen-digitale-kundengewinnung.html#positionierung">Angebot & Positionierung</a>
-                <a href="leistungen-digitale-kundengewinnung.html#anziehen">Anziehen</a>
-                <a href="leistungen-digitale-kundengewinnung.html#einsammeln">Einsammeln</a>
-                <a href="leistungen-digitale-kundengewinnung.html#abschliessen">Abschließen</a>
                 <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
                 <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
                 <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
@@ -1072,10 +1091,10 @@
         <div class="hero-content">
           <p class="hero-eyebrow">AyCaramba!</p>
           <h1 class="hero-headline">
-            <span class="line">Dein Marketing</span>
-            <span class="line">wird’s dir danken</span>
+            <span class="line">Dein Umsatz</span>
+            <span class="line">wird's dir danken.</span>
           </h1>
-          <p class="hero-subheadline">Digital Marketing that gets your business booked out.</p>
+          <p class="hero-subheadline">Für KMUs, die ihr Marketing nicht dem Zufall überlassen.</p>
           <div class="hero-ctas">
             <a href="#leistungen" class="btn-cartoon" aria-label="Mehr über unsere Leistungen erfahren">Mehr
               erfahren</a>
@@ -1196,6 +1215,7 @@
             <div class="gallery-card-media">
               <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.png"
                 alt="LinkedIn-Kampagne für Kraftquell Inside" width="920" height="506" loading="lazy" decoding="async">
+              <span class="ai-image-badge">✨ KI-generiertes Bild</span>
             </div>
             <div class="gallery-card-body">
               <h3>Kraftquell Inside LinkedIn-Kampagne</h3>
@@ -1214,6 +1234,18 @@
               <div class="gallery-tags">
                 <span class="tag-chip">UI &amp; UX Design</span>
                 <span class="tag-chip">SaaS Tools</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20-%20VEGA%20Website.PNG" alt="VEGA Website" width="920"
+                height="403" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>VEGA Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
               </div>
             </div>
           </article>
@@ -1307,6 +1339,8 @@
               loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="Referenz-Logo" width="320" height="184"
               loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="Pathadvice" width="320" height="47"
+              loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png" alt=""
               aria-hidden="true" width="620" height="172" loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="" aria-hidden="true" width="320"
@@ -1317,6 +1351,8 @@
               height="134" loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="" aria-hidden="true" width="320"
               height="184" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="" aria-hidden="true" width="320"
+              height="47" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -1369,9 +1405,10 @@
     <!-- 5b. Zitat: Wer wir sind (scroll reveal) -->
     <section class="reveal-section reveal-section-team">
       <div class="reveal-sticky">
+        <span class="ai-image-badge">✨ KI-generiertes Bild</span>
         <div>
           <p class="reveal-text"><span class="word">Wir</span> <span class="word">sind</span> <span
-              class="word">junge</span> <span class="word">Bastler,</span> <span class="word">Nerds,</span> <span
+              class="word">Bastler,</span> <span class="word">Nerds,</span> <span
               class="word">Kaffeejunkies</span> <span class="word">und</span> <span class="word">von</span>
             <span class="word">Natur</span> <span class="word">aus</span> <span class="word">Macher.</span> <span
               class="word">Wir</span> <span class="word">hinterfragen</span> <span class="word">grundsätzlich</span>
@@ -1395,6 +1432,17 @@
         <div class="container">
           <h2>Lesestoff, der wirklich was bringt.</h2>
           <div class="blog-preview-grid">
+            <a class="blog-preview-card" href="blog/unterschied-landingpage-website.html">
+              <div class="blog-preview-media">
+                <img src="assets/img/blog/landingpage-website-unterschied-hero.jpg" width="1600" height="1067" alt="Laptop und Monitore mit Website-Design-Software auf einem modernen Schreibtisch" loading="lazy">
+              </div>
+              <div class="blog-preview-body">
+                <span class="blog-preview-badge">Funnel &amp; Conversion</span>
+                <h3>Landingpage vs. Website: Was ist der Unterschied?</h3>
+                <p class="blog-preview-excerpt">Aufbau, Ziele, SEO-Wirkung und eine klare Entscheidungshilfe, wann du welches Format wirklich brauchst.</p>
+                <span class="blog-preview-meta">Niklas Markes · 9 Min. Lesezeit</span>
+              </div>
+            </a>
             <a class="blog-preview-card" href="blog/was-ist-ein-marketing-funnel.html">
               <div class="blog-preview-media">
                 <img src="assets/img/blog/marketing-funnel-hero.jpg" width="1600" height="1067" alt="Marketing-Team analysiert Kennzahlen und Diagramme am Konferenztisch" loading="lazy">
@@ -1404,17 +1452,6 @@
                 <h3>Was ist ein Marketing-Funnel?</h3>
                 <p class="blog-preview-excerpt">TOFU, MOFU, BOFU, AIDA-Modell und ein Bauplan, mit dem du aus Fremden planbar Kund:innen machst.</p>
                 <span class="blog-preview-meta">Niklas Markes · 11 Min. Lesezeit</span>
-              </div>
-            </a>
-            <a class="blog-preview-card" href="blog/wie-funktioniert-online-kundengewinnung.html">
-              <div class="blog-preview-media">
-                <img src="assets/img/blog/online-kundengewinnung-hero.jpg" width="1600" height="1067" alt="Kleines Team bespricht die Strategie für Online-Kundengewinnung am Tisch" loading="lazy">
-              </div>
-              <div class="blog-preview-body">
-                <span class="blog-preview-badge">Kundengewinnung &amp; Leads</span>
-                <h3>Online-Kundengewinnung erklärt</h3>
-                <p class="blog-preview-excerpt">SEO, Google Ads, Social Media und Bewertungen: die Kanäle, der Prozess dahinter und die Fehler, die dich Kund:innen kosten.</p>
-                <span class="blog-preview-meta">Niklas Markes · 9 Min. Lesezeit</span>
               </div>
             </a>
           </div>
