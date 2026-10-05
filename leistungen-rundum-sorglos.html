@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rundum-Sorglos — Ay Caramba!</title>
+  <meta name="description" content="Social Media und Website-Wartung im Rundum-Sorglos-Paket: Wir kümmern uns jeden Monat um Deine Online-Präsenz, Du Dich um Dein Kerngeschäft.">
+  <link rel="canonical" href="https://aycaramba.at/leistungen-rundum-sorglos">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rundum-Sorglos — Ay Caramba!">
+  <meta property="og:description" content="Social Media und Website-Wartung im Rundum-Sorglos-Paket: Wir kümmern uns jeden Monat um Deine Online-Präsenz, Du Dich um Dein Kerngeschäft.">
+  <meta property="og:url" content="https://aycaramba.at/leistungen-rundum-sorglos">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rundum-Sorglos — Ay Caramba!">
+  <meta name="twitter:description" content="Social Media und Website-Wartung im Rundum-Sorglos-Paket: Wir kümmern uns jeden Monat um Deine Online-Präsenz, Du Dich um Dein Kerngeschäft.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Header in Leistungsfarbe (Pink) ---------- */
+    .site-header {
+      background: var(--color-pink);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    /* ---------- Gemeinsame Bausteine (wie Umsatz-Wahnsinn) ---------- */
+    .uw-section-title {
+      font-size: clamp(1.9rem, 4.4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 22ch;
+    }
+
+    .uw-center {
+      text-align: center;
+    }
+
+    .uw-center .uw-section-title {
+      margin-inline: auto;
+    }
+
+    .uw-lead {
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+      margin: 1.25rem 0 0;
+    }
+
+    .uw-center .uw-lead {
+      margin-inline: auto;
+    }
+
+    .uw-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.25rem;
+    }
+
+    .uw-center .uw-actions {
+      justify-content: center;
+    }
+
+    .btn-cartoon:focus-visible {
+      outline: 3px solid var(--color-ink);
+      outline-offset: 4px;
+    }
+
+    .uw-btn-white {
+      box-shadow: var(--shadow-pop);
+    }
+
+    .uw-btn-white:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .uw-btn-white:active {
+      transform: translate(4px, 4px);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    /* ---------- 1. Hero ---------- */
+    .uw-hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-pink);
+      border-bottom: var(--cs-border-xthick);
+      padding-block: 1.5rem clamp(4rem, 9vw, 7rem);
+    }
+
+    .uw-hero .back-link {
+      color: var(--color-white);
+    }
+
+    .uw-hero .back-link:hover {
+      color: var(--color-ink);
+    }
+
+    /* bewusst nicht positioniert: der Grabstein richtet sich am Hero aus */
+    .uw-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding-top: clamp(1rem, 4vw, 3rem);
+      text-align: center;
+    }
+
+    .uw-hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2.3rem, 6vw, 4.25rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      color: var(--color-white);
+      max-width: 17ch;
+      margin-inline: auto;
+    }
+
+    .rs-hero-sub {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display, 'Poppins', sans-serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--color-white);
+      max-width: 44ch;
+      margin: 1.5rem auto 0;
+    }
+
+    .uw-hero .uw-actions {
+      position: relative;
+      z-index: 1;
+      justify-content: center;
+    }
+
+    /* Grabstein "RIP Online Marketing": bis 1360px groß im Hintergrund unten
+       rechts, darüber rechts neben der Headline und leicht schwingend */
+    .rs-hanger {
+      position: absolute;
+      right: -1.5rem;
+      bottom: -5rem;
+      z-index: 0;
+      width: clamp(150px, 26vw, 230px);
+      height: auto;
+      transform: rotate(-12deg);
+      transform-origin: 50% 12%;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1359.98px) {
+      .uw-hero {
+        padding-bottom: clamp(9rem, 24vw, 13rem);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .uw-hero {
+        padding-bottom: 13rem;
+      }
+
+      .rs-hanger {
+        right: 0.25rem;
+        bottom: -2.5rem;
+      }
+    }
+
+    @media (min-width: 1360px) {
+      .rs-hanger {
+        top: 50%;
+        bottom: auto;
+        right: max(2.5rem, calc((100vw - 1280px) / 2));
+        width: clamp(170px, 13vw, 230px);
+        margin-top: -150px;
+        transform: rotate(-8deg);
+        animation: rs-hanger-swing 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+      }
+    }
+
+    @keyframes rs-hanger-swing {
+      0%, 100% { transform: rotate(-8deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rs-hanger {
+        animation: none;
+      }
+    }
+
+    /* ---------- 2. Zitat mit Scroll-Reveal (wie Startseite, Logik in main.js) ---------- */
+    .reveal-section {
+      position: relative;
+      min-height: 220vh;
+      background: var(--color-teal-dark);
+    }
+
+    .reveal-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem clamp(1.5rem, 6vw, 5rem);
+      text-align: center;
+    }
+
+    .reveal-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.9rem, 4.4vw, 3.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 30ch;
+      margin: 0 auto;
+      text-wrap: balance;
+      color: var(--color-white);
+    }
+
+    .reveal-text .word {
+      opacity: 0.2;
+      transition: opacity 0.05s linear;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-text .word {
+        opacity: 1 !important;
+        transition: none;
+      }
+    }
+
+    /* ---------- 3. Einwände als bunte Kacheln (wie Schmerzpunkte) ---------- */
+    .uw-pains {
+      background: var(--color-cream);
+      border-bottom: var(--cs-border-xthick);
+    }
+
+    .uw-pain-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .uw-pain {
+      flex: 0 1 460px;
+      color: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 20px;
+      box-shadow: var(--shadow-pop);
+      padding: 1.75rem 1.75rem 2rem;
+      transform: rotate(var(--uw-tilt, 0deg));
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-pain:nth-child(1) { background: var(--color-orange); --uw-tilt: -1.2deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(2) { background: var(--color-teal); --uw-tilt: 0.9deg; --uw-tilt-hover: -1.5deg; }
+    .uw-pain:nth-child(3) { background: var(--color-pink); --uw-tilt: -0.6deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(4) { background: var(--color-teal-dark); --uw-tilt: 1.1deg; --uw-tilt-hover: -1.5deg; }
+
+    @media (hover: hover) {
+      .uw-pain:hover {
+        transform: translateY(-8px) scale(1.05) rotate(var(--uw-tilt-hover, 0deg));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .uw-pain {
+        transition: none;
+      }
+    }
+
+    /* Einwand steht als Zitat in der Überschrift, die Antwort darunter */
+    .uw-pain h3 {
+      font-size: 1.2rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .uw-pain p {
+      margin: 0;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .uw-pain strong {
+      font-weight: 800;
+    }
+
+    @media (max-width: 640px) {
+      .uw-pain {
+        flex-basis: 100%;
+      }
+    }
+
+    /* Traurige Smileys hängen an den Ecken der Kacheln */
+    .uw-pain {
+      position: relative;
+    }
+
+    .rs-sad {
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      filter: drop-shadow(3px 4px 0 var(--color-ink));
+      transform: rotate(var(--rs-sad-tilt, 0deg));
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-pain:nth-child(1) .rs-sad { top: -28px; left: -20px; --rs-sad-tilt: -14deg; }
+    .uw-pain:nth-child(2) .rs-sad { top: -30px; left: -22px; --rs-sad-tilt: -12deg; }
+    .uw-pain:nth-child(3) .rs-sad { bottom: -26px; right: -18px; --rs-sad-tilt: -10deg; }
+    .uw-pain:nth-child(4) .rs-sad { top: -28px; right: -20px; --rs-sad-tilt: 10deg; }
+
+    @media (hover: hover) {
+      .uw-pain:hover .rs-sad {
+        transform: rotate(calc(var(--rs-sad-tilt, 0deg) * -1.8)) scale(1.15);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .rs-sad {
+        width: 54px;
+        height: 54px;
+      }
+
+      .uw-pain:nth-child(4) .rs-sad { right: -10px; }
+      .uw-pain:nth-child(1) .rs-sad,
+      .uw-pain:nth-child(2) .rs-sad { left: -10px; }
+      .uw-pain:nth-child(3) .rs-sad { right: -8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rs-sad {
+        transition: none;
+      }
+    }
+
+    /* ---------- 4. Social-Media-Rechner (Zeitvergleich) ---------- */
+    .rs-calc-card {
+      max-width: 760px;
+      margin: 3rem auto 0;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.75rem, 5vw, 3rem);
+    }
+
+    .rs-calc-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
+
+    .rs-calc-label {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    .rs-calc-value {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+      min-width: 5.5ch;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .rs-calc-month {
+      text-align: right;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-ink-soft);
+      margin: 0.35rem 0 2rem;
+    }
+
+    /* Schieberegler im Cartoon-Stil: dicker Rand, orange Füllung, runder Griff */
+    .rs-slider {
+      --rs-pct: 5%;
+      flex: 1;
+      min-width: 180px;
+      height: 18px;
+      margin: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      background: linear-gradient(90deg, var(--color-orange) var(--rs-pct), var(--color-cream) var(--rs-pct));
+      cursor: pointer;
+    }
+
+    .rs-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .rs-slider::-moz-range-thumb {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .rs-slider:hover::-webkit-slider-thumb {
+      transform: scale(1.12);
+    }
+
+    .rs-slider:active::-webkit-slider-thumb {
+      transform: scale(0.95);
+    }
+
+    .rs-slider:focus-visible {
+      outline: 3px solid var(--color-pink);
+      outline-offset: 4px;
+    }
+
+    .rs-savings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .rs-saving {
+      border: var(--cs-border-thick);
+      border-radius: 18px;
+      padding: 1rem 1.25rem;
+      background: var(--color-orange);
+    }
+
+    .rs-saving + .rs-saving {
+      background: var(--color-teal);
+    }
+
+    .rs-saving-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .rs-saving-value {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.5rem, 3.4vw, 2rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .rs-calc-note {
+      margin: 1.25rem 0 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-ink-soft);
+    }
+
+    @media (max-width: 560px) {
+      .rs-savings {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- 5. Zitat #2 ---------- */
+    .rs-quote {
+      background: var(--color-ink);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .rs-quote figure {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .rs-quote-mark {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(5rem, 12vw, 8rem);
+      line-height: 0.6;
+      color: var(--color-pink);
+      margin-bottom: 1rem;
+    }
+
+    .rs-quote blockquote {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .rs-quote figcaption {
+      margin-top: 1.75rem;
+      font-family: var(--font-accent);
+      font-weight: 400;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      line-height: 1;
+      color: var(--color-orange);
+      transform: rotate(-3deg);
+    }
+
+    /* ---------- 6. Pakete (normales vertikales Scrollen, Schritte blenden
+       beim Reinscrollen ein — kein Pinning. Logik in main.js.) ---------- */
+    .rs-packages {
+      background: var(--color-cream);
+      padding-block: 0;
+    }
+
+    /* Intro-Titel auf eigener dunkler Farbfläche, mit zwei verspielten
+       Pfeilen, die vom Titel weg nach unten zu den Paketen ausfächern. */
+    .rs-packages-intro {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-ink);
+      border-bottom: var(--cs-border-xthick);
+      padding-block: clamp(3rem, 7vw, 4.5rem);
+    }
+
+    .rs-packages-intro .uw-center {
+      position: relative;
+      z-index: 1;
+    }
+
+    .rs-packages-intro .uw-section-title {
+      color: var(--color-white);
+    }
+
+    .rs-packages-accent {
+      color: var(--color-pink);
+    }
+
+    .rs-packages-intro .uw-lead {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .rs-packages-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 0;
+      width: clamp(64px, 8vw, 110px);
+      height: auto;
+      color: var(--color-orange);
+      pointer-events: none;
+    }
+
+    .rs-packages-arrow-left {
+      left: clamp(1rem, 7vw, 9rem);
+      transform: translateY(-35%) rotate(-4deg);
+    }
+
+    .rs-packages-arrow-right {
+      right: clamp(1rem, 7vw, 9rem);
+      transform: translateY(-35%) scaleX(-1) rotate(-4deg);
+    }
+
+    @media (max-width: 860px) {
+      .rs-packages-arrow {
+        display: none;
+      }
+    }
+
+    /* Vollflächig eingefärbter Block je Paket: links prominenter Titel,
+       rechts aufklappbare Kacheln. Die Grafik ist nur noch ein kleiner,
+       angeschnittener Eckakzent im Hintergrund (wie der Grabstein im Hero). */
+    .rs-pkg-block {
+      position: relative;
+      overflow: hidden;
+      border-block: var(--cs-border-thick);
+      padding-block: clamp(3rem, 7vw, 5rem);
+    }
+
+    .rs-pkg-block-social { background: var(--color-pink); }
+    .rs-pkg-block-web { background: var(--color-teal-dark); }
+
+    .rs-pkg-art {
+      position: absolute;
+      z-index: 0;
+      right: clamp(-3.5rem, -3vw, -1.5rem);
+      bottom: clamp(-3.5rem, -3vw, -1.5rem);
+      width: clamp(110px, 24vw, 320px);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    .rs-pkg-art svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rs-pkg-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(240px, 380px) 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .rs-pkg-meta {
+      color: var(--color-white);
+    }
+
+    .rs-pkg-for {
+      font-weight: 700;
+      opacity: 0.85;
+      margin: 0 0 0.75rem;
+    }
+
+    .rs-pkg-meta h3 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3.8vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--color-white);
+    }
+
+    .rs-pkg-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    /* Website-Paket seitenverkehrt: Kacheln links, Text rechts — damit sich
+       die beiden Pakete optisch voneinander abheben. */
+    .rs-pkg-block-web .rs-pkg-layout {
+      grid-template-columns: 1fr minmax(240px, 380px);
+    }
+
+    .rs-pkg-block-web .rs-pkg-meta {
+      order: 2;
+    }
+
+    .rs-pkg-block-web .rs-pkg-steps {
+      order: 1;
+    }
+
+    @media (max-width: 760px) {
+      .rs-pkg-layout,
+      .rs-pkg-block-web .rs-pkg-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .rs-pkg-meta {
+        text-align: center;
+      }
+
+      .rs-pkg-block-web .rs-pkg-meta,
+      .rs-pkg-block-web .rs-pkg-steps {
+        order: initial;
+      }
+
+      .rs-pkg-art {
+        display: none;
+      }
+    }
+
+    /* Kacheln: geschlossen zeigen sie nur Nummer + Titel, Klick öffnet den
+       vollen Text. Natives <details name="..."> sorgt dafür, dass sich eine
+       offene Kachel automatisch schließt, wenn eine andere geöffnet wird
+       (moderne Browser; in älteren bleibt der Inhalt trotzdem erreichbar). */
+    .rs-acc-item {
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 18px;
+      box-shadow: var(--shadow-pop);
+      overflow: hidden;
+    }
+
+    .rs-acc-item summary {
+      list-style: none;
+    }
+
+    .rs-acc-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rs-acc-trigger {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.35rem;
+      cursor: pointer;
+    }
+
+    .rs-acc-trigger:focus-visible {
+      outline: 3px solid var(--color-ink);
+      outline-offset: -4px;
+      border-radius: 10px;
+    }
+
+    .rs-acc-num {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: var(--cs-border);
+      background: var(--color-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 0.9rem;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .rs-pkg-block-social .rs-acc-item[open] .rs-acc-num {
+      background: var(--color-pink);
+      color: var(--color-white);
+    }
+
+    .rs-pkg-block-web .rs-acc-item[open] .rs-acc-num {
+      background: var(--color-teal-dark);
+      color: var(--color-white);
+    }
+
+    .rs-acc-label {
+      flex: 1;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.02rem, 2vw, 1.15rem);
+      line-height: 1.3;
+    }
+
+    .rs-acc-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--color-ink-soft);
+      transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .rs-acc-item[open] .rs-acc-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rs-acc-chevron {
+        transition: none;
+      }
+    }
+
+    .rs-acc-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0 1.35rem 1.35rem;
+    }
+
+    .rs-acc-content p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .rs-point-problem {
+      font-weight: 600;
+    }
+
+    .rs-point-then {
+      border-left: 4px solid var(--color-orange);
+      padding-left: 1rem;
+      font-weight: 500;
+    }
+
+    .rs-point-result {
+      background: var(--color-cream);
+      border: var(--cs-border);
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+    }
+
+    .rs-acc-item strong {
+      font-weight: 800;
+    }
+
+    /* Fazit- und Preisleiste unmittelbar unter jedem Paket-Block */
+    /* Preis prominent unten auf der Farbfläche, nicht mehr in eigener
+       weißer Fußleiste — Preis, Versprechen und CTA gehören für beide
+       Pakete zusammen und sind identisch. */
+    .rs-pkg-price-block {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: clamp(2.5rem, 6vw, 3.5rem) auto 0;
+      padding-top: clamp(2rem, 5vw, 3rem);
+      border-top: 2px solid rgba(255, 255, 255, 0.3);
+      text-align: center;
+    }
+
+    .rs-price {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0;
+      color: var(--color-white);
+    }
+
+    .rs-price small {
+      font-size: 0.35em;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    .rs-price-after {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      color: var(--color-white);
+      margin: 0.6rem 0 0;
+    }
+
+    .rs-perks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      list-style: none;
+      margin: 1.25rem 0 0;
+      padding: 0;
+    }
+
+    .rs-perks li {
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.75rem;
+      border: var(--cs-border);
+      border-radius: var(--radius-pill);
+      background: var(--color-cream);
+    }
+
+    .rs-pkg-price-block .btn-cartoon {
+      margin-top: 2rem;
+    }
+
+    /* Breite Kachel unter beiden Paketen: Verweis auf die komplette Kundengewinnung */
+    .rs-upsell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem 3rem;
+      margin-top: 2rem;
+      background: var(--color-orange);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.75rem);
+    }
+
+    .rs-upsell-text {
+      flex: 1 1 420px;
+    }
+
+    .rs-upsell h3 {
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      line-height: 1.15;
+      color: var(--color-white);
+      margin-bottom: 0.6rem;
+    }
+
+    .rs-upsell p {
+      margin: 0;
+      font-weight: 600;
+      max-width: 62ch;
+    }
+
+    /* ---------- 6b. Referenzen (Logo-Ticker, wie Umsatz-Wahnsinn) ---------- */
+    .references-cartoon {
+      background: var(--color-pink);
+      color: var(--color-white);
+      text-align: center;
+      padding-block: 2.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .references-cartoon {
+        padding-block: 1.75rem;
+      }
+    }
+
+    .references-cartoon h2 {
+      color: var(--color-white);
+      text-wrap: balance;
+      font-size: clamp(1rem, 4.4vw, 1.5rem);
+      margin: 0 auto 2rem;
+    }
+
+    /* Logo-Ticker: zwei identische Sets nebeneinander, per Keyframe von -50% auf 0%
+       (also von links nach rechts) verschoben — bei -50% Versatz deckt sich Set 2
+       exakt mit der Startposition von Set 1, dadurch kein sichtbarer Sprung im Loop. */
+    .reference-logos-viewport {
+      overflow: hidden;
+      margin-bottom: 2rem;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    .reference-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      width: max-content;
+      animation: reference-logos-scroll 24s linear infinite;
+    }
+
+    .reference-logos img {
+      height: 68px;
+      width: auto;
+      max-width: 260px;
+      object-fit: contain;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    @keyframes reference-logos-scroll {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reference-logos {
+        animation: none;
+      }
+    }
+
+    /* ---------- 7. Zwei Möglichkeiten: blaue vs. rote Pille (Matrix) ---------- */
+    .uw-options {
+      background: var(--color-cream);
+      border-top: var(--cs-border-xthick);
+    }
+
+    .uw-options .uw-section-title {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .uw-options-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem clamp(3rem, 7vw, 6rem);
+      align-items: stretch;
+      margin-top: 2.5rem;
+    }
+
+    .uw-choice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Pille: sitzt über der Karte und ragt in deren Oberkante */
+    .uw-pill {
+      position: relative;
+      z-index: 1;
+      width: clamp(150px, 16vw, 200px);
+      height: auto;
+      margin-bottom: -2.25rem;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-choice-blue .uw-pill { transform: rotate(-14deg); }
+    .uw-choice-red .uw-pill { transform: rotate(14deg); }
+
+    .uw-choice:hover .uw-pill,
+    .uw-choice:focus-within .uw-pill {
+      transform: translateY(-8px) rotate(0deg) scale(1.06);
+    }
+
+    .uw-option {
+      flex: 1;
+      width: 100%;
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      padding: 3.25rem clamp(1.5rem, 4vw, 2.5rem) clamp(1.75rem, 4vw, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .uw-option h3 {
+      font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .uw-option p {
+      margin: 0;
+    }
+
+    .uw-option-kicker {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin: 0 0 0.4rem;
+    }
+
+    /* Blaue Pille: alles bleibt, wie es ist */
+    .uw-option-old {
+      background: var(--color-white);
+      border-style: dashed;
+      color: var(--color-ink-soft);
+    }
+
+    .uw-option-old h3 {
+      color: var(--color-ink-soft);
+    }
+
+    .uw-option-old .uw-option-kicker {
+      color: var(--color-teal-dark);
+    }
+
+    /* Rote Pille: aufwachen */
+    .uw-option-new {
+      background: var(--color-ink);
+      color: var(--color-white);
+      box-shadow: 8px 8px 0 0 var(--color-pink);
+    }
+
+    .uw-option-new .uw-option-kicker {
+      color: var(--color-pink);
+    }
+
+    .uw-option-new p:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    .uw-option-new .btn-cartoon {
+      align-self: center;
+      margin-top: auto;
+    }
+
+    .uw-option-new .btn-cartoon:focus-visible {
+      outline-color: var(--color-white);
+    }
+
+    /* "oder" zwischen den beiden Pillen */
+    .uw-options-or {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%) rotate(-6deg);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: var(--cs-border-thick);
+      background: var(--color-white);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 760px) {
+      .uw-options-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .uw-options-or {
+        position: static;
+        transform: rotate(-6deg);
+        margin: 0 auto;
+      }
+    }
+
+
+    /* ---------- 8. Einwand KI: Unser Versprechen (dunkel) ---------- */
+    .rs-promise {
+      background: var(--color-ink);
+      color: var(--color-white);
+      border-top: var(--cs-border-xthick);
+    }
+
+    .rs-promise .uw-section-title {
+      color: var(--color-white);
+      max-width: 22ch;
+      margin-inline: auto;
+    }
+
+    .rs-promise-accent {
+      font-family: var(--font-accent);
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      line-height: 1;
+      color: var(--color-orange);
+      margin: 1.25rem 0 0;
+      transform: rotate(-4deg);
+    }
+
+    .rs-promise-accent-pink {
+      color: var(--color-pink);
+    }
+
+    .rs-promise-card {
+      position: relative;
+      max-width: 760px;
+      margin: 3.5rem auto 0;
+      padding: 2.75rem 2rem 2rem;
+      background: var(--color-pink);
+      color: var(--color-white);
+      border: 3px solid var(--color-white);
+      border-radius: 24px;
+      box-shadow: 10px 10px 0 var(--color-orange);
+    }
+
+    .rs-promise-badge {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-2deg);
+      padding: 0.45rem 1.25rem;
+      background: var(--color-teal);
+      color: var(--color-white);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      white-space: nowrap;
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .rs-promise-card p {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .rs-promise-card p + p {
+      margin-top: 1rem;
+    }
+
+    .rs-promise-card strong {
+      font-weight: 800;
+    }
+
+    .rs-promise .rs-promise-next {
+      margin-top: 6rem;
+    }
+
+    /* Tabelle "Warum KI allein nicht die Lösung ist" (von Umsatz-Wahnsinn) */
+    .rs-ai-table {
+      max-width: 960px;
+      margin: 3rem auto 0;
+      text-align: left;
+    }
+
+    .uw-ai-subtitle {
+      font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+      margin: 4rem 0 1.5rem;
+    }
+
+    .uw-ai-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .uw-ai-list li {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem 3rem;
+      padding-block: 1.75rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      align-items: baseline;
+    }
+
+    .uw-ai-list p {
+      margin: 0;
+    }
+
+    .uw-ai-effect {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--color-orange);
+    }
+
+    @media (max-width: 760px) {
+      .uw-ai-list li {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .rs-promise .rs-promise-next {
+        margin-top: 4.5rem;
+      }
+
+      .rs-promise-card {
+        padding: 2.5rem 1.25rem 1.5rem;
+        box-shadow: 6px 6px 0 var(--color-orange);
+      }
+    }
+    /* Terminbuchung (Cal.com) unter dem Logo-Slider */
+    .rs-booking {
+      background: var(--color-cream);
+      scroll-margin-top: 4.5rem;
+    }
+
+    .rs-booking-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1rem, 3vw, 2rem);
+      overflow: hidden;
+    }
+
+    /* feste Mindesthöhe, damit die Karte beim Laden nicht springt */
+    .rs-cal-embed {
+      width: 100%;
+      min-height: 640px;
+      overflow: auto;
+    }
+
+    /* CTA-Buttons am Ende jeder Sektion */
+    .rs-section-actions {
+      justify-content: center;
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .rs-quote .btn-cartoon:focus-visible,
+    .rs-promise .btn-cartoon:focus-visible {
+      outline-color: var(--color-white);
+    }
+
+    /* ---------- Angebote (wie Umsatz-Wahnsinn) ---------- */
+    .uw-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+      align-items: stretch;
+    }
+
+    .uw-offer {
+      position: relative;
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.75rem, 4vw, 2.75rem);
+      display: flex;
+      flex-direction: column;
+      background: var(--color-white);
+    }
+
+    /* "Du bist gerade hier"-Banner: markiert die Leistung der aktuellen Seite */
+    .uw-offer-here {
+      position: absolute;
+      top: 0;
+      left: clamp(1.25rem, 3vw, 2rem);
+      transform: translateY(-55%) rotate(-3deg);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem 0.45rem 0.8rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      line-height: 1;
+      color: var(--color-white);
+      background: var(--color-pink);
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-pop-sm);
+      white-space: nowrap;
+    }
+
+    /* auf der pinken Karte wäre der pinke Banner unsichtbar */
+    .uw-offer-sorglos .uw-offer-here {
+      background: var(--color-ink);
+    }
+
+    .uw-offer-here svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Farben je Leistung: Kundengewinnung orange, Rundum-Sorglos pink, Website blau */
+    .uw-offer-featured {
+      background: var(--color-orange);
+    }
+
+    .uw-offer-sorglos {
+      background: var(--color-pink);
+    }
+
+    .uw-offer-website {
+      background: var(--color-teal);
+    }
+
+    .uw-offer-for {
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0 0 1.25rem;
+    }
+
+    .uw-offer h3 {
+      font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .uw-offer p {
+      margin: 0 0 0.75rem;
+    }
+
+    .uw-offer p strong {
+      font-weight: 800;
+    }
+
+    .uw-offer-footer {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--color-ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .uw-price {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .uw-price small {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1023.98px) {
+      .uw-offers-grid {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="index.html#leistungen">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a class="site-nav-sub-label" href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a class="site-nav-sub-label" href="leistungen-rundum-sorglos.html" aria-current="page">Rundum sorglos</a>
+            <a class="site-nav-sub-label" href="leistungen-ki-mit-verstand.html">KI mit Verstand</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="uw-hero">
+      <div class="container">
+        <a href="index.html#leistungen" class="back-link">← Alle Leistungen</a>
+        <div class="uw-hero-inner">
+          <svg class="rs-hanger" viewBox="0 0 220 330" aria-hidden="true" focusable="false">
+            <!-- Harter Cartoon-Schatten -->
+            <path transform="translate(10 10)" fill="#171214" d="M34 110A76 76 0 0 1 186 110V316H34Z"/>
+            <!-- Grabstein -->
+            <path fill="#FFFFFF" stroke="#171214" stroke-width="7" d="M34 110A76 76 0 0 1 186 110V316H34Z"/>
+            <!-- Riss im Stein -->
+            <path d="M162 72 L150 98 L161 112" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+            <!-- Gras am Fuß -->
+            <path d="M18 316 Q26 296 34 316 Q42 298 50 316" fill="none" stroke="#171214" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M170 316 Q178 296 186 316 Q194 298 202 316" fill="none" stroke="#171214" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="110" y="180" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="46" fill="#171214" letter-spacing="-1">RIP</text>
+            <text x="110" y="220" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="24" fill="#171214" letter-spacing="-1">Online</text>
+            <text x="110" y="250" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="24" fill="#FF008E" letter-spacing="-1">Marketing</text>
+          </svg>
+          <h1>Für alle, die keine Zeit und Nerven für Online-Marketing haben.</h1>
+          <p class="rs-hero-sub">Vergiss KI-Wahnsinn, Social-Media-Irrsinn <br>und Nervenverlust.<br> So macht Online-Marketing wieder richtig Lust.</p>
+          <div class="uw-actions">
+            <a href="#termin" class="btn-cartoon btn-cartoon-dark">Kostenfrei testen</a>
+            <a href="#pakete" class="btn-cartoon uw-btn-white">Pakete ansehen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Zitat (scroll reveal) -->
+    <section class="reveal-section">
+      <div class="reveal-sticky">
+        <p class="reveal-text"><span class="word">Es</span> <span class="word">waren</span> <span class="word">einmal</span> <span class="word">Unternehmen,</span> <span class="word">die</span> <span class="word">dachten,</span> <span class="word">Premium-Online-Marketing</span> <span class="word">wäre</span> <span class="word">teuer</span> <span class="word">und</span> <span class="word">zeitaufwendig.</span></p>
+      </div>
+    </section>
+
+    <!-- 3. Problem: Einwände -->
+    <section class="section-cartoon uw-pains" id="einwaende">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Die traurige Wahrheit...</h2>
+        <div class="uw-pain-board">
+          <article class="uw-pain">
+            <svg class="rs-sad" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="28" fill="#4E9DB8" stroke="#171214" stroke-width="3.5"/><circle cx="23" cy="27" r="3.6" fill="#171214"/><circle cx="41" cy="27" r="3.6" fill="#171214"/><path d="M21 46 Q32 36 43 46" fill="none" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h3>„Unsere Website dient nur als Visitenkarte, wir gewinnen darüber keine Kunden.“</h3>
+            <p>→ <strong>80 % aller Kunden informieren sich vor dem Kauf online.</strong> Wäre es dann nicht sinnvoll, in eine Website zu investieren, mit der Du genau dann präsent bist, wenn Dein idealer Kunde Dich sucht?</p>
+          </article>
+          <article class="uw-pain">
+            <svg class="rs-sad" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="28" fill="#FF008E" stroke="#171214" stroke-width="3.5"/><circle cx="23" cy="27" r="3.6" fill="#171214"/><circle cx="41" cy="27" r="3.6" fill="#171214"/><path d="M41 33 C38 39 38 43 41 44 C44 43 44 39 41 33 Z" fill="#4E9DB8" stroke="#171214" stroke-width="2.5" stroke-linejoin="round"/><path d="M21 46 Q32 36 43 46" fill="none" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h3>„Wir brauchen kein Social Media.“</h3>
+            <p>→ Im Zeitalter der KI kaufen Menschen von <strong>Marken, denen sie vertrauen.</strong> Ob es Dir gefällt oder nicht: Der <strong>schnellste Weg, Vertrauen aufzubauen, ist Social Media.</strong></p>
+          </article>
+          <article class="uw-pain">
+            <svg class="rs-sad" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="28" fill="#F4680A" stroke="#171214" stroke-width="3.5"/><circle cx="23" cy="27" r="3.6" fill="#171214"/><circle cx="41" cy="27" r="3.6" fill="#171214"/><path d="M16 19 L27 22 M48 19 L37 22" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/><path d="M20 45 Q24 41 28 45 T36 45 T44 45" fill="none" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h3>„Wir machen das selbst mit KI.“</h3>
+            <p>→ Ob Du morgen 100 Kunden gewinnst oder pleitegehst, ist der KI <strong>vollkommen egal</strong>, weshalb sie Dir auch nie widersprechen oder Dich aktiv an Dein nächstes Posting erinnern wird. Ist zwar angenehm, <strong>bringt Dich aber absolut nicht weiter.</strong></p>
+          </article>
+          <article class="uw-pain">
+            <svg class="rs-sad" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="28" fill="#F3E7CE" stroke="#171214" stroke-width="3.5"/><path d="M18 27 h10 M36 27 h10" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/><path d="M50 10 C46 16 46 20 50 21 C54 20 54 16 50 10 Z" fill="#4E9DB8" stroke="#171214" stroke-width="2.5" stroke-linejoin="round"/><path d="M21 46 Q32 36 43 46" fill="none" stroke="#171214" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h3>„Wir haben schon jemanden für Social Media.“</h3>
+            <p>→ Macht Sinn. Aber warum sich nicht zumindest mal etwas Neues anhören, um potenziell <strong>noch schneller und günstiger zum Erfolg</strong> zu kommen?</p>
+          </article>
+        </div>
+        <div class="uw-actions rs-section-actions">
+          <a href="#termin" class="btn-cartoon btn-cartoon-dark">Kostenfrei testen</a>
+          <a href="#pakete" class="btn-cartoon uw-btn-white">Pakete ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Zitat #2 -->
+    <section class="section-cartoon rs-quote">
+      <div class="container">
+        <figure>
+          <span class="rs-quote-mark" aria-hidden="true">“</span>
+          <blockquote lang="en">A man who dares to waste one hour of time has not discovered the value of life.</blockquote>
+          <figcaption>Charles Darwin</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. Social-Media-Rechner -->
+    <section class="section-cartoon rs-calc" id="rechner">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Social Media <br>verbrennt Dein Geld.</h2>
+        <div class="rs-calc-card" style="text-align: left;">
+          <label class="rs-calc-label" for="rs-slider">Dein Aufwand für Social Media &amp; Website-Wartung / Woche</label>
+          <div class="rs-calc-row">
+            <input class="rs-slider" id="rs-slider" type="range" min="1" max="40" value="3" step="1" aria-describedby="rs-month-info">
+            <span class="rs-calc-value"><span id="rs-week-val">3</span> Std.</span>
+          </div>
+          <p class="rs-calc-month" id="rs-month-info">= ~13 Std. / Monat</p>
+
+          <div class="rs-savings" aria-live="polite">
+            <div class="rs-saving">
+              <span class="rs-saving-label">Das kostet Dich / Monat*</span>
+              <span class="rs-saving-value" id="rs-cost-self">≈ 520 €</span>
+            </div>
+            <div class="rs-saving">
+              <span class="rs-saving-label">Kosten AyCaramba / Monat</span>
+              <span class="rs-saving-value">99,99 €</span>
+            </div>
+          </div>
+
+          <p class="rs-calc-note">* Berechnet mit einem angenommenen internen Stundensatz von 40 €.</p>
+        </div>
+        <div class="uw-actions rs-section-actions">
+          <a href="#termin" class="btn-cartoon btn-cartoon-dark">Kostenfrei testen</a>
+          <a href="#pakete" class="btn-cartoon uw-btn-white">Pakete ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Pakete -->
+    <section class="section-cartoon rs-packages" id="pakete">
+      <div class="rs-packages-intro">
+        <svg class="rs-packages-arrow rs-packages-arrow-left" viewBox="0 0 100 130" aria-hidden="true" focusable="false">
+          <path d="M82 10 C 48 18, 16 48, 15 98" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+          <path d="M3 84 L 15 108 L 27 84" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="rs-packages-arrow rs-packages-arrow-right" viewBox="0 0 100 130" aria-hidden="true" focusable="false">
+          <path d="M82 10 C 48 18, 16 48, 15 98" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+          <path d="M3 84 L 15 108 L 27 84" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="container">
+          <div class="uw-center">
+            <h2 class="uw-section-title">Unsere Sorglos-Pakete. <br> <span class="rs-packages-accent">Deine Entspanntheit.</span></h2>
+            <p class="uw-lead">Profitiere von unseren kostengünstigen Rundum-Sorglos-Paketen, die Dir nicht nur eine Menge Zeit und Nerven sparen werden, sondern Dir langfristig auch Umsatz bringen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paket: Social Media -->
+      <div class="rs-pkg-block rs-pkg-block-social">
+        <div class="rs-pkg-art" aria-hidden="true">
+          <svg viewBox="0 0 200 280" focusable="false">
+            <rect x="57" y="27" width="114" height="234" rx="28" fill="#171214" transform="translate(9 9)"/>
+            <rect x="57" y="27" width="114" height="234" rx="28" fill="#FFFFFF" stroke="#171214" stroke-width="7"/>
+            <rect x="97" y="39" width="24" height="6" rx="3" fill="#171214"/>
+            <rect x="73" y="68" width="82" height="46" rx="10" fill="#4E9DB8" stroke="#171214" stroke-width="4"/>
+            <rect x="73" y="124" width="82" height="14" rx="7" fill="#F3E7CE" stroke="#171214" stroke-width="3"/>
+            <rect x="73" y="146" width="56" height="14" rx="7" fill="#F3E7CE" stroke="#171214" stroke-width="3"/>
+            <path d="M84 182 C79 174 67 174 67 186 C67 198 84 208 84 208 C84 208 101 198 101 186 C101 174 89 174 84 182 Z" fill="#FF008E" stroke="#171214" stroke-width="3.5" stroke-linejoin="round"/>
+            <rect x="109" y="188" width="46" height="10" rx="5" fill="#F4680A"/>
+            <circle cx="114" cy="240" r="10" fill="none" stroke="#171214" stroke-width="5"/>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="rs-pkg-layout">
+            <div class="rs-pkg-meta">
+              <p class="rs-pkg-for">Rundum-Sorglos-Social-Media</p>
+              <h3>Wenn Dir Social Media auf die Nerven geht:</h3>
+            </div>
+            <div class="rs-pkg-steps">
+              <details class="rs-acc-item" name="rs-acc-social">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">01</span>
+                  <span class="rs-acc-label">Deine Personal-Brand, ohne Aufwand</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">In den meisten Fällen scheitert es nicht an Ideen oder fehlendem Willen, sondern schlichtweg an der Zeit, um auf Social Media erfolgreich zu sein.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb</strong> kümmern wir uns zu 100% um Deinen Social-Media-Auftritt. Unser Fokus liegt dabei auf LinkedIN, um Dich als Person hervorzuheben und langfristig Vertrauen und Kunden aufzubauen.</p>
+                  <p class="rs-point-result"><strong>→ Ergebnis:</strong> Jede Woche sehen potenzielle Kunden das was Sie sehen wollen: Einen vertrausenvollen Experte, der hochwertigen und wertvollen Content postet. Der Effekt? Du wirst nicht mehr anhand von Preis verglichen, sondern anhand von Expertise und Authentizität.</p>
+                </div>
+              </details>
+              <details class="rs-acc-item" name="rs-acc-social">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">02</span>
+                  <span class="rs-acc-label">Viral gehen dank neuester Trends</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">Social Media verändert sich ständig. Was gestern funktioniert hat, könnte morgen schon wieder outdated sein.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb</strong> beschäftigt sich unser Social-Media-Team nur damit, <strong>die neuesten Trends zu kennen und für Dich zu nutzen</strong>. Alle neuen Trends und Entwicklung in Deiner Branche erhältst Du auf Wunsch auch jeden Monat in einem persönlichen „AyCaramba Newsletter“ per E-Mail.</p>
+                  <p class="rs-point-result"><strong>→</strong> Du als Unternehmer erhältst Schritt für Schritt mehr Reichweite, wodurch immer mehr Kunden darauf aufmerksam werden und das Vertrauen wächst.</p>
+                </div>
+              </details>
+              <details class="rs-acc-item" name="rs-acc-social">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">03</span>
+                  <span class="rs-acc-label">Gemeinsam geht’s besser</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">Der Austausch mit der KI ist für viele Unternehmer eher kontraproduktiv. Unkreative Ideen kosten Zeit, bringen aber im Endeffekt nichts.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb</strong> sehen wir uns bei AyCaramba als <strong>Deinen aktiven Sparringspartner.</strong> Wir liefern Dir aktiv Ideen und sorgen dafür, dass Dein Unternehmen konstant und einzigartig präsent ist. Und das ist ein Versprechen.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="rs-pkg-price-block">
+            <p class="rs-price">0 € im 1. Monat</p>
+            <p class="rs-price-after">danach ab 189,99 € / Monat</p>
+            <ul class="rs-perks">
+              <li>Kostenfrei und ohne Bindung testen</li>
+            </ul>
+            <a href="#termin" class="btn-cartoon uw-btn-white">Jetzt kostenfrei testen</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paket: Website -->
+      <div class="rs-pkg-block rs-pkg-block-web">
+        <div class="rs-pkg-art" aria-hidden="true">
+          <svg viewBox="0 0 220 200" focusable="false">
+            <rect x="18" y="26" width="184" height="140" rx="16" fill="#171214" transform="translate(9 9)"/>
+            <rect x="18" y="26" width="184" height="140" rx="16" fill="#FFFFFF" stroke="#171214" stroke-width="7"/>
+            <path d="M18 42A16 16 0 0 1 34 26H186A16 16 0 0 1 202 42V56H18Z" fill="#F3E7CE" stroke="#171214" stroke-width="7"/>
+            <circle cx="36" cy="41" r="5" fill="#FF008E"/>
+            <circle cx="52" cy="41" r="5" fill="#F4680A"/>
+            <circle cx="68" cy="41" r="5" fill="#4E9DB8"/>
+            <polyline points="40,140 75,110 105,125 140,80 175,60" fill="none" stroke="#F4680A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="175" cy="60" r="8" fill="#F4680A" stroke="#171214" stroke-width="3"/>
+            <circle cx="150" cy="120" r="16" fill="none" stroke="#171214" stroke-width="5"/>
+            <line x1="161" y1="131" x2="174" y2="144" stroke="#171214" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="rs-pkg-layout">
+            <div class="rs-pkg-meta">
+              <p class="rs-pkg-for">Website-Wartung und Sichtbarkeits-Erhöhung</p>
+              <h3>Wenn Du keine Zeit hast, Dich ständig um Deine Website zu kümmern:</h3>
+            </div>
+            <div class="rs-pkg-steps">
+              <details class="rs-acc-item" name="rs-acc-web">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">01</span>
+                  <span class="rs-acc-label">Mehr Besucher auf Deiner Website</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">Websites können heutzutage viel mehr als nur eine digitale Visitenkarte sein. Sie können aktiv und langfristig die effizienteste Methode sein, um online Kunden zu gewinnen. In den meisten Fällen scheitert es nicht an Ideen oder dem grundsätzlichen Willen, mit der eigenen Website erfolgreich zu sein, sondern schlichtweg an der Zeit.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb</strong> sorgen wir dafür, dass Du langfristig <strong>ganz oben bei Google und Co.</strong> landest. Mehr als die Hälft aller Klicks zu einem gewissen Thema fallen auf die Top-3-Ergebnisse bei Google, deshalb ist es umso wichtiger, dass <strong>Du</strong> dort sichtbar bist.</p>
+                  <p class="rs-point-result"><strong>→ Ergebnis:</strong> Erlebe Monat für Monat, wie Deine Präsenz erhöht wird und mehr Besucher auf Deiner Website landen.</p>
+                </div>
+              </details>
+              <details class="rs-acc-item" name="rs-acc-web">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">02</span>
+                  <span class="rs-acc-label">Regelmäßige Blogs in Agentur-Qualität</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">In der heutigen Zeit sind Referenzen und Blogs enorm wichtig, um Aktivität und Vertrauen auszustrahlen. Blöd nur, dass diese „Aktualisierungen“ jeden Monat passieren müssen – nicht gerade ein Aufwand, der zum Kerngeschäft gehört.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb:</strong> Im Zuge unserer Suchmaschinen-Optimierung verfassen wir <strong>jeden Monat 2 (auf Wunsch auch mehr) hochrelevante Blogs</strong> für Dein Unternehmen. Gerne nehmen wir dabei auch Inspirationen von Dir auf und verwandeln sie in optimierte Texte für Google und LLMs wie ChatGPT und Co.</p>
+                  <p class="rs-point-result"><strong>→</strong> Deine Website erhält nicht nur laufend mehr Besucher, sondern aktualisiert  sich auch „von selbst“.</p>
+                </div>
+              </details>
+              <details class="rs-acc-item" name="rs-acc-web">
+                <summary class="rs-acc-trigger">
+                  <span class="rs-acc-num" aria-hidden="true">03</span>
+                  <span class="rs-acc-label">Alles im Blick ohne einen Finger zu rühren</span>
+                  <svg class="rs-acc-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="rs-acc-content">
+                  <p class="rs-point-problem">Oftmals passiert es, dass Unternehmen gar nicht wissen, wie ihre Website performt: wie viele Besucher sie hat, wie gut sie angezeigt wird etc.</p>
+                  <p class="rs-point-then"><strong>→ Deshalb</strong> setzen wir <strong>jeden Monat ein aktuelles Reporting</strong> mit allen Fakten &amp; Statistiken für Dich auf. Darin siehst Du ganz genau, was sich auf Deiner Website tut und wo noch Verbesserungspotenzial steckt.</p>
+                  <p class="rs-point-result"><strong>→ Ergebnis:</strong> Du hast zwar alles im Blick, musst Dich aber nicht darum kümmern. Noch dazu gewinnst Du Kunden und kannst Dich (endlich) wieder um Dein Kerngeschäft kümmern.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="rs-pkg-price-block">
+            <p class="rs-price">0 € im 1. Monat</p>
+            <p class="rs-price-after">danach ab 99,99 € / Monat</p>
+            <ul class="rs-perks">
+              <li>Kostenfrei und ohne Bindung testen.</li>
+            </ul>
+            <a href="#termin" class="btn-cartoon uw-btn-white">Jetzt kostenfrei testen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Zwei Möglichkeiten (Pillen, wie Umsatz-Wahnsinn) -->
+    <section class="section-cartoon uw-options" id="entscheidung">
+      <div class="container">
+        <h2 class="uw-section-title">Du entscheidest:</h2>
+        <div class="uw-options-grid">
+          <div class="uw-choice uw-choice-blue">
+            <svg class="uw-pill" viewBox="0 0 220 96" aria-hidden="true" focusable="false">
+              <rect x="25" y="25" width="184" height="60" rx="30" fill="#171214"/>
+              <path d="M48 18H110V78H48A30 30 0 0 1 48 18Z" fill="#4E9DB8"/>
+              <path d="M110 18H172A30 30 0 0 1 172 78H110Z" fill="#386F80"/>
+              <line x1="110" y1="18" x2="110" y2="78" stroke="#171214" stroke-width="5"/>
+              <rect x="18" y="18" width="184" height="60" rx="30" fill="none" stroke="#171214" stroke-width="6"/>
+              <path d="M50 34H88" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+            <div class="uw-option uw-option-old">
+              <p class="uw-option-kicker">Möglichkeit 1: die blaue Pille</p>
+              <h3>Mach weiter wie bisher.</h3>
+              <p>Heißt: Social Media irgendwie nebenbei ohne wirkliche Konstanz und mit viel Frust bearbeiten und akzeptieren, dass Deine Website nie mehr als eine digitale Visitenkarte sein wird.</p>
+            </div>
+          </div>
+          <span class="uw-options-or" aria-hidden="true">oder</span>
+          <div class="uw-choice uw-choice-red">
+            <svg class="uw-pill" viewBox="0 0 220 96" aria-hidden="true" focusable="false">
+              <rect x="25" y="25" width="184" height="60" rx="30" fill="#171214"/>
+              <path d="M48 18H110V78H48A30 30 0 0 1 48 18Z" fill="#FF008E"/>
+              <path d="M110 18H172A30 30 0 0 1 172 78H110Z" fill="#C2006C"/>
+              <line x1="110" y1="18" x2="110" y2="78" stroke="#171214" stroke-width="5"/>
+              <rect x="18" y="18" width="184" height="60" rx="30" fill="none" stroke="#171214" stroke-width="6"/>
+              <path d="M50 34H88" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+            <div class="uw-option uw-option-new">
+              <p class="uw-option-kicker">Möglichkeit 2: die rote Pille</p>
+              <h3>Mach es Dir einfach.</h3>
+              <p>Heißt: Du trittst mit uns in Kontakt und schaust einfach mal, ob wir Dir sympathisch sind. Wenn ja, ist es unsere Pflicht, Dir zu helfen und Dein Leben leichter zu machen.</p>
+              <a href="#termin" class="btn-cartoon btn-cartoon-pink">Kostenfrei testen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referenzen (Logo-Ticker, identisch zur Startseite) -->
+    <section class="section-cartoon references-cartoon">
+      <div class="container">
+        <h2>KMUs, die uns vertrauen</h2>
+        <div class="reference-logos-viewport">
+          <div class="reference-logos">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png"
+              alt="Auxilio Lebensraum" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="First Floor" width="320" height="125"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="Valentin Skopek" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="KI Caramba" width="320" height="134"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="Referenz-Logo" width="320" height="184"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="Pathadvice" width="320" height="47"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="Aniko" width="320" height="107"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="Lift Yourself" width="320" height="42"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png" alt=""
+              aria-hidden="true" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="" aria-hidden="true" width="320"
+              height="125" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="" aria-hidden="true" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="" aria-hidden="true" width="320"
+              height="134" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="" aria-hidden="true" width="320"
+              height="184" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="" aria-hidden="true" width="320"
+              height="47" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="" aria-hidden="true" width="320"
+              height="107" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="" aria-hidden="true" width="320"
+              height="42" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminbuchung Rundum-Sorglos (Cal.com) -->
+    <section class="section-cartoon rs-booking" id="termin">
+      <div class="container uw-center">
+        <div class="rs-booking-card">
+          <!-- Cal inline embed code begins -->
+          <div class="rs-cal-embed" id="my-cal-inline-rundum-sorglos"></div>
+          <script type="text/javascript">
+            // Cal.com erst laden, wenn der Kalender in die Nähe kommt (spart Ladezeit und Drittanbieter-Cookies beim Seitenaufruf)
+            (function () {
+              var el = document.getElementById("my-cal-inline-rundum-sorglos");
+              function loadCal() {
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "rundum-sorglos", {origin:"https://app.cal.com"});
+                Cal.config = Cal.config || {};
+                Cal.config.forwardQueryParams = true;
+
+                Cal.ns["rundum-sorglos"]("inline", {
+                  elementOrSelector:"#my-cal-inline-rundum-sorglos",
+                  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+                  calLink: "aycaramba/rundum-sorglos",
+                });
+
+                Cal.ns["rundum-sorglos"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#FF008E"}},"hideEventTypeDetails":false,"layout":"month_view"});
+              }
+              if (!el || !("IntersectionObserver" in window)) { loadCal(); return; }
+              var io = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) { io.disconnect(); loadCal(); }
+              }, { rootMargin: "800px 0px" });
+              io.observe(el);
+            })();
+          </script>
+          <!-- Cal inline embed code ends -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Einwand KI: Unser Versprechen -->
+    <section class="section-cartoon rs-promise">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Okay, aber wie könnt ihr so günstig sein? Macht ihr alles mit KI?!</h2>
+        <p class="rs-promise-accent rs-promise-accent-pink">Nicht ganz...</p>
+        <div class="rs-promise-card">
+          <span class="rs-promise-badge">Unser Versprechen:</span>
+          <p>Wir lieben unser Handwerk, deswegen wollen wir es auch <strong>nicht durch die KI ersetzen.</strong> Bei uns landet keine Kreatvität in der KI.</p>
+          <p>Unsere „Rundum-Sorglos-Pakete“ sind jedoch darauf ausgelegt, dir <strong>schnelle und leistbare Ergebnisse zu liefern.</strong> Damit wir Dir das liefern können, <strong>skalieren wir unser Handwerk durch KI-Automatisierung</strong></p>
+        </div>
+
+        <h2 class="uw-section-title rs-promise-next">Okay, aber dann kann ich es ja auch einfach selbst mit der KI machen?!</h2>
+        <p class="rs-promise-accent">Eher nicht, denn....</p>
+
+        <!-- Tabelle wie Umsatz-Wahnsinn (Sektion KI) -->
+        <div class="rs-ai-table">
+          <ul class="uw-ai-list">
+            <li>
+              <p>Ob Du morgen 100 Kunden gewinnst oder pleitegehst, ist der KI vollkommen egal.</p>
+              <p class="uw-ai-effect">Schlechte bis mittelmäßige Ergebnisse: unvermeidbar.</p>
+            </li>
+            <li>
+              <p>Bevor die KI Dir widerspricht, stimmt sie Dir lieber zu. Kein wirklich guter Sparringspartner, um voranzukommen.</p>
+              <p class="uw-ai-effect">Stillstand vorprogrammiert.</p>
+            </li>
+            <li>
+              <p>Die KI hat keinen Zeitdruck. Wenn es sein muss, diskutiert sie tagelang über Themen, die eigentlich völlig irrelevant sind.</p>
+              <p class="uw-ai-effect">Priorisierung ist ein Fremdwort.</p>
+            </li>
+            <li>
+              <p>Die KI kommt nicht aktiv auf Dich zu. Du hättest heute einen Beitrag veröffentlichen sollen? Pech gehabt.</p>
+              <p class="uw-ai-effect">Mehr Zeitfresser als Zeitersparnis.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="uw-actions rs-section-actions">
+          <a href="#termin" class="btn-cartoon btn-cartoon-pink">Kostenfrei testen</a>
+          <a href="#pakete" class="btn-cartoon uw-btn-white">Pakete ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wie wir Dir helfen (Angebote, wie Umsatz-Wahnsinn) -->
+    <section class="section-cartoon uw-offers">
+      <div class="container">
+        <h2 class="uw-section-title">Wie wir Dir helfen</h2>
+        <div class="uw-offers-grid">
+          <div class="uw-offer uw-offer-featured">
+            <p class="uw-offer-for">Unser Premium-Paket für mehr Umsatz:</p>
+            <h3>Deine komplette Online-Kundengewinnung done4you.</h3>
+            <p>Wir bringen Dich in nur <strong>5 Schritten</strong> zu einem <strong>Kalender voller qualifizierter Erstgespräche</strong> – ohne Aufwand auf Deiner Seite.</p>
+            <p>Von der <strong>Angebotserstellung</strong> bis zum <strong>Termin mit Deinem potenziellen Kunden</strong>.</p>
+            <div class="uw-offer-footer">
+              <p class="uw-price">Preis auf Anfrage</p>
+              <a href="leistungen-umsatz-wahnsinn.html" class="btn-cartoon btn-cartoon-dark">Mehr erfahren</a>
+            </div>
+          </div>
+          <div class="uw-offer uw-offer-sorglos">
+            <span class="uw-offer-here"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c-3.9 0-7 3-7 6.9 0 5 7 12.1 7 12.1s7-7.1 7-12.1c0-3.9-3.1-6.9-7-6.9zm0 9.4a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" fill="currentColor"/></svg>Du bist gerade hier</span>
+            <p class="uw-offer-for">Unsere Pakete für zeitliche Entlastung und langfristigen Erfolg:</p>
+            <h3>Dein Unternehmen,<br> perfekt präsentiert &amp; sichtbar.</h3>
+            <p>Wir kümmern uns <strong>jeden Monat um Deine digitale Unternehmensdarstellung</strong> und sorgen dafür, dass Kunden <strong>langfristig auf Deinen Betrieb aufmerksam</strong> werden.</p>
+            <p><strong>Vergiss Social Media, SEO und Website-Wartung ein für alle Mal. Wir kümmern uns darum.</strong></p>
+            <div class="uw-offer-footer">
+              <p class="uw-price"><small>ab</small> 99,99 € <small>/ Monat</small></p>
+              <a href="#termin" class="btn-cartoon uw-btn-white">Jetzt kostenfrei testen</a>
+            </div>
+          </div>
+          <div class="uw-offer uw-offer-website">
+            <p class="uw-offer-for">Unser Paket für Deinen perfekten Online-Auftritt:</p>
+            <h3>Deine Premium-Website, die aktiv verkauft.</h3>
+            <p>Wir bauen Dir in nur <strong>5 Schritten</strong> eine <strong>einzigartige Website aus Designer-Hand</strong> – inklusive Suchmaschinen-Optimierung.</p>
+            <p><strong>Kein Baukasten, keine KI-Einheitsware: eine Website, die nicht nur gut aussieht, sondern Kunden bringt.</strong></p>
+            <div class="uw-offer-footer">
+              <p class="uw-price"><small>ab</small> 999,99 €</p>
+              <a href="leistungen-website-perfektion.html" class="btn-cartoon uw-btn-white">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="index.html#leistungen" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="index.html#leistungen">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Social-Media-Rechner: Stunden/Monat (Woche × 4,33) × Stundensatz,
+       Formel aus zeitvergleich-widget-export.html */
+    (function () {
+      'use strict';
+
+      var sl = document.getElementById('rs-slider');
+      if (!sl) return;
+
+      var weekVal = document.getElementById('rs-week-val');
+      var monthInfo = document.getElementById('rs-month-info');
+      var costSelf = document.getElementById('rs-cost-self');
+      var MAX_W = 40;
+      var HOURLY_RATE = 40; // € pro Stunde, wie im bisherigen Rechner
+
+      function update(w) {
+        w = parseInt(w, 10) || 1;
+        var monthly = Math.round(w * 4.33);
+        var cost = monthly * HOURLY_RATE;
+
+        weekVal.textContent = w;
+        monthInfo.textContent = '= ~' + monthly + ' Std. / Monat';
+        costSelf.textContent = '≈ ' + cost.toLocaleString('de-AT') + ' €';
+
+        sl.style.setProperty('--rs-pct', ((w - 1) / (MAX_W - 1) * 100).toFixed(1) + '%');
+      }
+
+      sl.addEventListener('input', function () { update(this.value); });
+      update(sl.value);
+    })();
+  </script>
+</body>
+</html>

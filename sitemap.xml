@@ -6,9 +6,9 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aycaramba.at/leistungen</loc>
+    <loc>https://aycaramba.at/leistungen-umsatz-wahnsinn</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aycaramba.at/funnel-blueprint</loc>
@@ -16,12 +16,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aycaramba.at/leistungen-happy-websites</loc>
+    <loc>https://aycaramba.at/leistungen-website-perfektion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aycaramba.at/leistungen-ai-caramba</loc>
+    <loc>https://aycaramba.at/leistungen-rundum-sorglos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aycaramba.at/leistungen-ki-mit-verstand</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -67,6 +72,16 @@
   </url>
   <url>
     <loc>https://aycaramba.at/blog/unterschied-landingpage-website</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aycaramba.at/blog/ersetzt-ki-marketing-agenturen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aycaramba.at/blog/website-wartung</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

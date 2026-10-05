@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KI mit Verstand — Ay Caramba!</title>
+  <meta name="description" content="Verantwortungsvolle KI für Österreich und Deutschland: lokal betreibbar, spezialisiert auf Deutsch und so einfach zu bedienen wie ein Gespräch.">
+  <link rel="canonical" href="https://aycaramba.at/leistungen-ki-mit-verstand">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KI mit Verstand — Ay Caramba!">
+  <meta property="og:description" content="Verantwortungsvolle KI für Österreich und Deutschland: lokal betreibbar, spezialisiert auf Deutsch und so einfach zu bedienen wie ein Gespräch.">
+  <meta property="og:url" content="https://aycaramba.at/leistungen-ki-mit-verstand">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KI mit Verstand — Ay Caramba!">
+  <meta name="twitter:description" content="Verantwortungsvolle KI für Österreich und Deutschland: lokal betreibbar, spezialisiert auf Deutsch und so einfach zu bedienen wie ein Gespräch.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Dunkle Seite: Ink als Grund, Pink und Teal als Akzente ---------- */
+    :root {
+      --ki-surface: #241b1f;   /* eine Stufe heller als Ink: Karten auf dunklem Grund */
+    }
+
+    body {
+      background: var(--color-ink);
+    }
+
+    .site-header {
+      background: var(--color-ink);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-pink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    /* ---------- Gemeinsame Bausteine ---------- */
+    .uw-section-title {
+      font-size: clamp(1.9rem, 4.4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 22ch;
+    }
+
+    .uw-center {
+      text-align: center;
+    }
+
+    .uw-center .uw-section-title {
+      margin-inline: auto;
+    }
+
+    .uw-lead {
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+      margin: 1.25rem 0 0;
+    }
+
+    .uw-center .uw-lead {
+      margin-inline: auto;
+    }
+
+    .uw-script {
+      font-family: var(--font-accent);
+      color: var(--color-pink);
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+
+    .uw-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.25rem;
+    }
+
+    .uw-center .uw-actions {
+      justify-content: center;
+    }
+
+    .btn-cartoon:focus-visible {
+      outline: 3px solid var(--color-ink);
+      outline-offset: 4px;
+    }
+
+    .uw-btn-white {
+      box-shadow: var(--shadow-pop);
+    }
+
+    .uw-btn-white:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .uw-btn-white:active {
+      transform: translate(4px, 4px);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    /* ---------- 1. Hero ---------- */
+    .uw-hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-orange);
+      border-bottom: var(--cs-border-xthick);
+      padding-block: 1.5rem clamp(4rem, 9vw, 7rem);
+    }
+
+    .uw-hero .back-link {
+      color: var(--color-white);
+    }
+
+    .uw-hero .back-link:hover {
+      color: var(--color-ink);
+    }
+
+    /* bewusst nicht positioniert: die Lupe richtet sich am Hero aus */
+    .uw-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding-top: clamp(1rem, 4vw, 3rem);
+      text-align: center;
+    }
+
+    .uw-hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2.5rem, 7vw, 5.25rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+      color: var(--color-white);
+      max-width: 16ch;
+      margin-inline: auto;
+    }
+
+    .uw-hero-lead {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      line-height: 1.35;
+      color: var(--color-ink);
+      max-width: 34ch;
+      margin: 1.75rem auto 0;
+    }
+
+    .uw-hero .uw-actions {
+      justify-content: center;
+    }
+
+    /* Hero auf dunklem Grund */
+    .uw-hero {
+      background: var(--color-ink);
+      border-bottom: 0;
+    }
+
+    .uw-hero .back-link:hover {
+      color: var(--color-pink);
+    }
+
+    .uw-hero-lead {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .uw-hero .uw-actions {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ki-btn-pink:focus-visible,
+    .uw-btn-white:focus-visible {
+      outline-color: var(--color-white);
+    }
+
+    /* Grafik "Daten bleiben im Haus": Server mit Schloss, Datenpunkte kreisen
+       innerhalb der gestrichelten Grenze und verlassen sie nie */
+    .ki-hero-art {
+      position: absolute;
+      right: -3rem;
+      bottom: -4rem;
+      z-index: 0;
+      width: clamp(220px, 36vw, 340px);
+      height: auto;
+      overflow: visible;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .ki-ring,
+    .ki-orbit,
+    .ki-led {
+      transform-box: view-box;
+      transform-origin: 150px 150px;
+    }
+
+    .ki-ring { animation: ki-spin 48s linear infinite; }
+    .ki-orbit { animation: ki-spin 12s linear infinite reverse; }
+    .ki-led { animation: ki-blink 2.4s ease-in-out infinite; }
+    .ki-led-2 { animation-delay: 0.8s; }
+    .ki-led-3 { animation-delay: 1.6s; }
+
+    @keyframes ki-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes ki-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.25; }
+    }
+
+    @media (max-width: 1359.98px) {
+      .uw-hero {
+        padding-bottom: clamp(10rem, 24vw, 13rem);
+      }
+    }
+
+    @media (min-width: 1360px) {
+      .ki-hero-art {
+        top: 50%;
+        bottom: auto;
+        right: max(2rem, calc((100vw - 1280px) / 2));
+        width: clamp(220px, 17vw, 300px);
+        transform: translateY(-45%);
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ki-ring,
+      .ki-orbit,
+      .ki-led {
+        animation: none;
+      }
+    }
+
+    /* Sektionstitel auf dunklem Grund */
+    .ki-dark .uw-section-title {
+      color: var(--color-white);
+    }
+
+    .ki-dark .uw-lead {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ---------- 3. Schmerzpunkte als Pinnwand ---------- */
+    .uw-pains {
+      background: var(--color-cream);
+      border-bottom: var(--cs-border-xthick);
+    }
+
+    .uw-pain-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .uw-pain {
+      flex: 0 1 340px;
+      border: var(--cs-border-thick);
+      border-radius: 20px;
+      box-shadow: var(--shadow-pop);
+      padding: 1.75rem 1.75rem 2rem;
+      transform: rotate(var(--uw-tilt, 0deg));
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Kräftige CD-Farben (wie die wechselnden Wörter oben) */
+    .uw-pain:nth-child(1) { background: var(--color-orange); --uw-tilt: -1.2deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(2) { background: var(--color-teal); --uw-tilt: 0.9deg; --uw-tilt-hover: -1.5deg; }
+    .uw-pain:nth-child(3) { background: var(--color-pink); --uw-tilt: -0.6deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(4) { background: var(--color-teal-dark); --uw-tilt: 1.1deg; --uw-tilt-hover: -1.5deg; }
+    .uw-pain:nth-child(5) { background: var(--color-orange); --uw-tilt: -0.8deg; --uw-tilt-hover: 1.5deg; }
+
+    .uw-pains-actions {
+      justify-content: center;
+      margin-top: 3.5rem;
+    }
+
+    /* Weiße Schrift auf allen Kacheln */
+    .uw-pain {
+      color: var(--color-white);
+    }
+
+    .uw-pain p {
+      font-weight: 500;
+    }
+
+    .uw-pain strong {
+      font-weight: 700;
+    }
+
+    /* Hover: Karte hebt sich an, wird größer und kippt auf die andere Seite */
+    @media (hover: hover) {
+      .uw-pain:hover {
+        transform: translateY(-8px) scale(1.05) rotate(var(--uw-tilt-hover, 0deg));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .uw-pain {
+        transition: none;
+      }
+    }
+
+    .uw-pain h3 {
+      font-size: 1.2rem;
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+    }
+
+    .uw-pain p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .uw-pain {
+        flex-basis: 100%;
+      }
+    }
+
+    /* ---------- 4. Schnitzel & Kaiserschmarrn ---------- */
+    .uw-punch {
+      background: var(--color-ink);
+      color: var(--color-white);
+    }
+
+    .uw-punch-list {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(3rem, 7vw, 5rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .uw-punch-item {
+      margin: 0;
+      text-align: center;
+    }
+
+    .uw-punch-line {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.6rem, 4.2vw, 2.9rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+
+    .uw-punch-answer {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: clamp(2.6rem, 7vw, 4.75rem);
+      line-height: 1;
+      color: var(--color-orange);
+      margin-top: 0.75rem;
+    }
+
+    /* ---------- Grundsätze: Kacheln wie auf den anderen Seiten, auf dunklem Grund ---------- */
+    .ki-principles.uw-pains {
+      background: var(--color-ink);
+      border-bottom: 0;
+    }
+
+    /* Schwarzer Schatten verschwindet auf Ink, deshalb farbige Schatten */
+    .ki-principles .uw-pain:nth-child(1) { background: var(--color-pink); box-shadow: 8px 8px 0 var(--color-teal); }
+    .ki-principles .uw-pain:nth-child(2) { background: var(--color-teal); box-shadow: 8px 8px 0 var(--color-pink); }
+    .ki-principles .uw-pain:nth-child(3) { background: var(--color-teal-dark); box-shadow: 8px 8px 0 var(--color-pink); }
+
+    .ki-principles .uw-pain {
+      border-color: var(--color-white);
+    }
+
+    /* Punchline auf Pink als bewusster Bruch im dunklen Verlauf */
+    .ki-punch.uw-punch {
+      background: var(--color-pink);
+      color: var(--color-ink);
+      border-block: var(--cs-border-xthick);
+    }
+
+    .ki-punch .uw-punch-answer {
+      color: var(--color-white);
+      text-shadow: 3px 3px 0 var(--color-ink);
+    }
+
+    /* ---------- Produkte ---------- */
+    .ki-products {
+      background: var(--color-ink);
+      color: var(--color-white);
+    }
+
+    .ki-product-list {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(2.5rem, 6vw, 4rem);
+      margin-top: 3.5rem;
+    }
+
+    .ki-product {
+      --ki-accent: var(--color-pink);
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+      background: var(--ki-surface);
+      border: 3px solid var(--ki-accent);
+      border-radius: 28px;
+      box-shadow: 10px 10px 0 var(--ki-accent);
+      overflow: hidden;
+    }
+
+    .ki-product-analyzer {
+      --ki-accent: var(--color-teal);
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    }
+
+    .ki-product-analyzer .ki-product-art {
+      order: -1;
+      border-left: 0;
+      border-right: 3px solid var(--ki-accent);
+    }
+
+    .ki-product-body {
+      padding: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    .ki-product-status {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--color-ink);
+      background: var(--ki-accent);
+      border-radius: var(--radius-pill);
+    }
+
+    .ki-product-name {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--ki-accent);
+      margin: 1rem 0 0.4rem;
+    }
+
+    .ki-product h3 {
+      color: var(--color-white);
+      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+
+    .ki-product p {
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+      max-width: 60ch;
+    }
+
+    .ki-product p strong {
+      color: var(--color-white);
+    }
+
+    .ki-product-quote {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--ki-accent) !important;
+      margin: 0.5rem 0 1.5rem !important;
+    }
+
+    .ki-features {
+      list-style: none;
+      margin: 1.25rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .ki-features li {
+      position: relative;
+      padding-left: 1.9rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .ki-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.35rem;
+      height: 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.8rem;
+      color: var(--color-ink);
+      background: var(--ki-accent);
+      border-radius: 50%;
+    }
+
+    .ki-product-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: var(--ki-accent);
+      border-left: 3px solid var(--ki-accent);
+    }
+
+    .ki-product-art svg {
+      width: min(100%, 260px);
+      height: auto;
+      overflow: visible;
+    }
+
+    /* CARLA: der rote Mikrofon-Knopf leuchtet wie im Projekt beschrieben */
+    .ki-mic-glow {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ki-glow 2.2s ease-in-out infinite;
+    }
+
+    @keyframes ki-glow {
+      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+      50% { opacity: 0.75; transform: scale(1.15); }
+    }
+
+    /* Analyzer: Wellenform, zwei Sprecher in zwei Farben */
+    .ki-wave rect {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ki-wave 1.6s ease-in-out infinite;
+    }
+
+    .ki-wave rect:nth-child(3n) { animation-delay: 0.2s; }
+    .ki-wave rect:nth-child(3n+1) { animation-delay: 0.45s; }
+    .ki-wave rect:nth-child(4n) { animation-delay: 0.7s; }
+
+    @keyframes ki-wave {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.45); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ki-mic-glow,
+      .ki-wave rect {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .ki-product {
+        grid-template-columns: 1fr;
+        box-shadow: 6px 6px 0 var(--ki-accent);
+      }
+
+      .ki-product-art,
+      .ki-product-analyzer .ki-product-art {
+        order: -1;
+        border: 0;
+        border-bottom: 3px solid var(--ki-accent);
+        padding: 1.5rem;
+      }
+
+      .ki-product-art svg {
+        width: min(70%, 200px);
+      }
+    }
+
+    /* ---------- Weitere KI-Leistungen: versetzte Kacheln auf dunklem Grund ---------- */
+    .ki-services {
+      background: var(--color-ink);
+      color: var(--color-white);
+    }
+
+    .ki-service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .ki-service {
+      --ki-accent: var(--color-pink);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      width: min(100%, 760px);
+      background: var(--ki-surface);
+      border: 3px solid var(--ki-accent);
+      border-radius: 24px;
+      box-shadow: 8px 8px 0 var(--ki-accent);
+      padding: clamp(1.5rem, 3.5vw, 2.25rem);
+    }
+
+    .ki-service:nth-child(2) {
+      --ki-accent: var(--color-teal);
+      margin-left: auto;
+    }
+
+    .ki-service:nth-child(3) {
+      --ki-accent: var(--color-pink);
+    }
+
+    .ki-service-icon {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      background: var(--ki-accent);
+      border-radius: 16px;
+    }
+
+    .ki-service h3 {
+      color: var(--color-white);
+      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+      line-height: 1.2;
+      margin: 0.35rem 0 0.75rem;
+    }
+
+    .ki-service p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .ki-service p strong {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 640px) {
+      .ki-service {
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 6px 6px 0 var(--ki-accent);
+      }
+
+      .ki-service-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.45rem;
+      }
+    }
+
+    /* ---------- Terminbuchung (Cal.com) am Seitenende ---------- */
+    .ki-booking {
+      background: var(--color-ink);
+      padding-top: 0;
+      scroll-margin-top: 4.5rem;
+    }
+
+    .ki-booking-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--ki-surface);
+      border: 3px solid var(--color-pink);
+      border-radius: 28px;
+      box-shadow: 10px 10px 0 var(--color-teal);
+      padding: clamp(1rem, 3vw, 2rem);
+      overflow: hidden;
+    }
+
+    .ki-booking-title {
+      color: var(--color-white);
+      margin-bottom: 2.5rem;
+    }
+
+    /* feste Mindesthöhe, damit die Karte beim Laden nicht springt */
+    .ki-cal-embed {
+      width: 100%;
+      min-height: 640px;
+      overflow: auto;
+    }
+
+    @media (max-width: 640px) {
+      .ki-booking-card {
+        box-shadow: 6px 6px 0 var(--color-teal);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="index.html#leistungen">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a class="site-nav-sub-label" href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a class="site-nav-sub-label" href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
+            <a class="site-nav-sub-label" href="leistungen-ki-mit-verstand.html" aria-current="page">KI mit Verstand</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="uw-hero">
+      <div class="container">
+        <a href="index.html#leistungen" class="back-link">← Alle Leistungen</a>
+        <div class="uw-hero-inner">
+          <svg class="ki-hero-art" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+            <!-- Grenze: hier bleiben die Daten -->
+            <circle class="ki-ring" cx="150" cy="150" r="138" fill="none" stroke="#4E9DB8" stroke-width="5" stroke-dasharray="16 12" stroke-linecap="round"/>
+            <!-- Kreisende Datenpunkte, immer innerhalb der Grenze -->
+            <g class="ki-orbit">
+              <circle cx="150" cy="40" r="9" fill="#FF008E" stroke="#171214" stroke-width="3"/>
+              <circle cx="255" cy="170" r="7" fill="#4E9DB8" stroke="#171214" stroke-width="3"/>
+              <circle cx="70" cy="225" r="8" fill="#FFFFFF" stroke="#171214" stroke-width="3"/>
+            </g>
+            <!-- Server -->
+            <rect x="103" y="98" width="104" height="124" rx="14" fill="#FF008E"/>
+            <rect x="95" y="90" width="104" height="124" rx="14" fill="#FFFFFF" stroke="#171214" stroke-width="6"/>
+            <line x1="95" y1="131" x2="199" y2="131" stroke="#171214" stroke-width="5"/>
+            <line x1="95" y1="172" x2="199" y2="172" stroke="#171214" stroke-width="5"/>
+            <rect x="110" y="106" width="44" height="9" rx="4.5" fill="#F3E7CE" stroke="#171214" stroke-width="2.5"/>
+            <rect x="110" y="147" width="44" height="9" rx="4.5" fill="#F3E7CE" stroke="#171214" stroke-width="2.5"/>
+            <rect x="110" y="188" width="44" height="9" rx="4.5" fill="#F3E7CE" stroke="#171214" stroke-width="2.5"/>
+            <circle class="ki-led" cx="180" cy="110.5" r="6" fill="#FF008E" stroke="#171214" stroke-width="2.5"/>
+            <circle class="ki-led ki-led-2" cx="180" cy="151.5" r="6" fill="#4E9DB8" stroke="#171214" stroke-width="2.5"/>
+            <circle class="ki-led ki-led-3" cx="180" cy="192.5" r="6" fill="#FF008E" stroke="#171214" stroke-width="2.5"/>
+            <!-- Schloss -->
+            <path d="M200 76 v-12 a16 16 0 0 1 32 0 v12" fill="none" stroke="#171214" stroke-width="12" stroke-linecap="round"/>
+            <path d="M200 76 v-12 a16 16 0 0 1 32 0 v12" fill="none" stroke="#4E9DB8" stroke-width="6" stroke-linecap="round"/>
+            <rect x="188" y="74" width="56" height="44" rx="9" fill="#4E9DB8" stroke="#171214" stroke-width="6"/>
+            <circle cx="216" cy="92" r="6" fill="#171214"/>
+            <rect x="213" y="94" width="6" height="12" rx="3" fill="#171214"/>
+          </svg>
+          <h1>Für alle, die KI intelligent nutzen wollen.</h1>
+          <p class="uw-hero-lead">KI-Lösungen für DACH-Unternehmen mit Verstand: Lokal betreibbar, spezialisiert auf Deutsch und Dialog orientiert.</p>
+          <div class="uw-actions">
+            <a href="#termin" class="btn-cartoon btn-cartoon-pink ki-btn-pink">Kontakt aufnehmen</a>
+            <a href="#produkte" class="btn-cartoon uw-btn-white">Unsere Produkte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Grundsätze -->
+    <section class="section-cartoon uw-pains ki-principles ki-dark">
+      <div class="container uw-center">
+        <h2 class="uw-section-title"><span style="color: var(--color-pink);">Drei Regeln,</span> <br>die wir nicht brechen.</h2>
+        <div class="uw-pain-board">
+          <article class="uw-pain">
+            <h3>Deine Daten bleiben bei Dir.</h3>
+            <p>Unsere Lösungen <strong>können vollständig lokal laufen</strong>, auf Deinem eigenen Server. Heikle Daten wie Kundengespräche, Preislisten und Dokumente <strong>verlassen Dein Haus nicht</strong>.</p>
+          </article>
+          <article class="uw-pain">
+            <h3>Gemacht für die deutsche Sprache</h3>
+            <p>Viele KI-Tools denken auf Englisch und übersetzen nur. Unsere sind <strong>auf die deutsche Sprache spezialisiert</strong>: Spracherkennung, Auswertung und Antworten, inklusive Fachbegriffe und Produktnamen.</p>
+          </article>
+          <article class="uw-pain">
+            <h3>So einfach wie ein Gespräch.</h3>
+            <p>Kein Prompt-Kurs, keine Eingabemasken. Unsere KI hat ein <strong>übersichtliches, voll animiertes Gegenüber</strong>: Du fragst, sie antwortet und zeigt Dir, woher sie es weiß.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Punchline -->
+    <section class="section-cartoon uw-punch ki-punch">
+      <div class="container">
+        <div class="uw-punch-list">
+          <p class="uw-punch-item">
+            <span class="uw-punch-line">Eine KI, die heikle Daten Übersee schickt, ist wie "1234" als Passwort.</span>
+            <span class="uw-punch-answer">Ziemlich dumm.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Produkte -->
+    <section class="section-cartoon ki-products ki-dark" id="produkte">
+      <div class="container">
+        <div class="uw-center">
+          <h2 class="uw-section-title">Nicht nur Gerede: Das bauen wir gerade.</h2>
+          <p class="uw-lead">Zwei Produkte, beide nach denselben Regeln: lokal, auf Deutsch und verständlich.</p>
+        </div>
+
+        <div class="ki-product-list">
+          <!-- CARLA -->
+          <article class="ki-product ki-product-carla">
+            <div class="ki-product-body">
+              <!-- PLATZHALTER: Status bitte bestätigen -->
+              <span class="ki-product-status">Prototyp</span>
+              <p class="ki-product-name">CARLA</p>
+              <h3>Das Wissens-Gegenüber für Deinen Verkauf.</h3>
+              <p>Mitten im Kundengespräch fehlt der Preis, ein technisches Detail oder die Lieferzeit? Statt in der Firma nachzufragen, drückt Dein Verkäufer den <strong>roten Mikrofon-Knopf</strong> und fragt CARLA. Die animierte Lagerarbeiterin holt die Antwort <strong>aus Euren eigenen Unterlagen</strong>, legt die Quelle auf den Tisch und sagt ehrlich, wenn etwas fehlt:</p>
+              <ul class="ki-features">
+                <li>Fragen per Sprache, jede Antwort mit Quelle</li>
+                <li>Erfindet nichts: nur Wissen aus Euren Dokumenten</li>
+                <li>Erkennt widersprüchliche Preislisten beim Hochladen</li>
+                <li>Läuft im Browser, auf Handy und Laptop</li>
+                <li>Wissensbasis, Spracherkennung und Stimme laufen lokal</li>
+              </ul>
+            </div>
+            <div class="ki-product-art" aria-hidden="true">
+              <!-- Altes Tischmikrofon mit rotem Knopf -->
+              <svg viewBox="0 0 220 240" focusable="false">
+                <rect x="40" y="198" width="150" height="34" rx="17" fill="#171214"/>
+                <rect x="32" y="190" width="150" height="34" rx="17" fill="#FFFFFF" stroke="#171214" stroke-width="6"/>
+                <rect x="98" y="120" width="18" height="74" rx="6" fill="#4E9DB8" stroke="#171214" stroke-width="6"/>
+                <path d="M78 118 Q107 140 136 118" fill="none" stroke="#171214" stroke-width="7" stroke-linecap="round"/>
+                <rect x="66" y="16" width="82" height="110" rx="41" fill="#4E9DB8" stroke="#171214" stroke-width="7"/>
+                <line x1="82" y1="46" x2="132" y2="46" stroke="#171214" stroke-width="4" stroke-linecap="round"/>
+                <line x1="78" y1="66" x2="136" y2="66" stroke="#171214" stroke-width="4" stroke-linecap="round"/>
+                <line x1="78" y1="86" x2="136" y2="86" stroke="#171214" stroke-width="4" stroke-linecap="round"/>
+                <line x1="82" y1="106" x2="132" y2="106" stroke="#171214" stroke-width="4" stroke-linecap="round"/>
+                <circle class="ki-mic-glow" cx="150" cy="207" r="20" fill="#FF3B3B"/>
+                <circle cx="150" cy="207" r="10" fill="#E00000" stroke="#171214" stroke-width="4"/>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Analyzer -->
+          <article class="ki-product ki-product-analyzer">
+            <div class="ki-product-body">
+              <!-- PLATZHALTER: Status und Produktname bitte bestätigen -->
+              <span class="ki-product-status">Prototyp</span>
+              <p class="ki-product-name">Analyzer</p>
+              <h3>Gesprächsanalyse, die im Haus bleibt.</h3>
+              <p>Kundengespräch, Meeting oder Interview hochladen, und kurz darauf liegt alles vor Dir: <strong>ein deutsches Transkript, getrennt nach Sprechern</strong>, mit der Stimmung jedes Abschnitts und einer Zusammenfassung der besprochenen Themen.</p>
+              <ul class="ki-features">
+                <li>Transkription auf Deutsch, mit Zeitstempeln</li>
+                <li>Spracherkennung</li>
+                <li>Stimmung aus Text und Tonfall, Widersprüche werden markiert</li>
+                <li>Zusammenfassung durch ein lokales Sprachmodell</li>
+                <li>100 % lokal: keine Aufnahme verlässt den Rechner</li>
+              </ul>
+            </div>
+            <div class="ki-product-art" aria-hidden="true">
+              <!-- Wellenform: zwei Sprecher in zwei Farben -->
+              <svg viewBox="0 0 240 200" focusable="false">
+                <rect x="12" y="22" width="216" height="156" rx="18" fill="#171214"/>
+                <rect x="4" y="14" width="216" height="156" rx="18" fill="#FFFFFF" stroke="#171214" stroke-width="6"/>
+                <g class="ki-wave" stroke="#171214" stroke-width="3">
+                  <rect x="22" y="72" width="10" height="40" rx="5" fill="#FF008E"/>
+                  <rect x="38" y="57" width="10" height="70" rx="5" fill="#FF008E"/>
+                  <rect x="54" y="47" width="10" height="90" rx="5" fill="#FF008E"/>
+                  <rect x="70" y="64" width="10" height="56" rx="5" fill="#FF008E"/>
+                  <rect x="86" y="77" width="10" height="30" rx="5" fill="#FF008E"/>
+                  <rect x="102" y="82" width="10" height="20" rx="5" fill="#F3E7CE"/>
+                  <rect x="118" y="62" width="10" height="60" rx="5" fill="#386F80"/>
+                  <rect x="134" y="42" width="10" height="100" rx="5" fill="#386F80"/>
+                  <rect x="150" y="54" width="10" height="76" rx="5" fill="#386F80"/>
+                  <rect x="166" y="70" width="10" height="44" rx="5" fill="#386F80"/>
+                  <rect x="182" y="60" width="10" height="64" rx="5" fill="#386F80"/>
+                  <rect x="198" y="76" width="10" height="32" rx="5" fill="#386F80"/>
+                </g>
+                <rect x="22" y="146" width="62" height="14" rx="7" fill="#FF008E" stroke="#171214" stroke-width="3"/>
+                <rect x="118" y="146" width="62" height="14" rx="7" fill="#386F80" stroke="#171214" stroke-width="3"/>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4b. Weitere KI-Leistungen (versetzte Kacheln wie die frühere KI-Seite) -->
+    <section class="section-cartoon ki-services ki-dark">
+      <div class="container">
+        <div class="uw-center">
+          <h2 class="uw-section-title">Und was wir sonst noch mit KI machen:</h2>
+        </div>
+        <div class="ki-service-list">
+          <article class="ki-service">
+            <span class="ki-service-icon" aria-hidden="true">🎓</span>
+            <div>
+              <h3>KI-Education</h3>
+              <p>Egal ob Du Dich selbst weiterentwickeln möchtest oder Dein Marketingteam auf das nächste Effizienzlevel bringen willst: Unser Expertenteam ist nicht nur im Marketing gut, sondern auch darin, Dein Unternehmen mit KI-Wissen zu bereichern.</p>
+            </div>
+          </article>
+          <article class="ki-service">
+            <span class="ki-service-icon" aria-hidden="true">⚙️</span>
+            <div>
+              <h3>KI-Prozessoptimierung</h3>
+              <p><strong>Mal ehrlich, manche Prozesse kosten eigentlich nur Zeit &amp; Nerven.</strong> Wenn sie Dir viel Zeit kosten und oft vorkommen, stehen die Chancen gut, dass die KI einen Großteil davon übernimmt. Gerne bauen wir diese Lösungen für Dich.</p>
+            </div>
+          </article>
+          <article class="ki-service">
+            <span class="ki-service-icon" aria-hidden="true">🚀</span>
+            <div>
+              <h3>Digitale Produktentwicklung (SaaS)</h3>
+              <p><strong>Der Traum vom passiven Einkommen ist doch wunderbar.</strong> Wir bauen für Dich bzw. mit Dir Dein erstes digitales Produkt (SaaS) – von der Idee bis zu den ersten Umsätzen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Terminbuchung KI mit Verstand (Cal.com, dunkles Theme) -->
+    <section class="section-cartoon ki-booking" id="termin">
+      <div class="container">
+        <div class="uw-center">
+          <h2 class="uw-section-title ki-booking-title">Lass uns über Dein Projekt sprechen.</h2>
+        </div>
+        <div class="ki-booking-card">
+          <!-- Cal inline embed code begins -->
+          <div class="ki-cal-embed" id="my-cal-inline-kennenlernen-ki-mit-verstand"></div>
+          <script type="text/javascript">
+            // Cal.com erst laden, wenn der Kalender in die Nähe kommt (spart Ladezeit und Drittanbieter-Cookies beim Seitenaufruf)
+            (function () {
+              var el = document.getElementById("my-cal-inline-kennenlernen-ki-mit-verstand");
+              function loadCal() {
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "kennenlernen-ki-mit-verstand", {origin:"https://app.cal.com"});
+                Cal.config = Cal.config || {};
+                Cal.config.forwardQueryParams = true;
+
+                Cal.ns["kennenlernen-ki-mit-verstand"]("inline", {
+                  elementOrSelector:"#my-cal-inline-kennenlernen-ki-mit-verstand",
+                  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
+                  calLink: "aycaramba/kennenlernen-ki-mit-verstand",
+                });
+
+                Cal.ns["kennenlernen-ki-mit-verstand"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#FF008E"},"dark":{"cal-brand":"#FF008E"}},"hideEventTypeDetails":false,"layout":"month_view"});
+              }
+              if (!el || !("IntersectionObserver" in window)) { loadCal(); return; }
+              var io = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) { io.disconnect(); loadCal(); }
+              }, { rootMargin: "800px 0px" });
+              io.observe(el);
+            })();
+          </script>
+          <!-- Cal inline embed code ends -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="index.html#leistungen" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="index.html#leistungen">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

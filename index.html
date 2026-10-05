@@ -8,9 +8,6 @@
   <meta name="description"
     content="AyCaramba ist eine Marketingagentur aus Wien, die handgemachte Marketingstrategie mit effizientem KI-Einsatz kombiniert.">
   <link rel="canonical" href="https://aycaramba.at/">
-  <link rel="alternate" hreflang="de" href="https://aycaramba.at/">
-  <link rel="alternate" hreflang="en" href="https://aycaramba.at/en/">
-  <link rel="alternate" hreflang="x-default" href="https://aycaramba.at/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ay Caramba! — Dein Umsatz wird’s dir danken">
   <meta property="og:description"
@@ -622,7 +619,7 @@
 
     .references-cartoon h2 {
       color: var(--color-white);
-      white-space: nowrap;
+      text-wrap: balance;
       margin: 0 auto 2rem;
     }
 
@@ -917,7 +914,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1.5rem;
-      max-width: 760px;
+      max-width: 980px;
       margin: 0 auto 2rem;
     }
 
@@ -1009,6 +1006,14 @@
         max-width: none;
       }
 
+      .blog-preview-card:nth-child(3) {
+        grid-column: 1 / -1;
+      }
+
+      .blog-preview-card:nth-child(3) .blog-preview-media {
+        aspect-ratio: 2 / 1;
+      }
+
       .blog-preview-body {
         padding: 0.85rem 0.9rem 1rem;
       }
@@ -1037,6 +1042,116 @@
       display: flex;
       justify-content: center;
     }
+
+    /* ---------- Kundenstimmen (aus referenzen.html) ---------- */
+    .reviews-cartoon {
+      background: var(--color-white);
+      color: var(--color-ink);
+      text-align: center;
+    }
+
+    .reviews-cartoon .rating-badge {
+      margin: 0 auto 3rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: var(--color-orange);
+      color: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-pop-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .testimonial-card:nth-child(2) {
+      background: var(--color-pink);
+    }
+
+    .testimonial-card:nth-child(3) {
+      background: var(--color-teal);
+    }
+
+    .testimonial-card:nth-child(4) {
+      background: var(--color-orange);
+    }
+
+    .testimonial-card .stars {
+      color: var(--color-white);
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--color-white);
+      margin: 0;
+      flex: 1;
+    }
+
+    .testimonial-author {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .testimonial-author strong {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--color-white);
+    }
+
+    .testimonial-author span,
+    .testimonial-author a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-white);
+    }
+
+    .testimonial-author a {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .testimonial-author a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1100px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .reviews-title {
+      margin: 0 auto 1.25rem;
+    }
+
+    .reviews-cartoon .rating-badge {
+      margin-bottom: 3rem;
+    }
   </style>
 </head>
 
@@ -1062,34 +1177,21 @@
             <a href="index.html" aria-current="page">Home</a>
             <div class="site-nav-group">
               <div class="site-nav-row">
-                <a href="leistungen.html">Leistungen</a>
+                <a href="#leistungen">Leistungen</a>
                 <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen"
                   aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
               </div>
               <div class="site-nav-sub" id="nav-sub-leistungen">
-                <a class="site-nav-sub-label" href="funnel-blueprint.html">Umsatz-Wahnsinn</a>
-                <a class="site-nav-sub-label" href="leistungen-happy-websites.html">Website-Perfektion</a>
-                <a href="leistungen-happy-websites.html#webdesign">Webdesign</a>
-                <a href="leistungen-happy-websites.html#webentwicklung-wordpress">Webentwicklung: WordPress</a>
-                <a href="leistungen-happy-websites.html#webentwicklung-individuell">Benutzerdefinierte Websites</a>
-                <a href="leistungen-happy-websites.html#shopentwicklung">Shopentwicklung</a>
-                <a href="leistungen-happy-websites.html#seo-sea">SEO &amp; SEA</a>
-                <a href="leistungen-happy-websites.html#content-wartung">Content &amp; Wartung</a>
-                <a class="site-nav-sub-label" href="leistungen-ai-caramba.html">KI-Irrsinn</a>
-                <a href="leistungen-ai-caramba.html#ai-education">AI Education</a>
-                <a href="leistungen-ai-caramba.html#ai-prozessoptimierung">AI Prozessoptimierung</a>
-                <a href="leistungen-ai-caramba.html#digitale-produktentwicklung">Digitale Produktentwicklung (SaaS)</a>
-                <a class="site-nav-sub-label" href="saas-tools.html">Unsere Tools</a>
+                <a class="site-nav-sub-label" href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+                <a class="site-nav-sub-label" href="leistungen-website-perfektion.html">Website-Perfektion</a>
+                <a class="site-nav-sub-label" href="leistungen-rundum-sorglos.html">Rundum-Sorglos</a>
+                <a class="site-nav-sub-label" href="leistungen-ki-mit-verstand.html">KI mit Verstand</a>
               </div>
             </div>
             <a href="referenzen.html">Referenzen</a>
             <a href="ueber-uns.html">Über uns</a>
             <a href="blog/index.html">Blog</a>
             <a href="kontakt.html">Kontakt</a>
-            <div class="site-nav-lang">
-              <span class="site-nav-lang-link is-active">DE</span>
-              <a class="site-nav-lang-link" href="en/index.html" hreflang="en">EN</a>
-            </div>
           </nav>
         </div>
       </header>
@@ -1101,7 +1203,7 @@
             <span class="line">Dein Umsatz</span>
             <span class="line">wird's dir danken.</span>
           </h1>
-          <p class="hero-subheadline">Für KMUs, die ihr Marketing nicht dem Zufall überlassen.</p>
+          <p class="hero-subheadline">Online-Sichtbarkeit für KMUs, die planbar neue Kunden und wieder mehr Zeit für ihr Kerngeschäft gewinnen wollen.</p>
           <div class="hero-ctas">
             <a href="funnel-blueprint.html" class="btn-cartoon" aria-label="Gratis Funnel-Blueprint sichern">Gratis
               Funnelblueprint sichern</a>
@@ -1137,29 +1239,26 @@
         <div class="container">
           <h2 class="services-title">Unsere Leistungen</h2>
           <div class="services-grid">
-            <a href="funnel-blueprint.html" class="card-cartoon card-cartoon-link">
+            <a href="leistungen-umsatz-wahnsinn.html" class="card-cartoon card-cartoon-link">
               <div class="card-cartoon-icon">🎯</div>
               <h3>Umsatz-Wahnsinn</h3>
               <p>Wär's nicht fein, aus der Masse herauszustechen und endlich planbar Kunden zu gewinnen?</p>
               <span class="card-cartoon-cta">Leistungen ansehen →</span>
             </a>
-            <a href="leistungen-happy-websites.html" class="card-cartoon card-cartoon-link">
+            <a href="leistungen-website-perfektion.html" class="card-cartoon card-cartoon-link">
               <div class="card-cartoon-icon">🌐</div>
               <h3>Website-Perfektion</h3>
               <p>Wär's nicht fein, eine eigene Website zu haben, die nicht nur geil aussieht, sondern auch Kunden am
                 laufenden Band bringt?</p>
               <span class="card-cartoon-cta">Leistungen ansehen →</span>
             </a>
-            <a href="leistungen-ai-caramba.html" class="card-cartoon card-cartoon-link">
-              <div class="card-cartoon-icon">🤖</div>
-              <h3>KI-Irrsinn</h3>
-              <p>Wär's nicht fein, das Maximale aus deiner Zeit herauszuholen und erfolgreiches Marketing auf Autopilot
-                zu
-                betreiben?</p>
+            <a href="leistungen-rundum-sorglos.html" class="card-cartoon card-cartoon-link">
+              <div class="card-cartoon-icon">🛋️</div>
+              <h3>Rundum-Sorglos</h3>
+              <p>Wär's nicht fein, Social Media und Website einfach abzugeben und trotzdem jeden Monat präsent zu sein?</p>
               <span class="card-cartoon-cta">Leistungen ansehen →</span>
             </a>
           </div>
-          <a href="leistungen.html" class="btn-cartoon btn-cartoon-dark">Alle Leistungen ansehen</a>
         </div>
       </section>
 
@@ -1181,7 +1280,7 @@
         <div class="gallery-track" id="galleryTrack">
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/pathadvice-international-website.png" alt="Website Pathadvice International" width="1046"
+              <img src="brand_assets/Projekte/pathadvice-international-website.jpg" alt="Website Pathadvice International" width="1046"
                 height="575" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1194,7 +1293,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/eternal-fashion-2.png" alt="Website Eternal-Fashion"
+              <img src="brand_assets/Projekte/eternal-fashion-2.jpg" alt="Website Eternal-Fashion"
                 width="1046" height="575" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1207,7 +1306,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Projekt%20%239%20Kriechbaums.png" alt="Website Stadthaus Klosterneuburg"
+              <img src="brand_assets/Projekte/Projekt%20%239%20Kriechbaums.jpg" alt="Website Stadthaus Klosterneuburg"
                 width="920" height="506" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1216,6 +1315,19 @@
                 <span class="tag-chip">Webdesign</span>
               </div>
               <a href="https://www.hausverkauf-klosterneuburg.at/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/LiftYourself_website.jpg" alt="Website Lift Yourself"
+                width="1046" height="575" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Website Lift Yourself</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+              <a href="https://www.lift-yourself.com/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
             </div>
           </article>
           <article class="gallery-card" tabindex="0">
@@ -1235,7 +1347,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.png"
+              <img src="brand_assets/Projekte/Projekt%20%2310%20Kraftquell.jpg"
                 alt="LinkedIn-Kampagne für Kraftquell Inside" width="920" height="506" loading="lazy" decoding="async">
               <span class="ai-image-badge">✨ KI-generiertes Bild</span>
             </div>
@@ -1249,7 +1361,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Projekt%20%232%20FirstFloor.png"
+              <img src="brand_assets/Projekte/Projekt%20%232%20FirstFloor.jpg"
                 alt="Social-Media-Content für die FirstFloor Bar Wien" width="920" height="503" loading="lazy"
                 decoding="async">
             </div>
@@ -1263,7 +1375,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Projekt%20%234%20Efficient%20Print.png"
+              <img src="brand_assets/Projekte/Projekt%20%234%20Efficient%20Print.jpg"
                 alt="Corporate Design für efficent" width="920" height="503" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1287,7 +1399,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Project%20%237%20AyCaramba%20Website%20old.png" alt="AyCaramba Website"
+              <img src="brand_assets/Projekte/Project%20%237%20AyCaramba%20Website%20old.jpg" alt="AyCaramba Website"
                 width="920" height="506" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1299,7 +1411,7 @@
           </article>
           <article class="gallery-card" tabindex="0">
             <div class="gallery-card-media">
-              <img src="brand_assets/Projekte/Project%20%239%20AyCaramba%20Online%20Shops%20Website.png"
+              <img src="brand_assets/Projekte/Project%20%239%20AyCaramba%20Online%20Shops%20Website.jpg"
                 alt="AyCaramba Online Shops Website" width="920" height="506" loading="lazy" decoding="async">
             </div>
             <div class="gallery-card-body">
@@ -1352,7 +1464,7 @@
     <!-- 4. Referenzen -->
     <section class="section-cartoon references-cartoon">
       <div class="container">
-        <h2>Wenn die Connection einfach passt</h2>
+        <h2>KMUs, die uns vertrauen</h2>
         <div class="reference-logos-viewport">
           <div class="reference-logos">
             <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png"
@@ -1369,6 +1481,8 @@
               loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="Aniko" width="320" height="107"
               loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="Lift Yourself" width="320" height="42"
+              loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png" alt=""
               aria-hidden="true" width="620" height="172" loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="" aria-hidden="true" width="320"
@@ -1383,54 +1497,57 @@
               height="47" loading="lazy" decoding="async">
             <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="" aria-hidden="true" width="320"
               height="107" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="" aria-hidden="true" width="320"
+              height="42" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. SaaS Tools -->
-    <div class="tools-wave-zone">
-      <section class="section-cartoon tools-overview">
-        <div class="container">
-          <h2 class="tools-overview-title">Unsere Tools zum Mitnehmen</h2>
-          <div class="tool-showcase-list">
-
-            <article class="tool-showcase">
-              <div class="tool-showcase-media">
-                <img src="brand_assets/Projekte/Projekt%20%236%20Peppi%20SaaS%20Tool.jpg"
-                  alt="Peppi Content-Creator Oberfläche" width="920" height="503" loading="lazy" decoding="async">
-              </div>
-              <div class="tool-showcase-body">
-                <h3>Peppi</h3>
-                <p>Peppi ist unser hauseigenes Social-Media-Tool für deutschsprachige Unternehmen – gebaut für alle,
-                  denen Social Media gehörig auf die Nerven geht. Keine Zeit für Marketing, aber trotzdem Bock auf
-                  Sichtbarkeit? Genau dafür gibt's Peppi: Ideen finden, Postings für alle gängigen Plattformen und
-                  Content-Formate erstellen, im Kalender einplanen – fertig. Ein Tool. Alles drin. Nerven geschont.</p>
-                <a href="saas-tools.html" class="btn-cartoon btn-cartoon-pink">Zu Peppi →</a>
-              </div>
-            </article>
-
-            <article class="tool-showcase">
-              <div class="tool-showcase-media is-mockup">
-                <img src="brand_assets/Visitors_Mockup_hell.png" alt="Vega Besucher-Übersicht" width="900" height="529"
-                  loading="lazy" decoding="async">
-              </div>
-              <div class="tool-showcase-body">
-                <h3>Vega</h3>
-                <p>Eine KI, die Kaufabsichten in Echtzeit erkennt? Das ist kein Nice-to-have, das ist ein unfairer
-                  Vorteil. VEGA fängt Absprünge ab und führt Unentschlossene zum Abschluss – mit KI-Agents, die nicht
-                  nur beraten, sondern verkaufen.</p>
-                <p>Das Beste: VEGA ist unser Partner und bei uns fest inkludiert. Andere bauen Funnels und hoffen. Wir
-                  bauen Funnels, die aktiv verkaufen. Eigene Liga – und du ab jetzt auch.</p>
-                <a href="https://www.vega.company" target="_blank" rel="noopener"
-                  class="btn-cartoon btn-cartoon-teal">Zu Vega ↗</a>
-              </div>
-            </article>
-
-          </div>
+    <!-- 5. Referenzen: Kundenstimmen (wie Referenzen-Seite) -->
+    <section class="section-cartoon reviews-cartoon">
+      <div class="container">
+        <h2 class="reviews-title">Was unsere Kunden sagen</h2>
+        <div class="rating-badge">
+          <span class="stars">★★★★★</span>
+          <strong>5,0</strong> Durchschnittsbewertung
         </div>
-      </section>
-    </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba ist seit Jahren unser verlässlicher Partner in Sachen Marketing und Branding. Kreativ, schnell und immer genau auf unsere Wünsche zugeschnitten. Uneingeschränkte Empfehlung.“</p>
+            <div class="testimonial-author">
+              <strong>Horst Kriechbaum</strong>
+              <a href="https://hausverkauf-klosterneuburg.at" target="_blank" rel="noopener">hausverkauf-klosterneuburg.at</a>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba hat uns bei unserem Offline-Funnel enorm unterstützt – unkompliziert, schnell und auf den Punkt. Die Designs haben bei unseren Kunden für echtes Erstaunen gesorgt. Vielen Dank für die tolle Arbeit!“</p>
+            <div class="testimonial-author">
+              <strong>Marco Brunner</strong>
+              <a href="https://auxilio-systems.com/" target="_blank" rel="noopener">auxilio Assistenzsysteme</a>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„AyCaramba hat für mich Online-Kampagnen gestaltet – absolut top! Sehr professionell, gestartet mit einem Workshop und perfekt umgesetzt. Auch mit 30 Jahren Berufserfahrung: eine zweite Meinung bei AyCaramba lohnt sich :-).“</p>
+            <div class="testimonial-author">
+              <strong>Bert Heinen</strong>
+              <a href="https://kraftquell-inside.de/" target="_blank" rel="noopener">Kraftquell INSIDE</a>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <p class="testimonial-quote">„Der KI-Workflow von AyCaramba erspart mir mindestens 10 Stunden administrative Arbeit pro Monat und läuft fehlerfrei im Hintergrund. Auch wenn ich zuerst skeptisch war: Diese Agentur weiß, wie man KI effizient einsetzt!“</p>
+            <div class="testimonial-author">
+              <strong>Valentin Skopek</strong>
+              <a href="https://www.valentinskopek.com/" target="_blank" rel="noopener">Personal Trainer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- 5b. Zitat: Wer wir sind (scroll reveal) -->
     <section class="reveal-section reveal-section-team">
@@ -1462,6 +1579,28 @@
         <div class="container">
           <h2>Lesestoff, der wirklich was bringt.</h2>
           <div class="blog-preview-grid">
+            <a class="blog-preview-card" href="blog/website-wartung.html">
+              <div class="blog-preview-media">
+                <img src="assets/img/blog/website-wartung-hero.jpg" width="1600" height="1060" alt="Nahaufnahme einer Person, die am Laptop Code für eine Website bearbeitet" loading="lazy">
+              </div>
+              <div class="blog-preview-body">
+                <span class="blog-preview-badge">Website &amp; Shops</span>
+                <h3>Website-Wartung: Was gehört dazu?</h3>
+                <p class="blog-preview-excerpt">Aufgaben, Kosten und warum eine gepflegte Website Dir mehr Anfragen bringt.</p>
+                <span class="blog-preview-meta">Niklas Markes · 14 Min. Lesezeit</span>
+              </div>
+            </a>
+            <a class="blog-preview-card" href="blog/ersetzt-ki-marketing-agenturen.html">
+              <div class="blog-preview-media">
+                <img src="assets/img/blog/ki-marketing-agentur-hero.jpg" width="1600" height="1067" alt="Hände tippen auf einem Laptop, auf dem die ChatGPT-Oberfläche geöffnet ist" loading="lazy">
+              </div>
+              <div class="blog-preview-body">
+                <span class="blog-preview-badge">KI &amp; Automatisierung</span>
+                <h3>Ersetzt KI Marketing-Agenturen?</h3>
+                <p class="blog-preview-excerpt">Was KI im Marketing wirklich kann, wo sie scheitert und wann sich eine Agentur noch rechnet.</p>
+                <span class="blog-preview-meta">Niklas Markes · 14 Min. Lesezeit</span>
+              </div>
+            </a>
             <a class="blog-preview-card" href="blog/unterschied-landingpage-website.html">
               <div class="blog-preview-media">
                 <img src="assets/img/blog/landingpage-website-unterschied-hero.jpg" width="1600" height="1067" alt="Laptop und Monitore mit Website-Design-Software auf einem modernen Schreibtisch" loading="lazy">
@@ -1471,17 +1610,6 @@
                 <h3>Landingpage vs. Website: Was ist der Unterschied?</h3>
                 <p class="blog-preview-excerpt">Aufbau, Ziele, SEO-Wirkung und eine klare Entscheidungshilfe, wann du welches Format wirklich brauchst.</p>
                 <span class="blog-preview-meta">Niklas Markes · 9 Min. Lesezeit</span>
-              </div>
-            </a>
-            <a class="blog-preview-card" href="blog/was-ist-ein-marketing-funnel.html">
-              <div class="blog-preview-media">
-                <img src="assets/img/blog/marketing-funnel-hero.jpg" width="1600" height="1067" alt="Marketing-Team analysiert Kennzahlen und Diagramme am Konferenztisch" loading="lazy">
-              </div>
-              <div class="blog-preview-body">
-                <span class="blog-preview-badge">Funnel &amp; Conversion</span>
-                <h3>Was ist ein Marketing-Funnel?</h3>
-                <p class="blog-preview-excerpt">TOFU, MOFU, BOFU, AIDA-Modell und ein Bauplan, mit dem du aus Fremden planbar Kund:innen machst.</p>
-                <span class="blog-preview-meta">Niklas Markes · 11 Min. Lesezeit</span>
               </div>
             </a>
           </div>
@@ -1508,11 +1636,34 @@
           <p class="booking-lead">Kein Verkaufsgespräch, kein Bla — nur 15 Minuten, um zu schauen, ob's zwischen uns
             passt. Wähl dir einfach einen freien Termin aus.</p>
 
-          <!-- Calendly inline widget begin -->
-          <div class="calendly-inline-widget" data-url="https://calendly.com/markes-niklas/kennenlernen-aycaramba?primary_color=f4680a"
-            style="min-width:320px;height:700px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          <!-- Calendly inline widget end -->
+          <!-- Cal inline embed code begins -->
+          <div class="cal-embed" style="width:100%;min-height:640px;margin-top:1.5rem;overflow:auto;" id="my-cal-inline-kennenlernen-aycaramba"></div>
+          <script type="text/javascript">
+            // Cal.com erst laden, wenn der Kalender in die Nähe kommt (spart Ladezeit und Drittanbieter-Cookies beim Seitenaufruf)
+            (function () {
+              var el = document.getElementById("my-cal-inline-kennenlernen-aycaramba");
+              function loadCal() {
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "kennenlernen-aycaramba", {origin:"https://app.cal.com"});
+                Cal.config = Cal.config || {};
+                Cal.config.forwardQueryParams = true;
+
+                Cal.ns["kennenlernen-aycaramba"]("inline", {
+                  elementOrSelector:"#my-cal-inline-kennenlernen-aycaramba",
+                  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+                  calLink: "aycaramba/kennenlernen-aycaramba",
+                });
+
+                Cal.ns["kennenlernen-aycaramba"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#F4680A"},"dark":{"cal-brand":"#F4680A"}},"hideEventTypeDetails":false,"layout":"month_view"});
+              }
+              if (!el || !("IntersectionObserver" in window)) { loadCal(); return; }
+              var io = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) { io.disconnect(); loadCal(); }
+              }, { rootMargin: "800px 0px" });
+              io.observe(el);
+            })();
+          </script>
+          <!-- Cal inline embed code ends -->
         </div>
       </div>
     </section>
@@ -1542,7 +1693,7 @@
       <div class="footer-lead">
         <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
         <div class="footer-lead-ctas">
-          <a href="leistungen.html" class="btn-cartoon" aria-label="Alle Leistungen im Detail entdecken">Mehr
+          <a href="#leistungen" class="btn-cartoon" aria-label="Alle Leistungen im Detail entdecken">Mehr
             erfahren</a>
           <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
         </div>
@@ -1553,7 +1704,7 @@
             <img src="assets/img/logo-white.svg" alt="Ay Caramba!" width="1938" height="1095" loading="lazy">
           </a>
           <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
-            <a href="leistungen.html">Leistungen <span>→</span></a>
+            <a href="#leistungen">Leistungen <span>→</span></a>
             <a href="referenzen.html">Referenzen <span>→</span></a>
             <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
             <a href="ueber-uns.html">Über uns <span>→</span></a>
@@ -1563,9 +1714,9 @@
         <div class="footer-col">
           <h3>Leistungen</h3>
           <nav class="footer-col-links" aria-label="Footer-Leistungen">
-            <a href="funnel-blueprint.html">Umsatz-Wahnsinn</a>
-            <a href="leistungen-happy-websites.html">Website-Perfektion</a>
-            <a href="leistungen-ai-caramba.html">KI-Irrsinn</a>
+            <a href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
           </nav>
         </div>
         <div class="footer-col">

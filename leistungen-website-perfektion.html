@@ -1,0 +1,2683 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website-Perfektion — Ay Caramba!</title>
+  <meta name="description" content="Premium-Websites aus Designer-Hand, die aktiv verkaufen: in 5 Schritten zu Deiner perfekten Website – inklusive Suchmaschinen-Optimierung. Jetzt Website-Preis vorab berechnen.">
+  <link rel="canonical" href="https://aycaramba.at/leistungen-website-perfektion">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Website-Perfektion — Ay Caramba!">
+  <meta property="og:description" content="Premium-Websites aus Designer-Hand, die aktiv verkaufen: in 5 Schritten zu Deiner perfekten Website – inklusive Suchmaschinen-Optimierung.">
+  <meta property="og:url" content="https://aycaramba.at/leistungen-website-perfektion">
+  <meta property="og:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website-Perfektion — Ay Caramba!">
+  <meta name="twitter:description" content="Premium-Websites aus Designer-Hand, die aktiv verkaufen: in 5 Schritten zu Deiner perfekten Website – inklusive Suchmaschinen-Optimierung.">
+  <meta name="twitter:image" content="https://aycaramba.at/assets/img/og-share.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-round.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/Yakin.otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ---------- Header in Leistungsfarbe (Teal) ---------- */
+    .site-header {
+      background: var(--color-teal);
+    }
+
+    @media (min-width: 1024px) {
+      .site-nav > a,
+      .site-nav-row a {
+        color: var(--color-white);
+      }
+
+      .site-nav > a:hover,
+      .site-nav-row a:hover {
+        color: var(--color-ink);
+      }
+
+      .site-nav > a[aria-current="page"] {
+        color: var(--color-white);
+      }
+    }
+
+    /* ---------- Gemeinsame Bausteine ---------- */
+    .uw-section-title {
+      font-size: clamp(1.9rem, 4.4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 22ch;
+    }
+
+    .uw-center {
+      text-align: center;
+    }
+
+    .uw-center .uw-section-title {
+      margin-inline: auto;
+    }
+
+    .uw-lead {
+      font-size: 1.1rem;
+      color: var(--color-ink-soft);
+      max-width: 60ch;
+      margin: 1.25rem 0 0;
+    }
+
+    .uw-center .uw-lead {
+      margin-inline: auto;
+    }
+
+    .uw-script {
+      font-family: var(--font-accent);
+      color: var(--color-pink);
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+
+    .uw-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.25rem;
+    }
+
+    .uw-center .uw-actions {
+      justify-content: center;
+    }
+
+    .btn-cartoon:focus-visible {
+      outline: 3px solid var(--color-ink);
+      outline-offset: 4px;
+    }
+
+    .uw-btn-white {
+      box-shadow: var(--shadow-pop);
+    }
+
+    .uw-btn-white:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    .uw-btn-white:active {
+      transform: translate(4px, 4px);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    /* ---------- 1. Hero ---------- */
+    .uw-hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-orange);
+      border-bottom: var(--cs-border-xthick);
+      padding-block: 1.5rem clamp(4rem, 9vw, 7rem);
+    }
+
+    .uw-hero .back-link {
+      color: var(--color-white);
+    }
+
+    .uw-hero .back-link:hover {
+      color: var(--color-ink);
+    }
+
+    /* bewusst nicht positioniert: die Lupe richtet sich am Hero aus */
+    .uw-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding-top: clamp(1rem, 4vw, 3rem);
+      text-align: center;
+    }
+
+    .uw-hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2.5rem, 7vw, 5.25rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+      color: var(--color-white);
+      max-width: 16ch;
+      margin-inline: auto;
+    }
+
+    .uw-hero-lead {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      line-height: 1.35;
+      color: var(--color-ink);
+      max-width: 34ch;
+      margin: 1.75rem auto 0;
+    }
+
+    .uw-hero .uw-actions {
+      justify-content: center;
+    }
+
+    .uw-hero {
+      background: var(--color-teal);
+    }
+
+    .uw-hero .uw-actions {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Geldbündel: bis 1360px groß im Hintergrund unten rechts (hinter Text
+       und Buttons), darüber rechts neben der Headline. Einzelne Scheine
+       fliegen aus dem Bündel nach oben. */
+    .ww-money {
+      position: absolute;
+      right: -2rem;
+      bottom: -2.5rem;
+      z-index: 0;
+      width: clamp(210px, 34vw, 330px);
+      height: auto;
+      overflow: visible;
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    .ww-money-bundle,
+    .ww-bill {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .ww-money-bundle {
+      animation: ww-bundle-bob 3.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    }
+
+    .ww-bill {
+      opacity: 0;
+      animation: ww-bill-fly 4.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    }
+
+    .ww-bill-2 { animation-delay: 1.6s; }
+    .ww-bill-3 { animation-delay: 3.2s; }
+
+    @keyframes ww-bundle-bob {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(-1.5deg); }
+    }
+
+    @keyframes ww-bill-fly {
+      0% { opacity: 0; transform: translate(0, 46px) rotate(0deg) scale(0.85); }
+      14% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; transform: translate(var(--ww-dx, 0px), -36px) rotate(var(--ww-rot, 12deg)) scale(1); }
+    }
+
+    .ww-bill-1 { --ww-dx: -26px; --ww-rot: -18deg; }
+    .ww-bill-2 { --ww-dx: 8px; --ww-rot: 14deg; }
+    .ww-bill-3 { --ww-dx: 30px; --ww-rot: 24deg; }
+
+    @media (max-width: 1359.98px) {
+      .uw-hero {
+        padding-bottom: clamp(9rem, 22vw, 12rem);
+      }
+    }
+
+    @media (min-width: 1360px) {
+      .ww-money {
+        top: 50%;
+        bottom: auto;
+        right: max(2.5rem, calc((100vw - 1280px) / 2));
+        width: clamp(200px, 16vw, 290px);
+        transform: translateY(-40%) rotate(-8deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ww-money-bundle {
+        animation: none;
+      }
+
+      .ww-bill {
+        animation: none;
+        opacity: 1;
+        transform: translate(var(--ww-dx, 0px), -10px) rotate(var(--ww-rot, 12deg));
+      }
+    }
+
+    /* ---------- 3. Schmerzpunkte als Pinnwand ---------- */
+    .uw-pains {
+      background: var(--color-cream);
+      border-bottom: var(--cs-border-xthick);
+    }
+
+    .uw-pain-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .uw-pain {
+      flex: 0 1 340px;
+      border: var(--cs-border-thick);
+      border-radius: 20px;
+      box-shadow: var(--shadow-pop);
+      padding: 1.75rem 1.75rem 2rem;
+      transform: rotate(var(--uw-tilt, 0deg));
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Kräftige CD-Farben (wie die wechselnden Wörter oben) */
+    .uw-pain:nth-child(1) { background: var(--color-orange); --uw-tilt: -1.2deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(2) { background: var(--color-teal); --uw-tilt: 0.9deg; --uw-tilt-hover: -1.5deg; }
+    .uw-pain:nth-child(3) { background: var(--color-pink); --uw-tilt: -0.6deg; --uw-tilt-hover: 1.5deg; }
+    .uw-pain:nth-child(4) { background: var(--color-teal-dark); --uw-tilt: 1.1deg; --uw-tilt-hover: -1.5deg; }
+    .uw-pain:nth-child(5) { background: var(--color-orange); --uw-tilt: -0.8deg; --uw-tilt-hover: 1.5deg; }
+
+    .uw-pains-actions {
+      justify-content: center;
+      margin-top: 3.5rem;
+    }
+
+    /* Weiße Schrift auf allen Kacheln */
+    .uw-pain {
+      color: var(--color-white);
+    }
+
+    .uw-pain p {
+      font-weight: 500;
+    }
+
+    .uw-pain strong {
+      font-weight: 700;
+    }
+
+    /* Hover: Karte hebt sich an, wird größer und kippt auf die andere Seite */
+    @media (hover: hover) {
+      .uw-pain:hover {
+        transform: translateY(-8px) scale(1.05) rotate(var(--uw-tilt-hover, 0deg));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .uw-pain {
+        transition: none;
+      }
+    }
+
+    .uw-pain h3 {
+      font-size: 1.2rem;
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+    }
+
+    .uw-pain p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .uw-pain {
+        flex-basis: 100%;
+      }
+    }
+
+    /* ---------- 4. Schnitzel & Kaiserschmarrn ---------- */
+    .uw-punch {
+      background: var(--color-ink);
+      color: var(--color-white);
+    }
+
+    .uw-punch-list {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(3rem, 7vw, 5rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .uw-punch-item {
+      margin: 0;
+      text-align: center;
+    }
+
+    .uw-punch-line {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.6rem, 4.2vw, 2.9rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+
+    .uw-punch-answer {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: clamp(2.6rem, 7vw, 4.75rem);
+      line-height: 1;
+      color: var(--color-orange);
+      margin-top: 0.75rem;
+    }
+
+    /* ---------- 4. Website in 5 Schritten (wie Umsatz-Wahnsinn) ---------- */
+    .uw-process {
+      background: var(--color-cream);
+      border-top: var(--cs-border-xthick);
+    }
+
+    .uw-process-head {
+      max-width: 760px;
+    }
+
+    .uw-rhyme {
+      font-family: var(--font-accent);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      line-height: 1.25;
+      color: var(--color-orange-dark);
+      margin: 2rem 0 0;
+    }
+
+    .uw-steps {
+      --uw-rail: 30px;
+      --uw-gutter: 6rem;
+      position: relative;
+      list-style: none;
+      margin: 4.5rem 0 0;
+      padding: 0 0 0 var(--uw-gutter);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .uw-steps::before,
+    .uw-steps::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      left: calc(var(--uw-rail) - 3px);
+      width: 6px;
+      border-radius: 6px;
+    }
+
+    .uw-steps::before {
+      background: rgba(23, 18, 20, 0.14);
+    }
+
+    .uw-steps::after {
+      background: var(--color-orange);
+      transform-origin: top center;
+      transform: scaleY(var(--uw-progress, 0));
+    }
+
+    .uw-step {
+      position: relative;
+    }
+
+    .uw-step-num {
+      position: absolute;
+      top: 0;
+      left: calc(-1 * var(--uw-gutter) + var(--uw-rail) - 30px);
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: var(--cs-border-thick);
+      background: var(--color-white);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-step.is-reached .uw-step-num {
+      background: var(--color-orange);
+      transform: scale(1.08);
+    }
+
+    .uw-step-card {
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+    }
+
+    /* Versetzte, leicht gekippte Karten wie bei Website-Perfektion */
+    @media (min-width: 861px) {
+      .uw-step-card {
+        width: 80%;
+      }
+
+      .uw-step:nth-child(odd) .uw-step-card {
+        margin-right: auto;
+        transform: rotate(-0.35deg);
+      }
+
+      .uw-step:nth-child(even) .uw-step-card {
+        margin-left: auto;
+        transform: rotate(0.35deg);
+      }
+    }
+
+    .uw-step-card h3 {
+      margin: 0;
+    }
+
+    /* Kopfzeile = Aufklapp-Button */
+    .uw-step-toggle {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      width: 100%;
+      margin: 0;
+      padding: clamp(1.4rem, 3.5vw, 2.1rem) clamp(1.4rem, 4vw, 2.5rem);
+      background: none;
+      border: 0;
+      border-radius: 21px;
+      font: inherit;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .uw-step-toggle:focus-visible {
+      outline: 3px solid var(--color-orange);
+      outline-offset: -8px;
+    }
+
+    .uw-step-toggle-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .uw-step-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .uw-step-sub {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.45;
+      color: var(--color-orange-dark);
+      margin: 0.4rem 0 0;
+    }
+
+    .uw-step-therefore {
+      border-left: 4px solid var(--color-orange);
+      padding-left: 1rem;
+    }
+
+    .uw-step-result h4 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .uw-step-final .uw-step-sub {
+      color: var(--color-orange-light);
+    }
+
+    .uw-step-final .uw-step-therefore {
+      border-color: var(--color-orange-light);
+    }
+
+    .uw-step:not(.uw-step-final) .uw-step-sub {
+      color: var(--color-ink);
+      opacity: 0.8;
+    }
+
+    .uw-step:not(.uw-step-final) .uw-step-therefore {
+      border-color: var(--color-ink);
+    }
+
+    .uw-step-arrow {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: var(--cs-border-thick);
+      background: var(--color-orange-light);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Transition erst nach dem Initialisieren, sonst dreht der Pfeil beim Laden */
+    .uw-steps.is-ready .uw-step-arrow {
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-step-arrow svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .uw-step-toggle:hover .uw-step-arrow {
+      transform: translateY(3px) scale(1.08);
+    }
+
+    .uw-step-toggle:active .uw-step-arrow {
+      transform: scale(0.9);
+    }
+
+    .uw-step-toggle[aria-expanded="true"] .uw-step-arrow {
+      transform: rotate(180deg);
+    }
+
+    .uw-step-toggle[aria-expanded="true"]:hover .uw-step-arrow {
+      transform: rotate(180deg) translateY(3px) scale(1.08);
+    }
+
+    .uw-step-toggle[aria-expanded="true"]:active .uw-step-arrow {
+      transform: rotate(180deg) scale(0.9);
+    }
+
+    .uw-step-panel p {
+      margin: 0 0 1rem;
+    }
+
+    .uw-step-panel {
+      padding: 0 clamp(1.4rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .uw-step-panel.is-opening {
+      animation: uw-panel-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes uw-panel-in {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .uw-step-card p {
+      max-width: 68ch;
+    }
+
+    /* Fließtext auf den bunten Karten kräftiger für bessere Lesbarkeit */
+    .uw-step-panel p {
+      font-weight: 600;
+    }
+
+    .uw-step-panel strong {
+      font-weight: 800;
+    }
+
+    .uw-step-result {
+      margin-top: 1.75rem;
+      background: var(--color-teal-light);
+      border: var(--cs-border);
+      border-radius: 18px;
+      padding: 1.35rem 1.5rem;
+    }
+
+    .uw-step-result p {
+      margin: 0 0 0.6rem;
+    }
+
+    .uw-step-result p:last-child {
+      margin-bottom: 0;
+    }
+
+    .uw-step-final .uw-step-card {
+      background: var(--color-ink);
+      color: var(--color-white);
+    }
+
+    .uw-step-final .btn-cartoon:focus-visible,
+    .uw-step-final .uw-step-toggle:focus-visible {
+      outline-color: var(--color-white);
+    }
+
+    .uw-step-final .uw-step-arrow {
+      background: var(--color-orange);
+    }
+
+    /* Bunte Karten in Markenfarben (Schritt 5 bleibt dunkel als Finale) */
+    .uw-step:nth-child(1) .uw-step-card { background: var(--color-teal-light); }
+    .uw-step:nth-child(2) .uw-step-card { background: var(--color-pink-soft); }
+    .uw-step:nth-child(3) .uw-step-card { background: var(--color-orange-light); }
+    .uw-step:nth-child(4) .uw-step-card { background: var(--color-teal); }
+
+    .uw-step:not(.uw-step-final) .uw-step-arrow {
+      background: var(--color-white);
+    }
+
+    .uw-step:not(.uw-step-final) .uw-step-result {
+      background: var(--color-white);
+    }
+
+    .uw-step:not(.uw-step-final) .uw-step-toggle:focus-visible {
+      outline-color: var(--color-ink);
+    }
+
+    @media (max-width: 640px) {
+      .uw-steps {
+        --uw-rail: 20px;
+        --uw-gutter: 3.25rem;
+        gap: 2.25rem;
+      }
+
+      .uw-step-num {
+        width: 40px;
+        height: 40px;
+        left: calc(-1 * var(--uw-gutter) + var(--uw-rail) - 20px);
+        font-size: 1.1rem;
+      }
+
+      .uw-steps::before,
+      .uw-steps::after {
+        top: 20px;
+        bottom: 20px;
+      }
+
+      .uw-step-toggle {
+        gap: 0.85rem;
+        padding: 1.25rem 1.1rem;
+      }
+
+      .uw-step-arrow {
+        width: 40px;
+        height: 40px;
+      }
+
+      .uw-step-panel {
+        padding-inline: 1.1rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .uw-step-arrow {
+        transition: none;
+      }
+
+      .uw-step-panel.is-opening {
+        animation: none;
+      }
+    }
+
+    /* Website-Roadmap: Zwischenüberschrift & Ergebnis-Box auf der dunklen Karte */
+    .ww-process-sub {
+      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--color-teal-dark);
+      margin: 2.25rem 0 0;
+    }
+
+    .uw-step-final .uw-step-result {
+      color: var(--color-ink);
+    }
+
+    .uw-step-result a {
+      color: inherit;
+      font-weight: 800;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    .uw-step-result a:hover {
+      color: var(--color-pink);
+    }
+
+    .uw-step-result a:focus-visible {
+      outline: 3px solid var(--color-pink);
+      outline-offset: 2px;
+    }
+
+    /* ---------- Abschluss-CTA unter der Roadmap (inkl. Funnel Blueprint) ---------- */
+    .uw-final-card {
+      margin-top: clamp(3.5rem, 7vw, 5rem);
+      position: relative;
+      background: var(--color-orange);
+      border: var(--cs-border-thick);
+      border-radius: 32px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 6vw, 4rem);
+      text-align: center;
+    }
+
+    .uw-final-card h2 {
+      font-size: clamp(1.8rem, 4.2vw, 2.9rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--color-white);
+      max-width: 22ch;
+      margin: 0 auto;
+    }
+
+    .uw-final-card p {
+      font-weight: 600;
+      max-width: 52ch;
+      margin: 1.25rem auto 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .uw-steps::after {
+        display: none;
+      }
+
+      .uw-step-num {
+        transition: none;
+      }
+    }
+
+    /* ---------- Website-Preisrechner ---------- */
+    .ww-calc {
+      background: var(--color-white);
+      scroll-margin-top: 4.5rem;
+    }
+
+    .ww-calc-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .ww-calc-form {
+      background: var(--color-cream);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .ww-q {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      min-width: 0;
+    }
+
+    .ww-q + .ww-q {
+      margin-top: 1.75rem;
+      padding-top: 1.75rem;
+      border-top: 2px dashed rgba(23, 18, 20, 0.2);
+    }
+
+    .ww-q-title {
+      display: block;
+      padding: 0;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+      line-height: 1.3;
+      margin-bottom: 0.85rem;
+      /* legend aus dem Fieldset-Rahmen lösen, damit die Trennlinie darüber liegt */
+      float: left;
+      width: 100%;
+    }
+
+    .ww-q-title + * {
+      clear: both;
+    }
+
+    .ww-q-hint {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-ink-soft);
+      margin: 0.6rem 0 0;
+    }
+
+    .ww-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    /* Auswahl als Cartoon-Chips: echte Radio/Checkbox-Inputs, optisch versteckt */
+    .ww-chip input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      pointer-events: none;
+    }
+
+    .ww-chip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.05rem;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .ww-chip input[type="checkbox"] + span::before {
+      content: '+';
+      font-family: var(--font-display);
+      font-weight: 900;
+    }
+
+    .ww-chip input[type="checkbox"]:checked + span::before {
+      content: '✓';
+    }
+
+    .ww-chip:hover span {
+      transform: translateY(-2px);
+    }
+
+    .ww-chip:active span {
+      transform: scale(0.96);
+    }
+
+    .ww-chip input:checked + span {
+      background: var(--color-teal);
+      color: var(--color-white);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .ww-chip input:focus-visible + span {
+      outline: 3px solid var(--color-pink);
+      outline-offset: 3px;
+    }
+
+    .ww-chip input:disabled + span {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .ww-pages-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem 1.5rem;
+    }
+
+    .ww-pages-value {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      min-width: 6.5ch;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .rs-slider:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Ergebnis: bleibt beim Scrollen durch die Fragen im Blick */
+    .ww-calc-result {
+      position: sticky;
+      top: 6.5rem;
+      background: var(--color-orange);
+      color: var(--color-ink);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.5rem, 4vw, 2.25rem);
+    }
+
+    .ww-result-label {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .ww-result-value {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--color-white);
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .ww-result-value.is-updated {
+      animation: ww-value-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes ww-value-pop {
+      from { transform: scale(0.94); }
+      to { transform: scale(1); }
+    }
+
+    .ww-result-tax {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .ww-result-incl {
+      list-style: none;
+      margin: 1.5rem 0 0;
+      padding: 1.25rem 0 0;
+      border-top: 2px solid rgba(23, 18, 20, 0.25);
+      display: grid;
+      gap: 0.45rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .ww-result-incl li::before {
+      content: '✓ ';
+      font-weight: 900;
+      color: var(--color-white);
+    }
+
+    .ww-calc-result .btn-cartoon {
+      margin-top: 1.75rem;
+    }
+
+    .ww-result-note {
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 1.25rem 0 0;
+    }
+
+    @media (max-width: 900px) {
+      .ww-calc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ww-calc-result {
+        position: static;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ww-pages-row {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ww-chip span {
+        transition: none;
+      }
+
+      .ww-result-value.is-updated {
+        animation: none;
+      }
+    }
+
+    /* Schieberegler im Cartoon-Stil: dicker Rand, orange Füllung, runder Griff */
+    .rs-slider {
+      --rs-pct: 5%;
+      flex: 1;
+      min-width: 180px;
+      height: 18px;
+      margin: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      background: linear-gradient(90deg, var(--color-orange) var(--rs-pct), var(--color-cream) var(--rs-pct));
+      cursor: pointer;
+    }
+
+    .rs-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .rs-slider::-moz-range-thumb {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .rs-slider:hover::-webkit-slider-thumb {
+      transform: scale(1.12);
+    }
+
+    .rs-slider:active::-webkit-slider-thumb {
+      transform: scale(0.95);
+    }
+
+    .rs-slider:focus-visible {
+      outline: 3px solid var(--color-pink);
+      outline-offset: 4px;
+    }
+
+    /* ---------- Du hast bereits eine Website? ---------- */
+    .ww-existing {
+      background: var(--color-white);
+      padding-top: 0;
+    }
+
+    .ww-existing .uw-section-title {
+      margin-inline: auto;
+    }
+
+    .ww-existing .rs-upsell {
+      margin-top: 2.5rem;
+      background: var(--color-teal);
+    }
+
+    .ww-upsell-price {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      letter-spacing: -0.02em;
+      color: var(--color-white);
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .ww-upsell-price small {
+      font-size: 0.6em;
+      font-weight: 800;
+    }
+
+    .ww-upsell-cta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem 1.75rem;
+    }
+
+    /* Breite Kachel (wie Rundum sorglos) */
+    .rs-upsell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem 3rem;
+      margin-top: 2rem;
+      background: var(--color-orange);
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.75rem);
+    }
+
+    .rs-upsell-text {
+      flex: 1 1 420px;
+    }
+
+    .rs-upsell h3 {
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      line-height: 1.15;
+      color: var(--color-white);
+      margin-bottom: 0.6rem;
+    }
+
+    .rs-upsell p {
+      margin: 0;
+      font-weight: 600;
+      max-width: 62ch;
+    }
+
+    /* ---------- 7. Zwei Möglichkeiten: blaue vs. rote Pille (Matrix) ---------- */
+    .uw-options {
+      background: var(--color-cream);
+      border-top: var(--cs-border-xthick);
+    }
+
+    .uw-options .uw-section-title {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .uw-options-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem clamp(3rem, 7vw, 6rem);
+      align-items: stretch;
+      margin-top: 2.5rem;
+    }
+
+    .uw-choice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Pille: sitzt über der Karte und ragt in deren Oberkante */
+    .uw-pill {
+      position: relative;
+      z-index: 1;
+      width: clamp(150px, 16vw, 200px);
+      height: auto;
+      margin-bottom: -2.25rem;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .uw-choice-blue .uw-pill { transform: rotate(-14deg); }
+    .uw-choice-red .uw-pill { transform: rotate(14deg); }
+
+    .uw-choice:hover .uw-pill,
+    .uw-choice:focus-within .uw-pill {
+      transform: translateY(-8px) rotate(0deg) scale(1.06);
+    }
+
+    .uw-option {
+      flex: 1;
+      width: 100%;
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      padding: 3.25rem clamp(1.5rem, 4vw, 2.5rem) clamp(1.75rem, 4vw, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .uw-option h3 {
+      font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .uw-option p {
+      margin: 0;
+    }
+
+    .uw-option-kicker {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin: 0 0 0.4rem;
+    }
+
+    /* Blaue Pille: alles bleibt, wie es ist */
+    .uw-option-old {
+      background: var(--color-white);
+      border-style: dashed;
+      color: var(--color-ink-soft);
+    }
+
+    .uw-option-old h3 {
+      color: var(--color-ink-soft);
+    }
+
+    .uw-option-old .uw-option-kicker {
+      color: var(--color-teal-dark);
+    }
+
+    /* Rote Pille: aufwachen */
+    .uw-option-new {
+      background: var(--color-ink);
+      color: var(--color-white);
+      box-shadow: 8px 8px 0 0 var(--color-pink);
+    }
+
+    .uw-option-new .uw-option-kicker {
+      color: var(--color-pink);
+    }
+
+    .uw-option-new p:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    .uw-option-new .btn-cartoon {
+      align-self: center;
+      margin-top: auto;
+    }
+
+    .uw-option-new .btn-cartoon:focus-visible {
+      outline-color: var(--color-white);
+    }
+
+    /* "oder" zwischen den beiden Pillen */
+    .uw-options-or {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%) rotate(-6deg);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: var(--cs-border-thick);
+      background: var(--color-white);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 760px) {
+      .uw-options-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .uw-options-or {
+        position: static;
+        transform: rotate(-6deg);
+        margin: 0 auto;
+      }
+    }
+
+    /* ---------- 8. KI-Tabelle (dunkel, wie Rundum sorglos) ---------- */
+    .rs-promise {
+      background: var(--color-ink);
+      color: var(--color-white);
+      border-top: var(--cs-border-xthick);
+    }
+
+    .rs-promise .uw-section-title {
+      color: var(--color-white);
+      max-width: 22ch;
+      margin-inline: auto;
+    }
+
+    .rs-promise-accent {
+      font-family: var(--font-accent);
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      line-height: 1;
+      color: var(--color-orange);
+      margin: 1.25rem 0 0;
+      transform: rotate(-4deg);
+    }
+
+    .rs-promise-accent-pink {
+      color: var(--color-pink);
+    }
+
+    .rs-promise-card {
+      position: relative;
+      max-width: 760px;
+      margin: 3.5rem auto 0;
+      padding: 2.75rem 2rem 2rem;
+      background: var(--color-pink);
+      color: var(--color-white);
+      border: 3px solid var(--color-white);
+      border-radius: 24px;
+      box-shadow: 10px 10px 0 var(--color-orange);
+    }
+
+    .rs-promise-badge {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-2deg);
+      padding: 0.45rem 1.25rem;
+      background: var(--color-teal);
+      color: var(--color-white);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      white-space: nowrap;
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-pop-sm);
+    }
+
+    .rs-promise-card p {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .rs-promise-card p + p {
+      margin-top: 1rem;
+    }
+
+    .rs-promise-card strong {
+      font-weight: 800;
+    }
+
+    .rs-promise .rs-promise-next {
+      margin-top: 6rem;
+    }
+
+    /* Tabelle "Warum KI allein nicht die Lösung ist" (von Umsatz-Wahnsinn) */
+    .rs-ai-table {
+      max-width: 960px;
+      margin: 3rem auto 0;
+      text-align: left;
+    }
+
+    .uw-ai-subtitle {
+      font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+      margin: 4rem 0 1.5rem;
+    }
+
+    .uw-ai-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .uw-ai-list li {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem 3rem;
+      padding-block: 1.75rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      align-items: baseline;
+    }
+
+    .uw-ai-list p {
+      margin: 0;
+    }
+
+    .uw-ai-effect {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--color-orange);
+    }
+
+    @media (max-width: 760px) {
+      .uw-ai-list li {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .rs-promise .rs-promise-next {
+        margin-top: 4.5rem;
+      }
+
+      .rs-promise-card {
+        padding: 2.5rem 1.25rem 1.5rem;
+        box-shadow: 6px 6px 0 var(--color-orange);
+      }
+    }
+
+    /* Terminbuchung (Cal.com) nach der Pillen-Sektion */
+    .ww-booking {
+      background: var(--color-white);
+      border-top: var(--cs-border-xthick);
+      scroll-margin-top: 4.5rem;
+    }
+
+    .ww-booking-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      border-radius: 28px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1rem, 3vw, 2rem);
+      overflow: hidden;
+    }
+
+    /* feste Mindesthöhe, damit die Karte beim Laden nicht springt */
+    .ww-cal-embed {
+      width: 100%;
+      min-height: 640px;
+      overflow: auto;
+    }
+
+    .rs-promise .rs-ai-table {
+      margin-top: 3rem;
+    }
+
+    /* ---------- Angebote (wie Umsatz-Wahnsinn) ---------- */
+    .uw-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+      align-items: stretch;
+    }
+
+    .uw-offer {
+      position: relative;
+      border: var(--cs-border-thick);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      padding: clamp(1.75rem, 4vw, 2.75rem);
+      display: flex;
+      flex-direction: column;
+      background: var(--color-white);
+    }
+
+    /* "Du bist gerade hier"-Banner: markiert die Leistung der aktuellen Seite */
+    .uw-offer-here {
+      position: absolute;
+      top: 0;
+      left: clamp(1.25rem, 3vw, 2rem);
+      transform: translateY(-55%) rotate(-3deg);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem 0.45rem 0.8rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      line-height: 1;
+      color: var(--color-white);
+      background: var(--color-pink);
+      border: var(--cs-border-thick);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-pop-sm);
+      white-space: nowrap;
+    }
+
+    /* auf der pinken Karte wäre der pinke Banner unsichtbar */
+    .uw-offer-sorglos .uw-offer-here {
+      background: var(--color-ink);
+    }
+
+    .uw-offer-here svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Farben je Leistung: Kundengewinnung orange, Rundum-Sorglos pink, Website blau */
+    .uw-offer-featured {
+      background: var(--color-orange);
+    }
+
+    .uw-offer-sorglos {
+      background: var(--color-pink);
+    }
+
+    .uw-offer-website {
+      background: var(--color-teal);
+    }
+
+    .uw-offer-for {
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0 0 1.25rem;
+    }
+
+    .uw-offer h3 {
+      font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .uw-offer p {
+      margin: 0 0 0.75rem;
+    }
+
+    .uw-offer p strong {
+      font-weight: 800;
+    }
+
+    .uw-offer-footer {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--color-ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .uw-price {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .uw-price small {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1023.98px) {
+      .uw-offers-grid {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+    }
+    /* ---------- Projekt-Galerie (wie Startseite, nur Webdesign) ---------- */
+    .gallery-cartoon {
+      background: transparent;
+      text-align: center;
+    }
+
+    .gallery-carousel {
+      position: relative;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 1.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0.5rem clamp(1.5rem, 14vw, 16vw) 2rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-card {
+      flex: 0 0 min(620px, 78vw);
+      scroll-snap-align: center;
+      background: var(--color-ink);
+      border-radius: 24px;
+      box-shadow: var(--shadow-pop-lg);
+      overflow: hidden;
+      opacity: 0.45;
+      transform: scale(0.93);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover:not(.is-active) {
+      opacity: 0.7;
+    }
+
+    .gallery-card:focus-visible {
+      outline: 3px solid var(--color-orange);
+      outline-offset: 4px;
+    }
+
+    .gallery-card.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-card-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: var(--color-ink-soft);
+    }
+
+    .gallery-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card-body {
+      padding: 1.5rem 1.75rem 1.85rem;
+      text-align: left;
+    }
+
+    .gallery-card-body h3 {
+      color: var(--color-white);
+      font-size: 1.15rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .gallery-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag-chip {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-white);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.35rem 0.9rem;
+    }
+
+    .gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery-dots {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gallery-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(23, 18, 20, 0.25);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.25s ease, border-radius 0.25s ease;
+    }
+
+    /* Invisible hit-area: expands the tappable region to ~44px without
+       changing the small dot's visual size (touch-target accessibility). */
+    .gallery-dot::before {
+      content: '';
+      position: absolute;
+      inset: -18px -13px;
+    }
+
+    .gallery-dot.is-active {
+      width: 26px;
+      border-radius: 4px;
+      background: var(--color-ink);
+    }
+
+    .gallery-arrows {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .gallery-arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: var(--cs-border-thick);
+      box-shadow: var(--shadow-pop-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .gallery-arrow:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-pop);
+    }
+
+    .gallery-arrow:active {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-card {
+        transition: none;
+      }
+    }
+
+    .ww-gallery .ww-gallery-title {
+      margin-bottom: 2.5rem;
+    }
+
+    .ww-gallery.gallery-cartoon {
+      background: var(--color-cream);
+    }
+
+    /* Abschluss-Kachel unter der Roadmap in Seitenfarbe Blau */
+    .uw-final-card {
+      background: var(--color-teal);
+    }
+    /* ---------- Logo-Ticker (wie Umsatz-Wahnsinn) ---------- */
+    .references-cartoon {
+      background: var(--color-orange);
+      color: var(--color-white);
+      text-align: center;
+      padding-block: 2.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .references-cartoon {
+        padding-block: 1.75rem;
+      }
+    }
+
+    .references-cartoon h2 {
+      color: var(--color-white);
+      text-wrap: balance;
+      font-size: clamp(1rem, 4.4vw, 1.5rem);
+      margin: 0 auto 2rem;
+    }
+
+    /* Logo-Ticker: zwei identische Sets nebeneinander, per Keyframe von -50% auf 0%
+       (also von links nach rechts) verschoben — bei -50% Versatz deckt sich Set 2
+       exakt mit der Startposition von Set 1, dadurch kein sichtbarer Sprung im Loop. */
+    .reference-logos-viewport {
+      overflow: hidden;
+      margin-bottom: 2rem;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    .reference-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      width: max-content;
+      animation: reference-logos-scroll 24s linear infinite;
+    }
+
+    .reference-logos img {
+      height: 68px;
+      width: auto;
+      max-width: 260px;
+      object-fit: contain;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    @keyframes reference-logos-scroll {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reference-logos {
+        animation: none;
+      }
+    }
+
+    /* Logo-Ticker auf dieser Seite in Blau */
+    .references-cartoon {
+      background: var(--color-teal);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+        <img src="brand_assets/Logo/AyCaramba%20Logo%20Comic%20White.png" alt="Ay Caramba!">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <div class="site-nav-group">
+          <div class="site-nav-row">
+            <a href="index.html#leistungen">Leistungen</a>
+            <button class="site-nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-leistungen" aria-label="Unterpunkte zu Leistungen anzeigen">▾</button>
+          </div>
+          <div class="site-nav-sub" id="nav-sub-leistungen">
+            <a class="site-nav-sub-label" href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a class="site-nav-sub-label" href="leistungen-website-perfektion.html" aria-current="page">Website-Perfektion</a>
+            <a class="site-nav-sub-label" href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
+            <a class="site-nav-sub-label" href="leistungen-ki-mit-verstand.html">KI mit Verstand</a>
+          </div>
+        </div>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hook -->
+    <section class="uw-hero">
+      <div class="container">
+        <a href="index.html#leistungen" class="back-link">← Alle Leistungen</a>
+        <div class="uw-hero-inner">
+          <svg class="ww-money" viewBox="0 0 280 260" aria-hidden="true" focusable="false">
+            <!-- Fliegende Einzelscheine -->
+            <g transform="translate(34 6) rotate(-16)">
+              <g class="ww-bill ww-bill-1">
+                <rect x="0" y="0" width="104" height="52" rx="8" fill="#5BBE78" stroke="#171214" stroke-width="5"/>
+                <circle cx="52" cy="26" r="13" fill="#8FD6A4" stroke="#171214" stroke-width="3.5"/>
+                <text x="52" y="33" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="19" fill="#171214">€</text>
+              </g>
+            </g>
+            <g transform="translate(112 -10) rotate(8)">
+              <g class="ww-bill ww-bill-2">
+                <rect x="0" y="0" width="104" height="52" rx="8" fill="#5BBE78" stroke="#171214" stroke-width="5"/>
+                <circle cx="52" cy="26" r="13" fill="#8FD6A4" stroke="#171214" stroke-width="3.5"/>
+                <text x="52" y="33" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="19" fill="#171214">€</text>
+              </g>
+            </g>
+            <g transform="translate(168 28) rotate(22)">
+              <g class="ww-bill ww-bill-3">
+                <rect x="0" y="0" width="104" height="52" rx="8" fill="#5BBE78" stroke="#171214" stroke-width="5"/>
+                <circle cx="52" cy="26" r="13" fill="#8FD6A4" stroke="#171214" stroke-width="3.5"/>
+                <text x="52" y="33" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="19" fill="#171214">€</text>
+              </g>
+            </g>
+            <!-- Geldbündel -->
+            <g class="ww-money-bundle">
+              <!-- Harter Cartoon-Schatten -->
+              <rect x="40" y="128" width="216" height="110" rx="14" fill="#171214"/>
+              <!-- Scheinstapel (Dicke) -->
+              <rect x="34" y="122" width="216" height="104" rx="13" fill="#2F8F50" stroke="#171214" stroke-width="6"/>
+              <rect x="28" y="112" width="216" height="104" rx="13" fill="#3FA45E" stroke="#171214" stroke-width="6"/>
+              <!-- Vorderster Schein -->
+              <rect x="22" y="102" width="216" height="104" rx="13" fill="#5BBE78" stroke="#171214" stroke-width="7"/>
+              <rect x="36" y="116" width="188" height="76" rx="8" fill="none" stroke="#2F8F50" stroke-width="4"/>
+              <circle cx="170" cy="154" r="27" fill="#8FD6A4" stroke="#171214" stroke-width="5"/>
+              <text x="170" y="166" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-size="34" fill="#171214">€</text>
+              <circle cx="52" cy="128" r="5" fill="#2F8F50"/>
+              <circle cx="208" cy="180" r="5" fill="#2F8F50"/>
+              <!-- Banderole -->
+              <rect x="70" y="94" width="42" height="140" rx="6" fill="#F4680A" stroke="#171214" stroke-width="6"/>
+              <rect x="70" y="150" width="42" height="12" fill="#FF008E" stroke="#171214" stroke-width="4"/>
+            </g>
+          </svg>
+          <h1>Websites, die mehr sind als nur digitale Visitenkarten.</h1>
+          <p class="uw-hero-lead">Deine Website, die aktiv verkauft und nicht nur „schön aussieht“.</p>
+          <div class="uw-actions">
+            <a href="#termin" class="btn-cartoon btn-cartoon-dark">Kontakt aufnehmen</a>
+            <a href="#preisrechner" class="btn-cartoon uw-btn-white">Website-Preis berechnen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Kennst Du das? -->
+    <section class="section-cartoon uw-pains">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Kennst Du das?</h2>
+        <div class="uw-pain-board">
+          <article class="uw-pain">
+            <h3>Websites, die nichts bringen</h3>
+            <p>Wenn Deine Website <strong>keinerlei Kunden-Interaktionen, geschweige denn Kunden-Anfragen</strong> bringt, bist Du nicht alleine. Das Gute? <strong>Die Lösung ist simpel.</strong></p>
+          </article>
+          <article class="uw-pain">
+            <h3>Keine Kontrolle</h3>
+            <p>Dein Unternehmen hat zwar eine tolle Website, aber <strong>keine Kontrolle darüber.</strong> Für <strong>jede kleinste Änderung</strong> muss die Agentur kontaktiert werden.</p>
+          </article>
+          <article class="uw-pain">
+            <h3>Regelmäßige Aktualisierung ist eine Qual</h3>
+            <p>Fakt ist: Nur Websites, die <strong>regelmäßig mit neuen Inhalten</strong> (Blogs, Bilder, Texte etc.) bespielt werden, können auf Google ganz oben landen. Blöd nur, dass das <strong>sehr viel Aufwand</strong> ist.</p>
+          </article>
+        </div>
+        <div class="uw-actions uw-pains-actions">
+          <a href="#termin" class="btn-cartoon btn-cartoon-dark">Kontakt aufnehmen</a>
+          <a href="#preisrechner" class="btn-cartoon uw-btn-white">Website-Preis vorab berechnen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Kaiserschmarrn -->
+    <section class="section-cartoon uw-punch">
+      <div class="container">
+        <div class="uw-punch-list">
+          <p class="uw-punch-item">
+            <span class="uw-punch-line">Eine Website, die nicht aktiv Kunden bringt, ist wie Kaiserschmarrn ohne Kaiser.</span>
+            <span class="uw-punch-answer">Schmarrn.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Website in 5 Schritten (Scroll-Roadmap wie Umsatz-Wahnsinn) -->
+    <section class="section-cartoon uw-process" id="website-in-5-schritten">
+      <div class="container">
+        <div class="uw-process-head">
+          <h2 class="uw-section-title">Schritt-für-Schritt <br>zu Deiner perfekten Website</h2>
+          <p class="uw-lead">Wir bringen Dich in nur 5 Schritten zu einer <strong>Online-Präsenz, die nicht nur perfekt aussieht, sondern auch aktiv Kunden bringt.</strong></p>
+        </div>
+
+        <ol class="uw-steps">
+          <li class="uw-step">
+            <span class="uw-step-num" aria-hidden="true">1</span>
+            <div class="uw-step-card">
+              <h3>
+                <button class="uw-step-toggle" type="button" aria-expanded="true" aria-controls="uw-step-1-panel">
+                  <span class="uw-step-toggle-text">
+                    <span class="uw-step-title"><span class="sr-only">Schritt 1: </span>Was brauchst Du wirklich? Wir sagen es Dir.</span>
+                  </span>
+                  <span class="uw-step-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l6 6 6-6"/></svg></span>
+                </button>
+              </h3>
+              <div class="uw-step-panel" id="uw-step-1-panel">
+                <p>Jedes Unternehmen hat andere Bedürfnisse. Manchen ist die einfache, eigenständige Wartung und Pflege von Inhalten wichtig, andere wollen damit gar nichts zu tun haben.</p>
+                <p class="uw-step-therefore"><strong>→ Deshalb</strong> brauchst Du Dich auch nicht darum zu kümmern: In unserem Erstgespräch stellen wir genau die Fragen, die wir brauchen, um Deine perfekte Website zu bauen.</p>
+                <div class="uw-step-result">
+                  <h4>Das Ergebnis?</h4>
+                  <p>Ganz egal, ob Shopify, WordPress oder HTML: Wir erstellen Deine Website genau nach Deinen Bedürfnissen.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="uw-step">
+            <span class="uw-step-num" aria-hidden="true">2</span>
+            <div class="uw-step-card">
+              <h3>
+                <button class="uw-step-toggle" type="button" aria-expanded="true" aria-controls="uw-step-2-panel">
+                  <span class="uw-step-toggle-text">
+                    <span class="uw-step-title"><span class="sr-only">Schritt 2: </span>Premium-Webdesign aus echtem Handwerk</span>
+                  </span>
+                  <span class="uw-step-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l6 6 6-6"/></svg></span>
+                </button>
+              </h3>
+              <div class="uw-step-panel" id="uw-step-2-panel">
+                <p>Heutzutage kann jeder einigermaßen schöne Websites erstellen. Das einzige Problem? Sie sehen alle gleich aus.</p>
+                <p class="uw-step-therefore"><strong>→ Deshalb</strong> geben wir Dir ein Versprechen: Unsere Websites kommen aus Designer-Hand und nicht von der KI!</p>
+                <div class="uw-step-result">
+                  <h4>Das Ergebnis?</h4>
+                  <p>Wir sorgen dafür, dass Deine Website einzigartig ist und Kunden nicht nur zum Kauf führt, sondern auch an mehreren Stellen beeindruckt.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="uw-step">
+            <span class="uw-step-num" aria-hidden="true">3</span>
+            <div class="uw-step-card">
+              <h3>
+                <button class="uw-step-toggle" type="button" aria-expanded="true" aria-controls="uw-step-3-panel">
+                  <span class="uw-step-toggle-text">
+                    <span class="uw-step-title"><span class="sr-only">Schritt 3: </span>Schnelligkeit ist unser Motto</span>
+                  </span>
+                  <span class="uw-step-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l6 6 6-6"/></svg></span>
+                </button>
+              </h3>
+              <div class="uw-step-panel" id="uw-step-3-panel">
+                <p>Kein Unternehmen hat Zeit zu verschwenden. Während das eigene Erstellen von Inhalten mit KI viel Zeit in Anspruch nehmen kann, ist unser Anspruch ein anderer:</p>
+                <p class="uw-step-therefore"><strong>→ Deshalb:</strong> Nachdem wir alle Informationen von Dir haben und Du das Design freigegeben hast, entwickeln wir Deine Website in wenigen Tagen, sodass Du direkt durchstarten kannst.</p>
+                <div class="uw-step-result">
+                  <h4>Das Ergebnis?</h4>
+                  <p>Weder Du noch Deine Kunden müssen lange auf Deine Premium-Online-Sichtbarkeit warten. Der Umsatz kann kommen.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="uw-step">
+            <span class="uw-step-num" aria-hidden="true">4</span>
+            <div class="uw-step-card">
+              <h3>
+                <button class="uw-step-toggle" type="button" aria-expanded="true" aria-controls="uw-step-4-panel">
+                  <span class="uw-step-toggle-text">
+                    <span class="uw-step-title"><span class="sr-only">Schritt 4: </span>Suchmaschinen-Optimierung inklusive</span>
+                  </span>
+                  <span class="uw-step-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l6 6 6-6"/></svg></span>
+                </button>
+              </h3>
+              <div class="uw-step-panel" id="uw-step-4-panel">
+                <p>Websites müssen heutzutage mehr als nur digitale Visitenkarten sein. Gute Sichtbarkeit auf Google und in KI-Chatmodellen ist essenziell, um online präsent zu sein und Kunden zu gewinnen.</p>
+                <p class="uw-step-therefore"><strong>→ Deshalb</strong> sorgen wir in der Entwicklung dafür, dass Deine Website zu 100 % suchmaschinenoptimiert ist.</p>
+                <div class="uw-step-result">
+                  <h4>Das Ergebnis?</h4>
+                  <p>Deine Website wird Schritt für Schritt an Sichtbarkeit gewinnen. Damit das regelmäßig passiert, schau Dir auch unsere <a href="leistungen-rundum-sorglos.html">Rundum-Sorglos-Pakete</a> an.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="uw-step uw-step-final">
+            <span class="uw-step-num" aria-hidden="true">5</span>
+            <div class="uw-step-card">
+              <h3>
+                <button class="uw-step-toggle" type="button" aria-expanded="true" aria-controls="uw-step-5-panel">
+                  <span class="uw-step-toggle-text">
+                    <span class="uw-step-title"><span class="sr-only">Schritt 5: </span>Kunden automatisch zum Abschluss führen</span>
+                  </span>
+                  <span class="uw-step-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="#171214" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5l6 6 6-6"/></svg></span>
+                </button>
+              </h3>
+              <div class="uw-step-panel" id="uw-step-5-panel">
+                <p>2 von 3 interessierten Besuchern verlassen Deine Website, ohne einen Abschluss zu erreichen?</p>
+                <p>Der Grund? Fehlender Support und zu viel Unsicherheit, die dafür sorgen, dass Deine Website eigentlich interessierte Kunden wieder verliert. Bislang konntest Du nichts dagegen tun.</p>
+                <p class="uw-step-therefore"><strong>→ Deshalb:</strong> Als einzige Agentur im DACH-Raum stellen wir unseren Website-Kunden die KI-Kaufabsichtserkennung von VEGA kostenfrei zur Verfügung. Mit VEGA werden kaufbereite Kunden automatisch erkannt und mithilfe von KI-Sales-Agents zum Abschluss geführt.</p>
+                <div class="uw-step-result">
+                  <h4>Das Ergebnis?</h4>
+                  <p>Die Abschlussrate auf Deiner Website wird bis zu 4-mal höher sein als auf anderen Websites, und zwar nur, weil Du Deinen Kunden eine bessere Nutzererfahrung bietest.</p>
+                  <p>Mehr Informationen zu VEGA erhältst Du in unserem Erstgespräch.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Abschluss-CTA der Roadmap: Kontakt oder Preisrechner -->
+        <div class="uw-final-card">
+          <h2>Bereit für Deine Operation „Kundengewinnung“?</h2>
+          <p>Nimm jetzt Kontakt auf – oder berechne vorab, was Deine neue Website ungefähr kosten wird.</p>
+          <div class="uw-actions" style="justify-content: center;">
+            <a href="#termin" class="btn-cartoon btn-cartoon-dark">Jetzt Kontakt aufnehmen</a>
+            <a href="#preisrechner" class="btn-cartoon uw-btn-white">Website-Preis vorab berechnen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekt-Galerie: nur Webdesign-Beispiele (Karten aus der Startseite) -->
+    <section class="section-cartoon gallery-cartoon ww-gallery">
+      <div class="container uw-center">
+        <h2 class="uw-section-title ww-gallery-title">Ausgewählte Arbeiten</h2>
+      </div>
+      <div class="gallery-carousel">
+        <div class="gallery-track" id="galleryTrack">
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/pathadvice-international-website.jpg" alt="Website Pathadvice International" width="1046"
+                height="575" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Website Pathadvice International</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+              <a href="https://vega.company/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/eternal-fashion-2.jpg" alt="Website Eternal-Fashion"
+                width="1046" height="575" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Website Eternal-Fashion</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+              <a href="https://www.eternal.fashion/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%239%20Kriechbaums.jpg" alt="Website Stadthaus Klosterneuburg"
+                width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Hausverkauf Klosterneuburg</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+              <a href="https://www.hausverkauf-klosterneuburg.at/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/LiftYourself_website.jpg" alt="Website Lift Yourself"
+                width="1046" height="575" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>Website Lift Yourself</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+              <a href="https://www.lift-yourself.com/" target="_blank" rel="noopener" class="gallery-card-link">Website ansehen →</a>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Projekt%20%235%20Efficent%20Website.jpg" alt="Website für efficent"
+                width="920" height="503" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>efficent Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Website</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%237%20AyCaramba%20Website%20old.jpg" alt="AyCaramba Website"
+                width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Website</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" tabindex="0">
+            <div class="gallery-card-media">
+              <img src="brand_assets/Projekte/Project%20%239%20AyCaramba%20Online%20Shops%20Website.jpg"
+                alt="AyCaramba Online Shops Website" width="920" height="506" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-card-body">
+              <h3>AyCaramba Online Shops</h3>
+              <div class="gallery-tags">
+                <span class="tag-chip">Webdesign</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="container">
+        <div class="gallery-controls">
+          <div class="gallery-dots" id="galleryDots"></div>
+          <div class="gallery-arrows">
+            <button class="gallery-arrow" type="button" data-dir="prev" aria-label="Vorheriges Projekt">←</button>
+            <button class="gallery-arrow" type="button" data-dir="next" aria-label="Nächstes Projekt">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referenzen (Logo-Ticker, wie Umsatz-Wahnsinn, hier in Blau) -->
+    <section class="section-cartoon references-cartoon">
+      <div class="container">
+        <h2>KMUs, die uns vertrauen</h2>
+        <div class="reference-logos-viewport">
+          <div class="reference-logos">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png"
+              alt="Auxilio Lebensraum" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="First Floor" width="320" height="125"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="Valentin Skopek" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="KI Caramba" width="320" height="134"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="Referenz-Logo" width="320" height="184"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="Pathadvice" width="320" height="47"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="Aniko" width="320" height="107"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="Lift Yourself" width="320" height="42"
+              loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Auxilio%20Lebensraum%20transparent%20white.png" alt=""
+              aria-hidden="true" width="620" height="172" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/FirstFloorLogo.png" alt="" aria-hidden="true" width="320"
+              height="125" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/ValentinSkopek_Logo.png" alt="" aria-hidden="true" width="320"
+              height="88" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/KI%20Logo_Wei%C3%9F.png" alt="" aria-hidden="true" width="320"
+              height="134" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Element%203@2x.png" alt="" aria-hidden="true" width="320"
+              height="184" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/Pathadvice.png" alt="" aria-hidden="true" width="320"
+              height="47" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/logo_aniko_white_ok.png" alt="" aria-hidden="true" width="320"
+              height="107" loading="lazy" decoding="async">
+            <img src="brand_assets/Referenzen%20Logos/LiftYourself..png" alt="" aria-hidden="true" width="320"
+              height="42" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Website-Preisrechner -->
+    <section class="section-cartoon ww-calc" id="preisrechner">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Website-Preis vorab berechnen</h2>
+        <p class="uw-lead">Wie viel wird Deine Website ungefähr kosten? Find’s heraus.</p>
+
+        <div class="ww-calc-grid">
+          <form class="ww-calc-form" id="ww-calc" onsubmit="return false;">
+            <fieldset class="ww-q">
+              <legend class="ww-q-title">Welche Art von Website brauchst Du?</legend>
+              <div class="ww-chips">
+                <label class="ww-chip"><input type="radio" name="type" value="onepager"><span>Einfacher Onepager</span></label>
+                <label class="ww-chip"><input type="radio" name="type" value="website" checked><span>Unternehmens-Website</span></label>
+                <label class="ww-chip"><input type="radio" name="type" value="shop"><span>Online-Shop</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ww-q">
+              <legend class="ww-q-title">Welchen Umfang soll deine Website ungefähr haben?</legend>
+              <div class="ww-pages-row">
+                <input class="rs-slider" id="ww-pages" type="range" min="1" max="30" value="5" step="1" aria-label="Anzahl der Unterseiten" aria-describedby="ww-pages-hint">
+                <span class="ww-pages-value" id="ww-pages-val">5 Seiten</span>
+              </div>
+              <p class="ww-q-hint" id="ww-pages-hint">Impressum &amp; Datenschutz zählen nicht mit.</p>
+            </fieldset>
+
+            <fieldset class="ww-q">
+              <legend class="ww-q-title">Möchtest Du die Website nach Fertigstellung selber pflegen?</legend>
+              <div class="ww-chips">
+                <label class="ww-chip"><input type="radio" name="cms" value="yes" checked><span>Ja, ich will selbst pflegen</span></label>
+                <label class="ww-chip"><input type="radio" name="cms" value="no"><span>Nein, ihr kümmert euch</span></label>
+              </div>
+              <p class="ww-q-hint" id="ww-cms-hint" hidden>Beim Online-Shop ist die eigene Pflege immer inklusive.</p>
+            </fieldset>
+
+            <fieldset class="ww-q">
+              <legend class="ww-q-title">Hast Du bereits Texte &amp; Bilder für Deine Website?</legend>
+              <div class="ww-chips">
+                <label class="ww-chip"><input type="radio" name="content" value="yes"><span>Ja, alles da</span></label>
+                <label class="ww-chip"><input type="radio" name="content" value="partial" checked><span>Teilweise</span></label>
+                <label class="ww-chip"><input type="radio" name="content" value="none"><span>Nein, brauche beides</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ww-q">
+              <legend class="ww-q-title">In wie vielen Sprachen soll Deine Website sein?</legend>
+              <div class="ww-chips">
+                <label class="ww-chip"><input type="radio" name="langs" value="1" checked><span>1 Sprache</span></label>
+                <label class="ww-chip"><input type="radio" name="langs" value="2"><span>2 Sprachen</span></label>
+                <label class="ww-chip"><input type="radio" name="langs" value="3"><span>3 oder mehr</span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="ww-calc-result" aria-live="polite">
+            <p class="ww-result-label">Deine Preis-Indikation*: ca.</p>
+            <span class="ww-result-value" id="ww-result">3.650&nbsp;– 4.700&nbsp;€</span>
+            <p class="ww-result-tax">einmalig, netto zzgl. USt.</p>
+            <ul class="ww-result-incl">
+              <li>Design aus Designer-Hand</li>
+              <li>Suchmaschinen-Optimierung</li>
+              <li>VEGA-Kaufabsichtserkennung kostenfrei</li>
+            </ul>
+            <a href="#termin" class="btn-cartoon btn-cartoon-dark">Unverbindlich anfragen</a>
+            <p class="ww-result-note">* Dieser Preis ist nicht bindend, sondern lediglich eine Preis-Indikation. Den genauen Preis erhältst Du nach unserem kostenlosen Erstgespräch.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Du hast bereits eine Website? -->
+    <section class="section-cartoon ww-existing">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Du hast bereits eine Website?</h2>
+        <p class="uw-lead">Dann ist das vielleicht das Richtige für Dich.</p>
+        <div class="rs-upsell" style="text-align: left;">
+          <div class="rs-upsell-text">
+            <h3>→ Wenn Du keine Zeit hast, Dich ständig um Deine Website zu kümmern.</h3>
+            <p>Unser Rundum-Sorglos-Paket für Unternehmer, die wirklich was zu tun haben.</p>
+          </div>
+          <div class="ww-upsell-cta">
+            <p class="ww-upsell-price"><small>ab</small> 99,99 €</p>
+            <a href="leistungen-rundum-sorglos.html" class="btn-cartoon btn-cartoon-dark">Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Zwei Möglichkeiten (Pillen, wie Rundum sorglos) -->
+    <section class="section-cartoon uw-options" id="entscheidung">
+      <div class="container">
+        <h2 class="uw-section-title">Du entscheidest:</h2>
+        <div class="uw-options-grid">
+          <div class="uw-choice uw-choice-blue">
+            <svg class="uw-pill" viewBox="0 0 220 96" aria-hidden="true" focusable="false">
+              <rect x="25" y="25" width="184" height="60" rx="30" fill="#171214"/>
+              <path d="M48 18H110V78H48A30 30 0 0 1 48 18Z" fill="#4E9DB8"/>
+              <path d="M110 18H172A30 30 0 0 1 172 78H110Z" fill="#386F80"/>
+              <line x1="110" y1="18" x2="110" y2="78" stroke="#171214" stroke-width="5"/>
+              <rect x="18" y="18" width="184" height="60" rx="30" fill="none" stroke="#171214" stroke-width="6"/>
+              <path d="M50 34H88" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+            <div class="uw-option uw-option-old">
+              <p class="uw-option-kicker">Möglichkeit 1: die blaue Pille</p>
+              <h3>Mach weiter wie bisher.</h3>
+              <p>Heißt: Social Media irgendwie nebenbei ohne wirkliche Konstanz und mit viel Frust bearbeiten und akzeptieren, dass Deine Website nie mehr als eine digitale Visitenkarte sein wird.</p>
+            </div>
+          </div>
+          <span class="uw-options-or" aria-hidden="true">oder</span>
+          <div class="uw-choice uw-choice-red">
+            <svg class="uw-pill" viewBox="0 0 220 96" aria-hidden="true" focusable="false">
+              <rect x="25" y="25" width="184" height="60" rx="30" fill="#171214"/>
+              <path d="M48 18H110V78H48A30 30 0 0 1 48 18Z" fill="#FF008E"/>
+              <path d="M110 18H172A30 30 0 0 1 172 78H110Z" fill="#C2006C"/>
+              <line x1="110" y1="18" x2="110" y2="78" stroke="#171214" stroke-width="5"/>
+              <rect x="18" y="18" width="184" height="60" rx="30" fill="none" stroke="#171214" stroke-width="6"/>
+              <path d="M50 34H88" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+            <div class="uw-option uw-option-new">
+              <p class="uw-option-kicker">Möglichkeit 2: die rote Pille</p>
+              <h3>Mach es Dir einfach.</h3>
+              <p>Heißt: Du trittst mit uns in Kontakt und schaust einfach mal, ob wir Dir sympathisch sind. Wenn ja, ist es unsere Pflicht, Dir zu helfen und Dein Leben leichter zu machen.</p>
+              <a href="#termin" class="btn-cartoon btn-cartoon-pink">Kontakt aufnehmen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminbuchung Kennenlernen Website (Cal.com, wie Rundum-Sorglos) -->
+    <section class="section-cartoon ww-booking" id="termin">
+      <div class="container">
+        <div class="ww-booking-card">
+          <!-- Cal inline embed code begins -->
+          <div class="ww-cal-embed" id="my-cal-inline-kennenlernen-website"></div>
+          <script type="text/javascript">
+            // Cal.com erst laden, wenn der Kalender in die Nähe kommt (spart Ladezeit und Drittanbieter-Cookies beim Seitenaufruf)
+            (function () {
+              var el = document.getElementById("my-cal-inline-kennenlernen-website");
+              function loadCal() {
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "kennenlernen-website", {origin:"https://app.cal.com"});
+                Cal.config = Cal.config || {};
+                Cal.config.forwardQueryParams = true;
+
+                Cal.ns["kennenlernen-website"]("inline", {
+                  elementOrSelector:"#my-cal-inline-kennenlernen-website",
+                  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+                  calLink: "aycaramba/kennenlernen-website",
+                });
+
+                Cal.ns["kennenlernen-website"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#4E9DB8"}},"hideEventTypeDetails":false,"layout":"month_view"});
+              }
+              if (!el || !("IntersectionObserver" in window)) { loadCal(); return; }
+              var io = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) { io.disconnect(); loadCal(); }
+              }, { rootMargin: "800px 0px" });
+              io.observe(el);
+            })();
+          </script>
+          <!-- Cal inline embed code ends -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. KI: Eher nicht, denn … (Tabelle wie Rundum sorglos) -->
+    <section class="section-cartoon rs-promise">
+      <div class="container uw-center">
+        <h2 class="uw-section-title">Okay, aber dann kann ich es ja auch einfach selbst mit der KI machen?!</h2>
+        <p class="rs-promise-accent">Eher nicht, denn...</p>
+
+        <div class="rs-ai-table">
+          <ul class="uw-ai-list">
+            <li>
+              <p>Ob Du morgen 100 Kunden gewinnst oder pleitegehst, ist der KI vollkommen egal.</p>
+              <p class="uw-ai-effect">Schlechte bis mittelmäßige Ergebnisse: unvermeidbar.</p>
+            </li>
+            <li>
+              <p>Bevor die KI Dir widerspricht, stimmt sie Dir lieber zu. Kein wirklich guter Sparringspartner, um voranzukommen.</p>
+              <p class="uw-ai-effect">Stillstand vorprogrammiert.</p>
+            </li>
+            <li>
+              <p>Die KI hat keinen Zeitdruck. Wenn es sein muss, diskutiert sie tagelang über Themen, die eigentlich völlig irrelevant sind.</p>
+              <p class="uw-ai-effect">Priorisierung ist ein Fremdwort.</p>
+            </li>
+            <li>
+              <p>Die KI kommt nicht aktiv auf Dich zu. Du hättest heute einen Beitrag veröffentlichen sollen? Pech gehabt.</p>
+              <p class="uw-ai-effect">Mehr Zeitfresser als Zeitersparnis.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wie wir Dir helfen (Angebote, wie Umsatz-Wahnsinn) -->
+    <section class="section-cartoon uw-offers">
+      <div class="container">
+        <h2 class="uw-section-title">Wie wir Dir helfen</h2>
+        <div class="uw-offers-grid">
+          <div class="uw-offer uw-offer-featured">
+            <p class="uw-offer-for">Unser Premium-Paket für mehr Umsatz:</p>
+            <h3>Deine komplette Online-Kundengewinnung done4you.</h3>
+            <p>Wir bringen Dich in nur <strong>5 Schritten</strong> zu einem <strong>Kalender voller qualifizierter Erstgespräche</strong> – ohne Aufwand auf Deiner Seite.</p>
+            <p>Von der <strong>Angebotserstellung</strong> bis zum <strong>Termin mit Deinem potenziellen Kunden</strong>.</p>
+            <div class="uw-offer-footer">
+              <p class="uw-price">Preis auf Anfrage</p>
+              <a href="leistungen-umsatz-wahnsinn.html" class="btn-cartoon btn-cartoon-dark">Mehr erfahren</a>
+            </div>
+          </div>
+          <div class="uw-offer uw-offer-sorglos">
+            <p class="uw-offer-for">Unsere Pakete für zeitliche Entlastung und langfristigen Erfolg:</p>
+            <h3>Dein Unternehmen,<br> perfekt präsentiert &amp; sichtbar.</h3>
+            <p>Wir kümmern uns <strong>jeden Monat um Deine digitale Unternehmensdarstellung</strong> und sorgen dafür, dass Kunden <strong>langfristig auf Deinen Betrieb aufmerksam</strong> werden.</p>
+            <p><strong>Vergiss Social Media, SEO und Website-Wartung ein für alle Mal. Wir kümmern uns darum.</strong></p>
+            <div class="uw-offer-footer">
+              <p class="uw-price"><small>ab</small> 99,99 € <small>/ Monat</small></p>
+              <a href="leistungen-rundum-sorglos.html" class="btn-cartoon uw-btn-white">Mehr erfahren</a>
+            </div>
+          </div>
+          <div class="uw-offer uw-offer-website">
+            <span class="uw-offer-here"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c-3.9 0-7 3-7 6.9 0 5 7 12.1 7 12.1s7-7.1 7-12.1c0-3.9-3.1-6.9-7-6.9zm0 9.4a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" fill="currentColor"/></svg>Du bist gerade hier</span>
+            <p class="uw-offer-for">Unser Paket für Deinen perfekten Online-Auftritt:</p>
+            <h3>Deine Premium-Website, die aktiv verkauft.</h3>
+            <p>Wir bauen Dir in nur <strong>5 Schritten</strong> eine <strong>einzigartige Website aus Designer-Hand</strong> – inklusive Suchmaschinen-Optimierung.</p>
+            <p><strong>Kein Baukasten, keine KI-Einheitsware: eine Website, die nicht nur gut aussieht, sondern Kunden bringt.</strong></p>
+            <div class="uw-offer-footer">
+              <p class="uw-price"><small>ab</small> 999,99 €</p>
+              <a href="#termin" class="btn-cartoon uw-btn-white">Kontakt aufnehmen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-lead">
+        <h2 class="footer-lead-text">Dein Marketing wird es dir danken.</h2>
+        <div class="footer-lead-ctas">
+          <a href="index.html#leistungen" class="btn-cartoon">Mehr erfahren</a>
+          <a href="kontakt.html" class="btn-cartoon">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="site-logo" href="index.html" aria-label="Ay Caramba! Startseite">
+            <img src="assets/img/logo-white.svg" alt="Ay Caramba!">
+          </a>
+          <nav class="footer-brand-links" aria-label="Footer-Hauptnavigation">
+            <a href="index.html#leistungen">Leistungen <span>→</span></a>
+            <a href="referenzen.html">Referenzen <span>→</span></a>
+            <a href="saas-tools.html">SaaS-Tools <span>→</span></a>
+            <a href="ueber-uns.html">Über uns <span>→</span></a>
+            <a href="kontakt.html">Kontakt <span>→</span></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Leistungen</h3>
+          <nav class="footer-col-links" aria-label="Footer-Leistungen">
+            <a href="leistungen-umsatz-wahnsinn.html">Umsatz-Wahnsinn</a>
+            <a href="leistungen-website-perfektion.html">Website-Perfektion</a>
+            <a href="leistungen-rundum-sorglos.html">Rundum sorglos</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>SaaS-Tools</h3>
+          <nav class="footer-col-links" aria-label="Footer-SaaS-Tools">
+            <a href="https://www.peppi.aycaramba.at" target="_blank" rel="noopener">Peppi Content Tool</a>
+            <a href="https://www.vega.company" target="_blank" rel="noopener">Vega</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3>Mehr</h3>
+          <nav class="footer-col-links" aria-label="Footer-Mehr">
+            <a href="blog/index.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aycaramba_marketing/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/niklas-markes-40559a306/" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="assets/img/icon-linkedin.png" alt=""></a>
+        </div>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Fortschrittslinie der 5 Schritte: füllt sich beim Scrollen,
+       erreichte Schritte bekommen eine orange Nummer. */
+    (function () {
+      'use strict';
+
+      var list = document.querySelector('.uw-steps');
+      if (!list) return;
+
+      var steps = list.querySelectorAll('.uw-step');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var ticking = false;
+
+      /* Auf-/Zuklappen der Schritte. Ohne JS bleiben alle Panels offen. */
+      list.querySelectorAll('.uw-step-toggle').forEach(function (btn) {
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!panel) return;
+
+        btn.setAttribute('aria-expanded', 'false');
+        panel.hidden = true;
+
+        panel.addEventListener('animationend', function () {
+          panel.classList.remove('is-opening');
+        });
+
+        btn.addEventListener('click', function () {
+          var open = btn.getAttribute('aria-expanded') !== 'true';
+          btn.setAttribute('aria-expanded', String(open));
+          panel.hidden = !open;
+          if (open && !reduce) panel.classList.add('is-opening');
+          onScroll();
+        });
+      });
+
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { list.classList.add('is-ready'); });
+      });
+
+      if (reduce) {
+        steps.forEach(function (s) { s.classList.add('is-reached'); });
+        return;
+      }
+
+      function update() {
+        ticking = false;
+        var trigger = window.innerHeight * 0.6;
+        var rect = list.getBoundingClientRect();
+        var progress = (trigger - rect.top) / rect.height;
+        progress = Math.max(0, Math.min(1, progress));
+        list.style.setProperty('--uw-progress', progress);
+
+        steps.forEach(function (step) {
+          var num = step.querySelector('.uw-step-num');
+          step.classList.toggle('is-reached', num.getBoundingClientRect().top < trigger);
+        });
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(update);
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    })();
+    /* Website-Preisrechner: grobe Preis-Indikation aus 7 Fragen.
+       PLATZHALTER-PREISE – bitte an die echten AyCaramba-Preise anpassen. */
+    (function () {
+      'use strict';
+
+      var form = document.getElementById('ww-calc');
+      if (!form) return;
+
+      var PRICES = {
+        type: {
+          onepager: { base: 1490, includedPages: 1, cms: 390 },
+          website: { base: 2990, includedPages: 5, cms: 590 },
+          shop: { base: 4990, includedPages: 5, cms: 0 }
+        },
+        extraPage: 190,          // je Unterseite über den inkludierten hinaus
+        // Texte & Bilder: Texte je Seite + Bilder pauschal
+        textsPerPage: { yes: 0, partial: 60, none: 120 },
+        images: { yes: 0, partial: 190, none: 390 },
+        languageFactor: { 1: 1, 2: 1.25, 3: 1.45 },
+        rangeLow: 0.9,
+        rangeHigh: 1.15
+      };
+
+      var pages = document.getElementById('ww-pages');
+      var pagesVal = document.getElementById('ww-pages-val');
+      var cmsHint = document.getElementById('ww-cms-hint');
+      var result = document.getElementById('ww-result');
+      var cmsNo = form.querySelector('input[name="cms"][value="no"]');
+      var cmsYes = form.querySelector('input[name="cms"][value="yes"]');
+      var lastPages = parseInt(pages.value, 10);
+
+      function val(name) {
+        var el = form.querySelector('input[name="' + name + '"]:checked');
+        return el ? el.value : null;
+      }
+
+      function euro(n) {
+        return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+
+      function update() {
+        var type = val('type');
+        var t = PRICES.type[type];
+
+        // Onepager: alles auf einer Seite, Regler gesperrt
+        if (type === 'onepager') {
+          if (!pages.disabled) lastPages = parseInt(pages.value, 10);
+          pages.value = 1;
+          pages.disabled = true;
+        } else if (pages.disabled) {
+          pages.disabled = false;
+          pages.value = lastPages;
+        }
+
+        // Online-Shop: eigene Pflege immer dabei
+        cmsNo.disabled = type === 'shop';
+        if (type === 'shop') cmsYes.checked = true;
+        cmsHint.hidden = type !== 'shop';
+
+        var n = parseInt(pages.value, 10);
+        pagesVal.textContent = type === 'onepager' ? '1 Seite' : n + (n === 1 ? ' Seite' : ' Seiten');
+        pages.style.setProperty('--rs-pct', ((n - 1) / 29 * 100).toFixed(1) + '%');
+
+        var textPages = type === 'onepager' ? 3 : n;
+        var total = t.base;
+        total += Math.max(0, n - t.includedPages) * PRICES.extraPage;
+        if (val('cms') === 'yes') total += t.cms;
+        total += PRICES.textsPerPage[val('content')] * textPages;
+        total += PRICES.images[val('content')];
+        total *= PRICES.languageFactor[val('langs')];
+
+        var low = Math.floor(total * PRICES.rangeLow / 50) * 50;
+        var high = Math.ceil(total * PRICES.rangeHigh / 50) * 50;
+        result.textContent = euro(low) + ' – ' + euro(high) + ' €';
+
+        result.classList.remove('is-updated');
+        void result.offsetWidth;
+        result.classList.add('is-updated');
+      }
+
+      form.addEventListener('input', update);
+      form.addEventListener('change', update);
+      update();
+      result.classList.remove('is-updated');
+    })();
+  </script>
+</body>
+</html>

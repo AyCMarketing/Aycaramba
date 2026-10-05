@@ -2,6 +2,21 @@ Options -Indexes
 
 RewriteEngine On
 
+# Old URL redirect: leistungen-digitale-kundengewinnung -> funnel-blueprint
+RewriteRule ^leistungen-digitale-kundengewinnung/?$ /funnel-blueprint [R=301,L]
+
+# Old URL redirect: KI-Irrsinn (leistungen-ai-caramba) -> Rundum sorglos
+RewriteRule ^leistungen-ai-caramba(\.html)?/?$ /leistungen-rundum-sorglos [R=301,L]
+
+# Old URL redirect: Happy Websites -> Website-Perfektion
+RewriteRule ^leistungen-happy-websites(\.html)?/?$ /leistungen-website-perfektion [R=301,L]
+
+# Old URL redirect: KI-Irrsinn -> KI mit Verstand
+RewriteRule ^leistungen-ki-irrsinn(\.html)?/?$ /leistungen-ki-mit-verstand [R=301,L]
+
+# Old URL redirect: Leistungen-Übersichtsseite entfernt -> Leistungen-Bereich auf der Startseite
+RewriteRule ^leistungen(\.html)?/?$ /#leistungen [R=301,L]
+
 # Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -14,7 +29,7 @@ RewriteRule ^ /%1 [R=301,L]
 # Compress text-based assets
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
-  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
   AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
@@ -29,6 +44,7 @@ RewriteRule ^ /%1 [R=301,L]
   ExpiresByType font/otf "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
